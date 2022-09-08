@@ -23,6 +23,7 @@ const routes: Routes=[
   {path:'confirmacion',component:MensajeconfirmacionComponent},
   {path:'administrador',component:VentanaadmiComponent},
   {path:'confiusuario',component:ConfiguracionusuarioComponent},
+  {path:'crearpersona',component:CrearpersonaComponent}
   ];
 
 @NgModule({
