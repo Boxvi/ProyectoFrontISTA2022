@@ -15,6 +15,7 @@ import { ConfiguracionusuarioComponent } from './configuracionusuario/configurac
 import { CrearpersonaComponent } from './crearpersona/crearpersona.component';
 
 
+
 const routes: Routes=[
   {path:'',component:PagPrincComponent},
   {path:'login',component:LoginComponent},
@@ -23,6 +24,7 @@ const routes: Routes=[
   {path:'confirmacion',component:MensajeconfirmacionComponent},
   {path:'administrador',component:VentanaadmiComponent},
   {path:'confiusuario',component:ConfiguracionusuarioComponent},
+  {path: 'crearpersona', component: CrearpersonaComponent}
   ];
 
 @NgModule({
