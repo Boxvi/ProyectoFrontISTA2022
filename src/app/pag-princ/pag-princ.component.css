@@ -1,0 +1,54 @@
+.container{
+    text-align:center;
+    background-color:mediumblue;
+}
+
+.left{
+    float: left;
+    background:blue
+}
+
+.inicio{
+    float: right;
+    margin-left: 1000px;
+    color: white;
+    margin-top: 10px;
+}
+
+.logotransparente{
+    width: 100%;
+    position: relative;
+}
+
+.titulos{
+    position: relative;
+}
+
+.imagenfondo{
+    height: 100%;
+    width: 100%;
+}
+
+.title1{
+    position: absolute;
+    margin-top: 250px;
+    margin-left: 25px;
+    color: darkblue;
+    background-color: lightsteelblue;
+}
+
+.title2{
+    position: absolute;
+    margin-top: 350px;
+    margin-left: 25px;
+    color: darkblue;
+    background-color: lightsteelblue;
+}
+
+.title3{
+    position: absolute;
+    margin-top: 450px;
+    margin-left: 25px;
+    color: darkblue;
+    background-color: lightsteelblue;
+}
