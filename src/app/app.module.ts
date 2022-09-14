@@ -14,6 +14,8 @@ import { VentanaadmiComponent } from './ventanaadmi/ventanaadmi.component';
 import { ConfiguracionusuarioComponent } from './configuracionusuario/configuracionusuario.component';
 import { CrearpersonaComponent } from './crearpersona/crearpersona.component';
 import { AdministradorComponent } from './administrador/administrador.component';
+import { UsuarioComponent } from './usuario/usuario.component';
+import { CrudUsuarioComponent } from './crud-usuario/crud-usuario.component';
 
 
 
@@ -28,6 +30,9 @@ const routes: Routes=[
   {path:'confiusuario',component:ConfiguracionusuarioComponent},
   {path:'crearpersona',component:CrearpersonaComponent},
   {path:'admin',component:AdministradorComponent},
+  {path:'usuario',component:UsuarioComponent},
+  {path:'crudusuario',component:CrudUsuarioComponent},
+
 
 
   ];
@@ -45,6 +50,8 @@ const routes: Routes=[
     ConfiguracionusuarioComponent,
     CrearpersonaComponent,
     AdministradorComponent,
+    UsuarioComponent,
+    CrudUsuarioComponent,
   ],
   imports: [
     BrowserModule,
