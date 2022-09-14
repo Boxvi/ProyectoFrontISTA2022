@@ -8,7 +8,7 @@
       "schematics": {
         "@schematics/angular:application": {
           "strict": true
-        }
+        }asdasdasd
       },
       "root": "",
       "sourceRoot": "src",
