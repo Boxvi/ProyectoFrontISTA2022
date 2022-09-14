@@ -1,16 +1,14 @@
 
-<nav id="navbar-example2" class="navbar  px-3 mb-3" style="background-color: blue">
+<nav id="navbar-example2" class="navbar  px-3 mb-3" style="background-color: #192C8A">
   <img src="assets\img\logo_ista.png" style="width: 5%;">
-  <h1 class="navbar-brand" href="#" style="color: aliceblue;">Administrador</h1>
-  <h1  class="navbar-brand" href="#" style="color: aliceblue;">Evaluador</h1>
-  <h1  class="navbar-brand" href="#" style="color: aliceblue;">Monitor</h1 >
-  <h1  class="navbar-brand" href="#" style="color: aliceblue;">Colaborador</h1 >
+  <a class="navbar-brand" href="#" style="color: aliceblue; margin-right:800px  ;"[routerLink]="['/admin']">Administrador</a>
+
   <ul class="nav nav-pills" style="position: relative;">
 
     <li class="nav-item dropdown">
       <h1  class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" style="color: aliceblue;">Juan Perez <img src="assets\img\user_icon-icons.com_66546.png" alt=""style="width: 15%;"></h1 >
       <ul class="dropdown-menu" style="background-color: gray;">
-        <li><a class="dropdown-item" href="#scrollspyHeading3" style="background-color: gray;">Configuracion</a></li>
+        <li><a class="dropdown-item" href="#scrollspyHeading3" style="background-color: gray;" [routerLink]="['/confiusuario']">Perfil</a></li>
         <li><a class="dropdown-item" href="#scrollspyHeading4" style="background-color: gray;">Cerrar Sesion</a></li>
       </ul>
     </li>

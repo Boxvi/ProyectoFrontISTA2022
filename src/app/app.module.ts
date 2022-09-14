@@ -13,6 +13,9 @@ import { MensajeconfirmacionComponent } from './mensajeconfirmacion/mensajeconfi
 import { VentanaadmiComponent } from './ventanaadmi/ventanaadmi.component';
 import { ConfiguracionusuarioComponent } from './configuracionusuario/configuracionusuario.component';
 import { CrearpersonaComponent } from './crearpersona/crearpersona.component';
+import { AdministradorComponent } from './administrador/administrador.component';
+
+
 
 
 const routes: Routes=[
@@ -21,9 +24,12 @@ const routes: Routes=[
   {path:'restablecer',component:RescontrasenaComponent},
   {path:'verificar',component:VerificarcontrasenaComponent},
   {path:'confirmacion',component:MensajeconfirmacionComponent},
-  {path:'administrador',component:VentanaadmiComponent},
+  {path:'administradorpricipal',component:VentanaadmiComponent},
   {path:'confiusuario',component:ConfiguracionusuarioComponent},
-  {path:'crearpersona',component:CrearpersonaComponent}
+  {path:'crearpersona',component:CrearpersonaComponent},
+  {path:'admin',component:AdministradorComponent},
+
+
   ];
 
 @NgModule({
@@ -37,7 +43,8 @@ const routes: Routes=[
     MensajeconfirmacionComponent,
     VentanaadmiComponent,
     ConfiguracionusuarioComponent,
-    CrearpersonaComponent
+    CrearpersonaComponent,
+    AdministradorComponent,
   ],
   imports: [
     BrowserModule,
