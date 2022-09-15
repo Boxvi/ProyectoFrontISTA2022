@@ -2,10 +2,11 @@ div {
 
     position: relative;
     border: 1px;
-    border-style: dashed;
+
     width: 370px;
     height: 600px;
-    background-color: transparent;
+    background-color: white;
+    box-shadow: 2px 2px 15px black; 
 
 }
 
