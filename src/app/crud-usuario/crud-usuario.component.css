@@ -1,5 +1,5 @@
-div{
-    
+div {
+
     position: relative;
     border: 1px;
     border-style: dashed;
@@ -18,7 +18,8 @@ div{
     padding: 5px;
     color: white;
 }
-.cuaderno{
+
+.cuaderno {
     margin-top: 70px;
     margin-left: 180px;
     width: 50px;
@@ -26,14 +27,15 @@ div{
     position: absolute;
 }
 
-.cedula{
+.cedula {
     position: absolute;
     margin-top: 130px;
     color: black;
     margin-left: 74px;
-    
+
 }
-.inputCedula{
+
+.inputCedula {
     position: absolute;
     margin-top: 130px;
     color: black;
@@ -43,16 +45,16 @@ div{
     background-color: #B1E7E1;
 }
 
-.buscar{
+.buscar {
     margin-top: 133px;
     margin-left: 265px;
     width: 25px;
     height: 25px;
     position: absolute;
-    
+
 }
 
-.Nombre{
+.Nombre {
     margin-top: 175px;
     margin-left: 50px;
     background-color: gray;
@@ -61,20 +63,20 @@ div{
     padding-right: 100px;
 }
 
-.separador{
+.separador {
     width: 300px;
     margin-left: 40px;
     border-width: 2px;
 }
 
-.usuario{
+.usuario {
     position: absolute;
     margin-top: 5px;
     color: black;
     margin-left: 70px;
 }
 
-.inputUsuario{
+.inputUsuario {
     position: absolute;
     margin-top: 4px;
     color: black;
@@ -83,50 +85,54 @@ div{
     border: transparent;
     background-color: #B1E7E1;
 }
-.rol{
+
+.rol {
     position: absolute;
     margin-top: 50px;
     color: black;
     margin-left: 86px;
 }
 
-.checkbox{
+.checkbox {
     position: absolute;
     margin-top: 57px;
     margin-left: 145px;
-    
+
 
 }
-.checkbox1{
+
+.checkbox1 {
     position: absolute;
     margin-top: 100px;
     margin-left: 145px;
-    
+
 
 }
-.checkbox2{
+
+.checkbox2 {
     position: absolute;
     margin-top: 100px;
     margin-left: 245px;
-    
+
 
 }
-.checkbox3{
+
+.checkbox3 {
     position: absolute;
     margin-top: 57px;
     margin-left: 245px;
-    
+
 
 }
 
-.contrasenia{
+.contrasenia {
     position: absolute;
     margin-top: 130px;
     color: black;
     margin-left: 40px;
 }
 
-.repetircontrasenia{
+.repetircontrasenia {
     position: absolute;
     margin-top: 170px;
     color: black;
@@ -134,7 +140,7 @@ div{
     text-align: center;
 }
 
-.inputContraseña{
+.inputContraseña {
     position: absolute;
     margin-top: 130px;
     color: black;
@@ -144,7 +150,7 @@ div{
     background-color: #B1E7E1;
 }
 
-.inputRepetir{
+.inputRepetir {
     position: absolute;
     margin-top: 180px;
     color: black;
@@ -155,21 +161,21 @@ div{
 
 }
 
-.cancelar{
-border-radius: 10px;
-background-color: #DF2926;
-border: transparent;
-padding: 5px;
-padding-right: 20px;
-padding-left: 20px;
-margin-top: 260px;
-margin-left: 45px;
-color: white;
+.cancelar {
+    border-radius: 10px;
+    background-color: #DF2926;
+    border: transparent;
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 260px;
+    margin-left: 45px;
+    color: white;
 
 
 }
 
-.aceptar{
+.aceptar {
     border-radius: 10px;
     background-color: #2664DF;
     border: transparent;
@@ -179,4 +185,80 @@ color: white;
     margin-left: 50px;
     color: white;
 
+}
+
+.eliminar {
+    position: relative;
+    border: 1px;
+    border-style: dashed;
+    width: 600px;
+    height: 200px;
+    background-color: transparent;
+}
+
+.advertencia {
+    width: 70px;
+    height: 70px;
+    margin-left: 250px;
+}
+
+.seguro {
+    margin-left: 10px;
+    text-align: justify;
+}
+
+.cancelar2 {
+    border-radius: 10px;
+    background-color: #DF2926;
+    border: transparent;
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 15px;
+    margin-left: 45px;
+    color: white;
+
+
+}
+
+.eliminarbtn {
+    border-radius: 10px;
+    background-color: green;
+    border: transparent;
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 15px;
+    margin-left: 150px;
+    color: white;
+
+
+}
+
+.confirmarGuardado {
+    position: relative;
+    border: 1px;
+    border-style: dashed;
+    width: 500px;
+    height: 200px;
+    background-color: transparent;
+}
+
+.confirmar {
+    border-radius: 10px;
+    background-color: green;
+    border: transparent;
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 15px;
+    margin-left: 80px;
+    color: white;
+
+
+}
+.advertencia2 {
+    width: 70px;
+    height: 70px;
+    margin-left: 200px;
 }
