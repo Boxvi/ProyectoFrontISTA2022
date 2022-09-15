@@ -11,5 +11,13 @@ export class UsuarioComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  displayStyle = "none";
+  
+  openPopup() {
+    this.displayStyle = "block";
+  }
+  closePopup() {
+    this.displayStyle = "none";
+  }
 
 }
