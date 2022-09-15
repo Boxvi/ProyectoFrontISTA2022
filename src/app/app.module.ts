@@ -16,6 +16,7 @@ import { CrearpersonaComponent } from './crearpersona/crearpersona.component';
 import { AdministradorComponent } from './administrador/administrador.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { CrudUsuarioComponent } from './crud-usuario/crud-usuario.component';
+import { ProyectoComponent } from './proyecto/proyecto.component';
 
 
 
@@ -32,7 +33,7 @@ const routes: Routes=[
   {path:'admin',component:AdministradorComponent},
   {path:'usuario',component:UsuarioComponent},
   {path:'crudusuario',component:CrudUsuarioComponent},
-
+  {path:'proyecto',component:ProyectoComponent},
 
 
   ];
@@ -52,6 +53,7 @@ const routes: Routes=[
     AdministradorComponent,
     UsuarioComponent,
     CrudUsuarioComponent,
+    ProyectoComponent,
   ],
   imports: [
     BrowserModule,
