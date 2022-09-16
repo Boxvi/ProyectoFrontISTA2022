@@ -141,13 +141,14 @@ div{
 
 }
 
-.contrasenia{
+.contrasenia {
     position: absolute;
     margin-top: 130px;
     color: black;
     margin-left: 40px;
 }
 
+.repetircontrasenia {
     position: absolute;
     margin-top: 170px;
     color: black;
@@ -155,7 +156,7 @@ div{
     text-align: center;
 }
 
-.inputContraseña{
+.inputContraseña {
     position: absolute;
     margin-top: 130px;
     color: black;
@@ -165,7 +166,7 @@ div{
     background-color: #B1E7E1;
 }
 
-.inputRepetir{
+.inputRepetir {
     position: absolute;
     margin-top: 180px;
     color: black;
