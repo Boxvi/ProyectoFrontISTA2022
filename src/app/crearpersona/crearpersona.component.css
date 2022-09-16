@@ -1,63 +1,491 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
-* {
-  box-sizing: border-box;
+.crear{
+  position: relative;
+  border: 1px;
+  width: 370px;
+  height: 450px;
+  background-color: white;
+  box-shadow: 2px 2px 5px black; 
+  border-radius: 20px;
 }
+.editar{
+  position: relative;
+  border: 1px;
 
-body {
-  background-color: #edeef6;
-  font-family: 'Poppins', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  margin: 0;
+  width: 370px;
+  height: 600px;
+  background-color: white;
+  box-shadow: 2px 2px 5px black; 
+  border-radius: 20px;
+
 }
-button {
-  background-color: #47a386;
-  border: 0;
+.separador {
+  width: 300px;
+  margin-left: 40px;
+  border-width: 2px;
+  margin-top: 100px;
+}
+.titulo {
+  background-color: #E8EC12;
+  position: absolute;
+  margin: 25px;
+  margin-left: 120px;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  color: #fff;
-  font-size: 14px;
-  padding: 10px 25px;
+  margin-top: 38px;
+  padding: 5px;
+  color: white;
 }
 
-.modal-container {
-  display: flex;
-  background-color: rgba(0, 0, 0, 0.3);
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  pointer-events: none;
-  opacity: 0;  
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  transition: opacity 0.3s ease;
+.cara {
+  margin-top: 10px;
+  margin-left: 55px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
 }
 
-.show {
-  pointer-events: auto;
-  opacity: 1;
+.cedula {
+  position: absolute;
+  margin-top: 75px;
+  color: black;
+  margin-left: 74px;
+
 }
 
-.modal {
-  background-color: #fff;
-  width: 600px;
-  max-width: 100%;
-  padding: 30px 50px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+.Nombre {
+  position: absolute;
+  margin-top: 10px;
+  color: black;
+  margin-left: 74px;
+
+}
+
+.Apellido {
+  position: absolute;
+  margin-top: 60px;
+  color: black;
+  margin-left: 74px;
+
+}
+
+.Direccion {
+  position: absolute;
+  margin-top: 110px;
+  color: black;
+  margin-left: 74px;
+
+}
+
+.Correo {
+  position: absolute;
+  margin-top: 160px;
+  color: black;
+  margin-left: 74px;
+
+}
+
+.inputNombre {
+  position: absolute;
+  margin-top: 10px;
+  color: black;
+  margin-left: 160px;
+  border-radius: 10px;
+  border: transparent;
+  background-color: #B1E7E1;
+}
+
+.inputApellido {
+  position: absolute;
+  margin-top: 60px;
+  color: black;
+  margin-left: 160px;
+  border-radius: 10px;
+  border: transparent;
+  background-color: #B1E7E1;
+}
+
+.inputDireccion {
+  position: absolute;
+  margin-top: 110px;
+  color: black;
+  margin-left: 160px;
+  border-radius: 10px;
+  border: transparent;
+  background-color: #B1E7E1;
+}
+
+.inputCorreo {
+  position: absolute;
+  margin-top: 160px;
+  color: black;
+  margin-left: 160px;
+  border-radius: 10px;
+  border: transparent;
+  background-color: #B1E7E1;
+}
+
+.inputCedula {
+  position: absolute;
+  margin-top: 75px;
+  color: black;
+  margin-left: 160px;
+  border-radius: 10px;
+  border: transparent;
+  background-color: #B1E7E1;
+}
+
+.cedula1 {
+  position: absolute;
+  margin-top: 60px;
+  color: black;
+  margin-left: 74px;
+
+}
+
+.Nombre1 {
+  position: absolute;
+  margin-top: 110px;
+  color: black;
+  margin-left: 74px;
+
+}
+
+.Apellido1 {
+  position: absolute;
+  margin-top: 160px;
+  color: black;
+  margin-left: 74px;
+
+}
+
+.Direccion1 {
+  position: absolute;
+  margin-top: 210px;
+  color: black;
+  margin-left: 74px;
+
+}
+
+.Correo1 {
+  position: absolute;
+  margin-top: 260px;
+  color: black;
+  margin-left: 74px;
+
+}
+
+.inputNombre1 {
+  position: absolute;
+  margin-top: 110px;
+  color: black;
+  margin-left: 160px;
+  border-radius: 10px;
+  border: transparent;
+  background-color: #B1E7E1;
+}
+
+.inputApellido1 {
+  position: absolute;
+  margin-top: 160px;
+  color: black;
+  margin-left: 160px;
+  border-radius: 10px;
+  border: transparent;
+  background-color: #B1E7E1;
+}
+
+.inputDireccion1 {
+  position: absolute;
+  margin-top: 210px;
+  color: black;
+  margin-left: 160px;
+  border-radius: 10px;
+  border: transparent;
+  background-color: #B1E7E1;
+}
+
+.inputCorreo1 {
+  position: absolute;
+  margin-top: 260px;
+  color: black;
+  margin-left: 160px;
+  border-radius: 10px;
+  border: transparent;
+  background-color: #B1E7E1;
+}
+
+.inputCedula1 {
+  position: absolute;
+  margin-top: 60px;
+  color: black;
+  margin-left: 160px;
+  border-radius: 10px;
+  border: transparent;
+  background-color: #B1E7E1;
+}
+
+.inputCedula2 {
+  position: absolute;
+  margin-top: 75px;
+  color: black;
+  margin-left: 74px;
+  border-radius: 10px;
+  border: transparent;
+  background-color:white;
+  width: 100px;
+  font-weight: bold;
+}
+
+.buscar {
+  margin-top: 133px;
+  margin-left: 265px;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+
+}
+
+
+
+.separador {
+  width: 300px;
+  margin-left: 40px;
+  border-width: 2px;
+}
+
+.usuario {
+  position: absolute;
+  margin-top: 5px;
+  color: black;
+  margin-left: 70px;
+}
+
+.inputUsuario {
+  position: absolute;
+  margin-top: 4px;
+  color: black;
+  margin-left: 140px;
+  border-radius: 10px;
+  border: transparent;
+  background-color: #B1E7E1;
+}
+
+.rol {
+  position: absolute;
+  margin-top: 50px;
+  color: black;
+  margin-left: 86px;
+}
+
+.checkbox {
+  position: absolute;
+  margin-top: 57px;
+  margin-left: 145px;
+
+
+}
+
+.checkbox1 {
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 145px;
+
+
+}
+
+.checkbox2 {
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 245px;
+
+
+}
+
+.checkbox3 {
+  position: absolute;
+  margin-top: 57px;
+  margin-left: 245px;
+
+
+}
+
+.contrasenia {
+  position: absolute;
+  margin-top: 130px;
+  color: black;
+  margin-left: 40px;
+}
+
+.repetircontrasenia {
+  position: absolute;
+  margin-top: 170px;
+  color: black;
+  margin-left: 40px;
   text-align: center;
 }
 
-.modal h1 {
-  margin: 0;
+.inputContraseña {
+  position: absolute;
+  margin-top: 130px;
+  color: black;
+  margin-left: 140px;
+  border-radius: 10px;
+  border: transparent;
+  background-color: #B1E7E1;
 }
 
-.modal p {
-  opacity: 0.7;
-  font-size: 14px;
+.inputRepetir {
+  position: absolute;
+  margin-top: 180px;
+  color: black;
+  margin-left: 140px;
+  border-radius: 10px;
+  border: transparent;
+  background-color: #B1E7E1;
+
 }
+
+.cancelar {
+  border-radius: 10px;
+  background-color: #DF2926;
+  border: transparent;
+  padding: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-top: 260px;
+  margin-left: 45px;
+  color: white;
+
+
+}
+
+.aceptar {
+  border-radius: 10px;
+  background-color: #2664DF;
+  border: transparent;
+  padding: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-left: 50px;
+  color: white;
+  margin-top: 350px;
+
+}
+
+.cancelar2 {
+  border-radius: 10px;
+  background-color: #DF2926;
+  border: transparent;
+  padding: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-top: 110px;
+  margin-left: 45px;
+  color: white;
+
+
+}
+
+.aceptar2 {
+  border-radius: 10px;
+  background-color: #2664DF;
+  border: transparent;
+  padding: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-left: 50px;
+  color: white;
+  margin-top: 210px;
+
+}
+
+.eliminar {
+  position: relative;
+  border: 1px;
+  width: 600px;
+  height: 200px;
+  background-color: white;
+  box-shadow: 2px 2px 5px black;
+  border-radius: 20px;
+
+}
+
+.advertencia {
+  width: 70px;
+  height: 70px;
+  margin-left: 250px;
+}
+
+.seguro {
+  margin-left: 10px;
+  text-align: justify;
+}
+
+.cancelar2 {
+  border-radius: 10px;
+  background-color: #DF2926;
+  border: transparent;
+  padding: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-top: 15px;
+  margin-left: 45px;
+  color: white;
+
+
+}
+
+.eliminarbtn {
+  border-radius: 10px;
+  background-color: green;
+  border: transparent;
+  padding: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-top: 15px;
+  margin-left: 150px;
+  color: white;
+
+
+}
+
+.confirmarGuardado {
+  position: relative;
+  border: 1px;
+  width: 500px;
+  height: 200px;
+  background-color: white;
+  box-shadow: 2px 2px 5px black; 
+  border-radius: 20px;
+
+}
+
+.confirmar {
+  border-radius: 10px;
+  background-color: green;
+  border: transparent;
+  padding: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-top: 15px;
+  margin-left: 80px;
+  color: white;
+
+
+}
+.advertencia2 {
+  width: 70px;
+  height: 70px;
+  margin-left: 200px;
+}
+
+.modal{
+  position: absolute; 
+  overflow: hidden; 
+  margin-left: 470px;
+  margin-top: 150px;
+}
+
+
+
+
