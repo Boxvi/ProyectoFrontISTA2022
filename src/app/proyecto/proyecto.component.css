@@ -189,11 +189,11 @@ input::-webkit-search-cancel-button {
 /* search input field */
 input[type=search] {
  
-   /* background: #ededed url(http://webdesignerwall.com/demo/expandable-search-form/images/search-icon.png) no-repeat 9px center; */
+   background: #ededed url(http://webdesignerwall.com/demo/expandable-search-form/images/search-icon.png) no-repeat 9px center;
    background-image: src="assets\img\x-error.png";
    border: solid 1px #ccc;
    padding: 9px 10px 9px 32px;
-   width: 55px;
+   width: 100px;
    
    -webkit-border-radius: 10em;
    -moz-border-radius: 10em;
@@ -204,7 +204,7 @@ input[type=search] {
    transition: all .5s;
 }
 input[type=search]:focus {
-   width: 130px;
+   width: 400px;
    background-color: #fff;
    border-color: #272e56;
    
