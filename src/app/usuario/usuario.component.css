@@ -16,18 +16,6 @@
     box-shadow: 2px 2px 15px black; 
 }
 
-div{
-    
-    position: relative;
-    border: 1px;
-    border-style: hidden;
-    width: 370px;
-    height: 600px;
-    background-color: white;
-    
-
-}
-
 .titulo {
     background-color: #E8EC12;
     position: absolute;
@@ -112,32 +100,35 @@ div{
     margin-left: 86px;
 }
 
-.checkbox{
+.checkbox {
     position: absolute;
     margin-top: 57px;
     margin-left: 145px;
-    
+
 
 }
-.checkbox1{
+
+.checkbox1 {
     position: absolute;
     margin-top: 100px;
     margin-left: 145px;
-    
+
 
 }
-.checkbox2{
+
+.checkbox2 {
     position: absolute;
     margin-top: 100px;
     margin-left: 245px;
-    
+
 
 }
-.checkbox3{
+
+.checkbox3 {
     position: absolute;
     margin-top: 57px;
     margin-left: 245px;
-    
+
 
 }
 

@@ -22,7 +22,7 @@
     <div>
       <div class="row">
         <div class="col-6">
-          <button style="margin-left:200px ;margin-bottom: 40px ;margin-right: 200px; color:white;background-color: #D9CF37; border-radius: 7px; border-color: transparent;"(click)="openPopup()">  +NUEVO USUARIO</button>
+          <button style="margin-left:200px ;margin-bottom: 40px ;margin-right: 200px; color:white;background-color: #D9CF37; border-radius: 7px; border-color: transparent;"[routerLink]="['/crudusuario']">  +NUEVO USUARIO</button>
         </div>
         <div class="col-6">
           <div class="input-group">
@@ -116,65 +116,4 @@
     </table>
     <img src="assets\img\logoista_opaco.png" style="height: 25%;width: 25%; margin-top:30px ;margin-left: 25px; position: relative;">
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    <div
-    class="modal"
-    style="position: absolute; overflow: hidden; "
-    role="dialog"
-    [ngStyle]="{'display':displayStyle}">
-    <div >
-          <div id="crear">
-              <label class="titulo"> Nuevo Usuario </label>
-              <img src="assets\img\015-cuaderno.png" class="cuaderno">
-              <br>
-              <label class="cedula" >Cedula:</label>
-              <input type="text" placeholder="Cedula" class="inputCedula">
-              <label class="Nombre">Juanito Perez</label>
-              <br>
-              <hr class="separador">
-              <label class="usuario" >Usuario:</label>
-              <input type="text" placeholder="Usuario" class="inputUsuario">
-              <label class="rol" >Roles:</label>
-              <input class="checkbox" type="checkbox">
-              <input class="checkbox1" type="checkbox">
-              <input class="checkbox2" type="checkbox">
-              <input class="checkbox3" type="checkbox">
-              
-              <label class="contrasenia" >Contraseña:</label>
-              <input type="text" placeholder="Contraseña" class="inputContraseña">
-              
-              <label class="repetircontrasenia" >Repetir <br> Contraseña :</label>
-              <input type="text" placeholder="Contraseña" class="inputRepetir">
-              
-              <button class="aceptar">ACEPTAR</button>
-              <button class="cancelar" (click)="closePopup()">CANCELAR</button>
-              
-        </div>
-    </div>
+  
