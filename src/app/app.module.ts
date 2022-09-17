@@ -18,6 +18,15 @@ import { UsuarioComponent } from './usuario/usuario.component';
 import { CrudUsuarioComponent } from './crud-usuario/crud-usuario.component';
 import { ProyectoComponent } from './proyecto/proyecto.component';
 
+//Angular Material
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTableModule} from '@angular/material/table';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core'
+import {MatSelectModule} from '@angular/material/select';
+import {FormsModule} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 
@@ -54,11 +63,19 @@ const routes: Routes=[
     UsuarioComponent,
     CrudUsuarioComponent,
     ProyectoComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSelectModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
