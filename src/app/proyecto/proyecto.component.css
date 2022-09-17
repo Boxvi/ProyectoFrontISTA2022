@@ -4,7 +4,7 @@
     padding-top:10px;
     width: 200px;
     height: 100%;
-    margin-top: 74px;
+    margin-top: 5%;
     background-color: rgba(186,200,215,255);
     position: fixed;
   
@@ -249,11 +249,12 @@ input::-webkit-input-placeholder {
 
 
 .boton:hover{
-background: #c09300;
+background: #624c05;
 }
 
 .boton:active{
 box-shadow: 0px 2px 0px 0px #a78000;
+filter: brightness(100);
 }
 
 /* Tabla */
@@ -379,4 +380,85 @@ h2::after{
    margin-top:-0.5%;
    margin-left:-0.5%;
    margin-bottom:-0.5%;
+ }
+
+ /* Notificaciones */
+ .confirmarGuardado {
+   position: center;
+   overflow: hidden; 
+   margin-left: 25%;
+   margin-top: 7%;
+   
+   border: 100px;
+   width: 500px;
+   height: 200px;
+   background-color: white;
+   box-shadow: 2px 2px 5px black;
+   border-color: #000; 
+   border-radius: 20px;
+ 
+ }
+ .advertencia2 {
+   width: 70px;
+   height: 70px;
+   margin-left: 5%;
+   margin-top: 1%;
+ }
+ .fondopapa{
+   background-color: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+ .contenedor form .detalles-proy{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   margin: 20px 0 12px 0;
+ }
+
+ form .detalles-proy .input-box{
+   margin-bottom: 15px;
+   width: calc(100% / 2 - 20px);
+ }
+ .detalles-proy .input-box .detalles{
+   
+   display: flex;
+   font-weight: 1000;
+   margin-bottom: 5px;
+   
+ }
+ .detalles-proy .input-box input{
+  display: flex;
+   height: 45px;
+   width: 100%;
+   padding-left: 1000px;
+   outline: none;
+   background-color: rgba(186,200,215,255);;
+   border-radius: 5px;
+   border: 1px solid #ccc;
+   padding-left: 15px;
+   font-size: 16px;
+   border-bottom-width: 2px;
+   transition: all 0.3 ease;
+
+
+ }
+ .detalles-proy .input-box input:focus,
+ .detalles-proy .input-box input:valid{
+   border-color: #c09300;
+ }
+
+ button{
+   height: 10%;
+   width: 30%;
+   outline: none;
+   color: #fff;
+   border: none;
+   font-size:18px ;
+   font-weight: 500;
+   border-radius: 5%;
+   letter-spacing: 1px;   
+   background: linear-gradient(135deg, #71b7eb, #9b59b6) ;
+ }
+ .aceptar{
+   margin-right: 10px; 
+   margin-top: 10px;
  }

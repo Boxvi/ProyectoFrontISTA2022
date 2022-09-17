@@ -79,7 +79,7 @@
 
 
       <input src="assets\img\x-error.png" type="search" placeholder="Buscar">
-      <a href="#" class="boton restructurar">Restructurar</a>
+      <a class="boton restructurar">Restructurar</a>
       <a class="boton nuevo" (click)="openPopupNuevo()">+ Nuevo</a>
 
     </div>
@@ -177,57 +177,43 @@
       </tbody>
     </table>
 
-
-    <div class="modal" role="dialog" [ngStyle]="{'display':displayNuevo}">
-
+<!-- POP-UP -->
+ <div class="modal" role="dialog" [ngStyle]="{'display':displayNuevo}">
       <div>
         <div class="crear">
           <div class="headPop-up">
             <h3 class="tituloCrearProyecto"> Crear Proyecto </h3>
             <hr class="lineaPop-Up">
           </div>
-
-          <form class="formularioProyecto">
-            <div class="superior">
-              <label class="labels">Nombre</label>
-              <input type="text" placeholder="Sistema Contable" class="txtNombre">
-              <label class="labels">Carrera</label>
-              <input type="text" placeholder="Tecnología Superior en Desarrollo de Software" class="txtCarrera">
-              <label class="labels">Evaluador</label>
-              <input type="text" placeholder="Williams Trelles" class="txtEvaluador">
-
-            </div>
-            <hr class="lineaIntermedia">
-            <div class="inferior">
-              <form class="fechas">
-
+          <!-- formulario -->
+          <div class="fondopapa">
+            <div class="contenedor">
+              <form action="#" >
+                <div class="detalles-proy">
+                  <div class="input-box">
+                    <span class="detalles">Nombre</span>
+                    <input type="text" placeholder="Ingrese el nombre del Proyecto" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="detalles">Carrera</span>
+                    <input type="text" placeholder="Ingrese la Carrera" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="detalles">Evaluador</span>
+                    <input type="text" placeholder="Ingrese el nombre del Evauador" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="detalles">Colaboradores</span>
+                    <input type="text" placeholder="Ingrese el nombre de los colaboradores" required>
+                  </div>
+                </div>
               </form>
             </div>
-
-
-          </form>
-
+          </div>
+          
           <button class="aceptar" (click)="openPopupGuardar()">ACEPTAR</button>
           <button class="cancelar" (click)="closePopupNuevo()">CANCELAR</button>
-
-
-        </div>
-      </div>
-
-
-    </div>
-
-    <div class="modal" role="dialog" style="margin-top:300px ;margin-left: 350px ;"
-      [ngStyle]="{'display':displayEliminar}">
-      <div>
-        <div class="eliminar">
-          <br>
-          <img src="assets\img\018-advertencia.png" class="advertencia">
-
-          <h3 class="seguro">¿Está seguro que desea eliminar esta persona?</h3>
-
-          <button class="eliminarbtn">ELIMINAR</button>
-          <button class="cancelar2" (click)="closePopup3()">CANCELAR</button>
+        
         </div>
       </div>
     </div>

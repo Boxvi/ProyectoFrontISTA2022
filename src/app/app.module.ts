@@ -63,7 +63,6 @@ const routes: Routes=[
     UsuarioComponent,
     CrudUsuarioComponent,
     ProyectoComponent,
-    
   ],
   imports: [
     BrowserModule,
