@@ -4,7 +4,7 @@
     padding-top:10px;
     width: 200px;
     height: 100%;
-    margin-top: 5%;
+    margin-top: 74px;
     background-color: rgba(186,200,215,255);
     position: fixed;
   
@@ -223,39 +223,60 @@ input::-webkit-input-placeholder {
 
 /* Botones */
 
-.boton{
-   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
-   text-align:center;
-   text-decoration: none;
-   font-family: 'Helvetica Neue', Helvetica, sans-serif;
-   display:inline-block;
-   color: #FFF;
-   background: #7F8C8D;
-   padding: 7px 20px;
-   white-space: nowrap;
-   -webkit-border-radius: 5px;
-   -moz-border-radius: 5px;
-   border-radius: 100px;
-   margin: 0px 5px;
-   -webkit-transition: all 0.2s ease-in-out;
-   -ms-transition: all 0.2s ease-in-out;
-   -moz-transition: all 0.2s ease-in-out;
-   -o-transition: all 0.2s ease-in-out;
-   transition: all 0.2s ease-in-out;
-   background: #c09300;
-   box-shadow: 0px 5px 0px 0px #a78000;
-   float :right;
+button {
+  margin: 20px;
+}
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 4px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+.btn-15 {
+  background:  #a2882b;
+  border: none;
+  z-index: 1;
+}
+.btn-15:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #272e56;
+  border-radius: 4px;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  transition: all 0.5s ease;
+}
+.btn-15:hover {
+  color: #fff;
+}
+.btn-15:hover:after {
+  left: 0;
+  width: 99%;
+}
+.btn-15:active {
+  top: 2px;
 }
 
 
-.boton:hover{
-background: #624c05;
-}
-
-.boton:active{
-box-shadow: 0px 2px 0px 0px #a78000;
-filter: brightness(100);
-}
 
 /* Tabla */
 .principal{
@@ -313,14 +334,15 @@ h2::after{
 .modal{
    position: center; 
    overflow: hidden; 
-   margin-left: 25%;
-   margin-top: 10%;
+   margin-left: 2%;
+   margin-top: 7%;
+   z-index: 1;
    
  }
  .crear{
    position: relative;
    border: 1px;
-   width: 1000px;
+   width: 97%;
    height: 500px;
    background-color: white;
    box-shadow: 2px 2px 5px black; 
@@ -372,23 +394,22 @@ h2::after{
  .inferior{
    margin-top:30%;
  }
- .lineaIntermedia{
-   height: 5px;
+ /* .lineaIntermedia{
+   height: 1px;
    background-color: #000000;
    border-color: #000000;
    margin-right:-0.5%;
    margin-top:-0.5%;
    margin-left:-0.5%;
    margin-bottom:-0.5%;
- }
+ } */
 
  /* Notificaciones */
  .confirmarGuardado {
    position: center;
    overflow: hidden; 
    margin-left: 25%;
-   margin-top: 7%;
-   
+   margin-top: 7%;   
    border: 100px;
    width: 500px;
    height: 200px;
@@ -404,32 +425,35 @@ h2::after{
    margin-left: 5%;
    margin-top: 1%;
  }
+ /* PAPA CREAR PROYECTO */
  .fondopapa{
    background-color: linear-gradient(135deg, #71b7e6, #9b59b6);
  }
  .contenedor form .detalles-proy{
    display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
-   margin: 20px 0 12px 0;
+   flex-wrap: wrap;  
+   justify-content:  space-between;
+   margin: 0px 50px 12px 50px;
  }
-
+/* Dsitribucion de los formularios */
  form .detalles-proy .input-box{
    margin-bottom: 15px;
-   width: calc(100% / 2 - 20px);
+   width: calc(100% / 2 - 2px);
+   
  }
  .detalles-proy .input-box .detalles{
    
-   display: flex;
+   display: flow-root;
+   position: fixed;
    font-weight: 1000;
    margin-bottom: 5px;
    
  }
  .detalles-proy .input-box input{
-  display: flex;
-   height: 45px;
-   width: 100%;
-   padding-left: 1000px;
+   display: flex;
+   height: 38px;
+   width: 50%;
+   padding-left: 100px;
    outline: none;
    background-color: rgba(186,200,215,255);;
    border-radius: 5px;
@@ -437,8 +461,9 @@ h2::after{
    padding-left: 15px;
    font-size: 16px;
    border-bottom-width: 2px;
+   margin-left: 25%;
    transition: all 0.3 ease;
-
+  
 
  }
  .detalles-proy .input-box input:focus,
@@ -448,7 +473,7 @@ h2::after{
 
  button{
    height: 10%;
-   width: 30%;
+   width: 20%;
    outline: none;
    color: #fff;
    border: none;
@@ -462,3 +487,15 @@ h2::after{
    margin-right: 10px; 
    margin-top: 10px;
  }
+ .formulario{
+  border-top: white;
+  margin-top: -29px;
+ }
+ .tablapapa, .enc, .cuer{
+  border: 2px solid black;
+  width: 300px;
+ }
+ .calendario{
+  margin-left: 142px;
+ }
+

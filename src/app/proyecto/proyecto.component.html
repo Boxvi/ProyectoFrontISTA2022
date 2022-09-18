@@ -79,8 +79,8 @@
 
 
       <input src="assets\img\x-error.png" type="search" placeholder="Buscar">
-      <a class="boton restructurar">Restructurar</a>
-      <a class="boton nuevo" (click)="openPopupNuevo()">+ Nuevo</a>
+      <a class="custom-btn btn-15">Restructurar</a>
+      <a class="custom-btn btn-15" (click)="openPopupNuevo()">+ Nuevo</a>
 
     </div>
 
@@ -177,8 +177,8 @@
       </tbody>
     </table>
 
-<!-- POP-UP -->
- <div class="modal" role="dialog" [ngStyle]="{'display':displayNuevo}">
+    <!-- POP-UP -->
+    <div class="modal" role="dialog" [ngStyle]="{'display':displayNuevo}">
       <div>
         <div class="crear">
           <div class="headPop-up">
@@ -188,32 +188,96 @@
           <!-- formulario -->
           <div class="fondopapa">
             <div class="contenedor">
-              <form action="#" >
+              <form action="#">
                 <div class="detalles-proy">
                   <div class="input-box">
                     <span class="detalles">Nombre</span>
                     <input type="text" placeholder="Ingrese el nombre del Proyecto" required>
                   </div>
                   <div class="input-box">
+                    <span class="detalles">Colaboradores</span>
+                    <input type="text" placeholder="Ingrese el nombre del Colaborador" required>
+                  </div>
+                  <div class="input-box">
                     <span class="detalles">Carrera</span>
                     <input type="text" placeholder="Ingrese la Carrera" required>
                   </div>
+                </div>
+
+              </form>
+
+
+
+              <form action="#" class="formulario">
+                <div class="detalles-proy">
                   <div class="input-box">
                     <span class="detalles">Evaluador</span>
-                    <input type="text" placeholder="Ingrese el nombre del Evauador" required>
-                  </div>
-                  <div class="input-box">
-                    <span class="detalles">Colaboradores</span>
-                    <input type="text" placeholder="Ingrese el nombre de los colaboradores" required>
+                    <input type="text" placeholder="Ingrese el nombre del Evaluador" required>
                   </div>
                 </div>
               </form>
             </div>
           </div>
+          <!-- PARTE INFERIOR DEL FORMULARIO -->
+          <div class="fondopapa">
+            <div class="contenedor">
+              <form action="#">
+                <div class="detalles-proy">
+                  
+                  <div class="calendario">
+                    <mat-form-field appearance="outline">
+                      <mat-label>Rango de Fecha</mat-label>
+                      <mat-date-range-input [rangePicker]="picker">
+                        <input matStartDate placeholder="Start date">
+                        <input matEndDate placeholder="End date">
+                      </mat-date-range-input>
+                      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                      <mat-date-range-picker class="cal-desplegable" #picker></mat-date-range-picker>
+                    </mat-form-field>
+                  </div>
+                  <div class="input-box">
+                    
+                     
+                    
+                    
+                  </div>
+                  <div class="input-box">
+                    <span class="detalles">Colaboradores</span>
+                    <input type="text" placeholder="Ingrese el nombre del Colaborador" required>
+                  </div>
+                                  
+                  <div class="input-box">
+                    <span class="detalles">Carrera</span>
+                    <input type="text" placeholder="Ingrese la Carrera" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="detalles">Carrera</span>
+                    <input type="text" placeholder="Ingrese la Carrera" required>
+                  </div><div class="input-box">
+                    <span class="detalles">Carrera</span>
+                    <input type="text" placeholder="Ingrese la Carrera" required>
+                  </div><div class="input-box">
+                    <span class="detalles">Carrera</span>
+                    <input type="text" placeholder="Ingrese la Carrera" required>
+                  </div>
+                </div>
+                
+
+              </form>
+
+
+
+              
+            </div>
+          </div>
+
+
           
+
+
           <button class="aceptar" (click)="openPopupGuardar()">ACEPTAR</button>
           <button class="cancelar" (click)="closePopupNuevo()">CANCELAR</button>
-        
+
         </div>
       </div>
     </div>
