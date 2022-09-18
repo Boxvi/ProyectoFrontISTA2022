@@ -79,8 +79,8 @@
 
 
       <input src="assets\img\x-error.png" type="search" placeholder="Buscar">
-      <a class="custom-btn btn-15">Restructurar</a>
-      <a class="custom-btn btn-15" (click)="openPopupNuevo()">+ Nuevo</a>
+      <button class="custom-btn btn-15">Restructurar</button>
+      <button type="button" data-bs-toggle="modal" class="custom-btn btn-15" data-bs-target="#modal1" (click)="openPopupNuevo()">+ Nuevo</button>
 
     </div>
 
@@ -178,7 +178,7 @@
     </table>
 
     <!-- POP-UP -->
-    <div class="modal" role="dialog" [ngStyle]="{'display':displayNuevo}">
+    <div class="modal" id="modal1" tabindex="-1" role="dialog" [ngStyle]="{'display':displayNuevo}" aria-hidden="true">
       <div>
         <div class="crear">
           <div class="headPop-up">
@@ -237,9 +237,7 @@
                   </div>
                   <div class="input-box">
                     
-                     
-                    
-                    
+                                         
                   </div>
                   <div class="input-box">
                     <span class="detalles">Colaboradores</span>
@@ -264,19 +262,14 @@
                 
 
               </form>
-
-
-
               
             </div>
           </div>
 
+            <button class="aceptar" (click)="openPopupGuardar()">ACEPTAR</button>
+            <button type="button" class="cancelar" data-bs-dismiss="#modal1"  data-bs-target="#cabecera" (click)="closePopupNuevo()">CANCELAR</button> cabecera
+                    
 
-          
-
-
-          <button class="aceptar" (click)="openPopupGuardar()">ACEPTAR</button>
-          <button class="cancelar" (click)="closePopupNuevo()">CANCELAR</button>
 
         </div>
       </div>
@@ -292,7 +285,7 @@
           <h3 class="seguro1">¿Está seguro de guardar los datos?</h3>
 
           <button class="confirmar">CONFIRMAR</button>
-          <button class="cancelar2" (click)="closePopupGuardar()">CANCELAR</button>
+          <button type="button" class="cancelar2" data-bs-dismiss="modal" (click)="closePopupGuardar()">CANCELAR</button> 
         </div>
       </div>
     </div>

@@ -243,12 +243,15 @@ button {
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
   outline: none;
+  margin-top: auto;
 }
 
 .btn-15 {
   background:  #a2882b;
   border: none;
   z-index: 1;
+  float: right;
+  margin-top: auto;
 }
 .btn-15:after {
   position: absolute;
@@ -333,12 +336,14 @@ h2::after{
 /* Pop-UP */
 .modal{
    position: center; 
-   overflow: hidden; 
+   
    margin-left: 2%;
    margin-top: 7%;
-   z-index: 1;
-   
+   overflow-x: auto;
+   backdrop-filter: initial;
  }
+
+
  .crear{
    position: relative;
    border: 1px;
