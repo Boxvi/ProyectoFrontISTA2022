@@ -1,159 +1,291 @@
-<div id="cabecera" >
-    <nav  class="navbar  px-3 mb-3"  style="background-color: rgba(39,46,86,255)"  >
-        <img src="assets\img\logo_ista.png" style="width: 5%;">
-          <h1 class="navbar-brand" href="#" style="color: aliceblue;">Administrador</h1>
-          <h1  class="navbar-brand" href="#" style="color: aliceblue;">Evaluador</h1>
-          <h1  class="navbar-brand" href="#" style="color: aliceblue;">Monitor</h1 >
-          <h1  class="navbar-brand" href="#" style="color: aliceblue;">Colaborador</h1 >
-          <ul class="nav nav-pills">
-      
-            <li class="nav-item dropdown">
-              <h1  class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" style="color: aliceblue;">Juan Perez <img src="assets\img\user_icon-icons.com_66546.png" alt=""style="width: 15%;"></h1 >
-              <ul class="dropdown-menu"style="background-color: gray;">
-                <li><a class="dropdown-item" href="#scrollspyHeading3" style="background-color: gray;" [routerLink]="['/confiusuario']">Perfil</a></li>
-                <li><a class="dropdown-item" href="#scrollspyHeading4">Cerrar Sesion</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>    
+<!-- <mat-form-field appearance="outline">
+  <mat-label>Rango de Fecha</mat-label>
+  <mat-date-range-input [rangePicker]="picker">
+    <input matStartDate placeholder="Start date">
+    <input matEndDate placeholder="End date">
+  </mat-date-range-input>
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-date-range-picker #picker></mat-date-range-picker>
+</mat-form-field> -->
+
+<div id="cabecera">
+  <nav class="navbar  px-3 mb-3" style="background-color: rgba(39,46,86,255)">
+    <img src="assets\img\logo_ista.png" style="width: 5%;">
+    <h1 class="navbar-brand" href="#" style="color: aliceblue;">Administrador</h1>
+    <h1 class="navbar-brand" href="#" style="color: aliceblue;">Evaluador</h1>
+    <h1 class="navbar-brand" href="#" style="color: aliceblue;">Monitor</h1>
+    <h1 class="navbar-brand" href="#" style="color: aliceblue;">Colaborador</h1>
+    <ul class="nav nav-pills">
+
+      <li class="nav-item dropdown">
+        <h1 class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"
+          style="color: aliceblue;">Juan Perez <img src="assets\img\user_icon-icons.com_66546.png" alt=""
+            style="width: 15%;"></h1>
+        <ul class="dropdown-menu" style="background-color: gray;">
+          <li><a class="dropdown-item" href="#scrollspyHeading3" style="background-color: gray;"
+              [routerLink]="['/confiusuario']">Perfil</a></li>
+          <li><a class="dropdown-item" href="#scrollspyHeading4">Cerrar Sesion</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 </div>
 <div id="nav">
-    <div class="titulonav">
+  <div class="titulonav">
     Participantes
-    </div>
-    
-    <div class="cuerporec">
+  </div>
+
+  <div class="cuerporec">
     <ul>
-        <li>Pedro Avila</li>
-        <li>Mateo Bravo</li>
-        <li>Antonio Calle</li>
-        <li>Manuel Silva</li>
-        <li>Juan mendez</li>
-        <li>Adrian Merchan</li>
+      <li>Pedro Avila</li>
+      <li>Mateo Bravo</li>
+      <li>Antonio Calle</li>
+      <li>Manuel Silva</li>
+      <li>Juan mendez</li>
+      <li>Adrian Merchan</li>
     </ul>
-    </div>
-    <div class="titulonav">
-        Secciones
-        </div>
-        
-        <div class="cuerporec">
-        <ul>
-           <li>Copia de Proyecto</li>
-           
-        </ul>
-        </div>
-        
- </div>
- <div>
-    
- </div>
- 
- <div class="principal">
+  </div>
+  <div class="titulonav">
+    Secciones
+  </div>
 
-    <hr>
-    <div>        
-              
-        <h2 class="tit">   PROYECTOS ISTA   </h2>
-        
-    </div>
-    <hr>
-    
-       
-     
+  <div class="cuerporec">
+    <ul>
+      <li>Copia de Proyecto</li>
 
-     <body>
+    </ul>
+  </div>
+
+</div>
+<div>
+
+</div>
+
+<div class="principal">
+
+  <hr>
+  <div>
+
+    <h2 class="tit"> PROYECTOS ISTA </h2>
+
+  </div>
+  <hr>
+
+
+
+
+  <body>
     <div class="fondo">
 
-          
-        <input src="assets\img\x-error.png" type="search" placeholder="Buscar">
-        <a href="#" class="boton restructurar">Restructurar</a>
-        <a href="#" class="boton nuevo">+ Nuevo</a> 
+
+      <input src="assets\img\x-error.png" type="search" placeholder="Buscar">
+      <button class="custom-btn btn-15">Restructurar</button>
+      <button type="button" data-bs-toggle="modal" class="custom-btn btn-15" data-bs-target="#modal1" (click)="openPopupNuevo()">+ Nuevo</button>
 
     </div>
 
 
-  <table class="content-table">
-    <thead>
-      <tr>
-        <th>N°</th>
-        <th>Nombre del Proyecto</th>
-        <th>Carrera</th>
-        <th>Fecha Inicio</th>
-        <th>Fecha Fin</th>
-        <th>Evaluador</th>
-        <th>Estado</th>
-        <th>Objetivos</th>
-        <th>Operaciones</th>
-      </tr>
-  
-    </thead>
-    <tbody >
-      <tr>
-        <td>1</td>
-        <td>Domenic</td>
-        <td>88,110</td>
-        <td>dcode</td>
-        <td>N°</td>
-        <td>Domenic</td>
-        <td ><img src="assets\img\x-error.png" width="30" height="30"></td>
-        <td><img src="assets\img\objetivos_proyecto.png" width="30" height="30"></td>
-        <td><img class="editar" src="assets\img\editar.png" width="30" height="30"> <img class ="borrar" src="assets\img\cubo-de-basura.png" width="30" height="30"></td>
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th>N°</th>
+          <th>Nombre del Proyecto</th>
+          <th>Carrera</th>
+          <th>Fecha Inicio</th>
+          <th>Fecha Fin</th>
+          <th>Evaluador</th>
+          <th>Estado</th>
+          <th>Objetivos</th>
+          <th>Operaciones</th>
+        </tr>
 
-      </tr>
-      <tr class="active-row">
-        <td>1</td>
-        <td>Sally</td>
-        <td>72,400</td>
-        <td>Students</td>
-        <td>Students</td>
-        <td>Sally</td>
-        <td ><img src="assets\img\checkmark.png" width="30" height="30"></td>
-        <td><img src="assets\img\objetivos_proyecto.png" width="30" height="30"></td>
-        <td><img class="editar" src="assets\img\editar.png" width="30" height="30"> <img class ="borrar" src="assets\img\cubo-de-basura.png" width="30" height="30"></td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Nick</td>
-        <td>52,300</td>
-        <td>dcode</td>
-        <td>Students</td>
-        <td>Sally</td>
-        <td ><img src="assets\img\desabilitado.png" width="30" height="30"></td>
-        <td><img src="assets\img\objetivos_proyecto.png" width="30" height="30"></td>
-        <td><img class="editar" src="assets\img\editar.png" width="30" height="30"> <img class ="borrar" src="assets\img\cubo-de-basura.png" width="30" height="30"></td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Nick</td>
-        <td>52,300</td>
-        <td>dcode</td>
-        <td>Students</td>
-        <td>Sally</td>
-        <td ><img src="assets\img\x-error.png" width="30" height="30"></td>
-        <td><img src="assets\img\objetivos_proyecto.png" width="30" height="30"></td>
-        <td><img class="editar" src="assets\img\editar.png" width="30" height="30"> <img class ="borrar" src="assets\img\cubo-de-basura.png" width="30" height="30"></td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Nick</td>
-        <td>52,300</td>
-        <td>dcode</td>
-        <td>Students</td>
-        <td>Sally</td>
-        <td ><img src="assets\img\x-error.png" width="30" height="30"></td>
-        <td><img src="assets\img\objetivos_proyecto.png" width="30" height="30"></td>
-        <td><img class="editar" src="assets\img\editar.png" width="30" height="30"> <img class ="borrar" src="assets\img\cubo-de-basura.png" width="30" height="30"></td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Nick</td>
-        <td>52,300</td>
-        <td>dcode</td>
-        <td>Students</td>
-        <td>Sally</td>
-        <td ><img src="assets\img\x-error.png" width="30" height="30"></td>
-        <td><img src="assets\img\objetivos_proyecto.png" width="30" height="30"></td>
-        <td><img class="editar" src="assets\img\editar.png" width="30" height="30"> <img class ="borrar" src="assets\img\cubo-de-basura.png" width="30" height="30"></td>
-      </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Domenic</td>
+          <td>88,110</td>
+          <td>dcode</td>
+          <td>N°</td>
+          <td>Domenic</td>
+          <td><img src="assets\img\x-error.png" width="30" height="30"></td>
+          <td><img src="assets\img\objetivos_proyecto.png" width="30" height="30"></td>
+          <td><img class="editar" src="assets\img\editar.png" width="30" height="30"> <img class="borrar"
+              src="assets\img\cubo-de-basura.png" width="30" height="30"></td>
+
+        </tr>
+        <tr class="active-row">
+          <td>1</td>
+          <td>Sally</td>
+          <td>72,400</td>
+          <td>Students</td>
+          <td>Students</td>
+          <td>Sally</td>
+          <td><img src="assets\img\checkmark.png" width="30" height="30"></td>
+          <td><img src="assets\img\objetivos_proyecto.png" width="30" height="30"></td>
+          <td><img class="editar" src="assets\img\editar.png" width="30" height="30"> <img class="borrar"
+              src="assets\img\cubo-de-basura.png" width="30" height="30"></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Nick</td>
+          <td>52,300</td>
+          <td>dcode</td>
+          <td>Students</td>
+          <td>Sally</td>
+          <td><img src="assets\img\desabilitado.png" width="30" height="30"></td>
+          <td><img src="assets\img\objetivos_proyecto.png" width="30" height="30"></td>
+          <td><img class="editar" src="assets\img\editar.png" width="30" height="30"> <img class="borrar"
+              src="assets\img\cubo-de-basura.png" width="30" height="30"></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Nick</td>
+          <td>52,300</td>
+          <td>dcode</td>
+          <td>Students</td>
+          <td>Sally</td>
+          <td><img src="assets\img\x-error.png" width="30" height="30"></td>
+          <td><img src="assets\img\objetivos_proyecto.png" width="30" height="30"></td>
+          <td><img class="editar" src="assets\img\editar.png" width="30" height="30"> <img class="borrar"
+              src="assets\img\cubo-de-basura.png" width="30" height="30"></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Nick</td>
+          <td>52,300</td>
+          <td>dcode</td>
+          <td>Students</td>
+          <td>Sally</td>
+          <td><img src="assets\img\x-error.png" width="30" height="30"></td>
+          <td><img src="assets\img\objetivos_proyecto.png" width="30" height="30"></td>
+          <td><img class="editar" src="assets\img\editar.png" width="30" height="30"> <img class="borrar"
+              src="assets\img\cubo-de-basura.png" width="30" height="30"></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Nick</td>
+          <td>52,300</td>
+          <td>dcode</td>
+          <td>Students</td>
+          <td>Sally</td>
+          <td><img src="assets\img\x-error.png" width="30" height="30"></td>
+          <td><img src="assets\img\objetivos_proyecto.png" width="30" height="30"></td>
+          <td><img class="editar" src="assets\img\editar.png" width="30" height="30"> <img class="borrar"
+              src="assets\img\cubo-de-basura.png" width="30" height="30"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- POP-UP -->
+    <div class="modal" id="modal1" tabindex="-1" role="dialog" [ngStyle]="{'display':displayNuevo}" aria-hidden="true">
+      <div>
+        <div class="crear">
+          <div class="headPop-up">
+            <h3 class="tituloCrearProyecto"> Crear Proyecto </h3>
+            <hr class="lineaPop-Up">
+          </div>
+          <!-- formulario -->
+          <div class="fondopapa">
+            <div class="contenedor">
+              <form action="#">
+                <div class="detalles-proy">
+                  <div class="input-box">
+                    <span class="detalles">Nombre</span>
+                    <input type="text" placeholder="Ingrese el nombre del Proyecto" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="detalles">Colaboradores</span>
+                    <input type="text" placeholder="Ingrese el nombre del Colaborador" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="detalles">Carrera</span>
+                    <input type="text" placeholder="Ingrese la Carrera" required>
+                  </div>
+                </div>
+
+              </form>
+
+
+
+              <form action="#" class="formulario">
+                <div class="detalles-proy">
+                  <div class="input-box">
+                    <span class="detalles">Evaluador</span>
+                    <input type="text" placeholder="Ingrese el nombre del Evaluador" required>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- PARTE INFERIOR DEL FORMULARIO -->
+          <div class="fondopapa">
+            <div class="contenedor">
+              <form action="#">
+                <div class="detalles-proy">
+                  
+                  <div class="calendario">
+                    <mat-form-field appearance="outline">
+                      <mat-label>Rango de Fecha</mat-label>
+                      <mat-date-range-input [rangePicker]="picker">
+                        <input matStartDate placeholder="Start date">
+                        <input matEndDate placeholder="End date">
+                      </mat-date-range-input>
+                      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                      <mat-date-range-picker class="cal-desplegable" #picker></mat-date-range-picker>
+                    </mat-form-field>
+                  </div>
+                  <div class="input-box">
+                    
+                                         
+                  </div>
+                  <div class="input-box">
+                    <span class="detalles">Colaboradores</span>
+                    <input type="text" placeholder="Ingrese el nombre del Colaborador" required>
+                  </div>
+                                  
+                  <div class="input-box">
+                    <span class="detalles">Carrera</span>
+                    <input type="text" placeholder="Ingrese la Carrera" required>
+                  </div>
+                  <div class="input-box">
+                    <span class="detalles">Carrera</span>
+                    <input type="text" placeholder="Ingrese la Carrera" required>
+                  </div><div class="input-box">
+                    <span class="detalles">Carrera</span>
+                    <input type="text" placeholder="Ingrese la Carrera" required>
+                  </div><div class="input-box">
+                    <span class="detalles">Carrera</span>
+                    <input type="text" placeholder="Ingrese la Carrera" required>
+                  </div>
+                </div>
+                
+
+              </form>
+              
+            </div>
+          </div>
+
+            <button class="aceptar" (click)="openPopupGuardar()">ACEPTAR</button>
+            <button type="button" class="cancelar" data-bs-dismiss="#modal1"  data-bs-target="#cabecera" (click)="closePopupNuevo()">CANCELAR</button> cabecera
+                    
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" role="dialog" style="margin-top:300px ;margin-left: 350px ;"
+      [ngStyle]="{'display':displayGuardar}">
+      <div>
+        <div class="confirmarGuardado">
+          <br>
+          <img src="assets\img\018-advertencia.png" class="advertencia2">
+
+          <h3 class="seguro1">¿Está seguro de guardar los datos?</h3>
+
+          <button class="confirmar">CONFIRMAR</button>
+          <button type="button" class="cancelar2" data-bs-dismiss="modal" (click)="closePopupGuardar()">CANCELAR</button> 
+        </div>
+      </div>
+    </div>
