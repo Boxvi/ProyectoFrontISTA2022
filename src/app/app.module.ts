@@ -17,6 +17,10 @@ import { AdministradorComponent } from './administrador/administrador.component'
 import { UsuarioComponent } from './usuario/usuario.component';
 import { CrudUsuarioComponent } from './crud-usuario/crud-usuario.component';
 import { ProyectoComponent } from './proyecto/proyecto.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
+
 
 
 
@@ -54,13 +58,16 @@ const routes: Routes=[
     UsuarioComponent,
     CrudUsuarioComponent,
     ProyectoComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [{provide: JWT_OPTIONS, useValue: JWT_OPTIONS},JwtHelperService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
