@@ -18,19 +18,8 @@ import { UsuarioComponent } from './usuario/usuario.component';
 import { CrudUsuarioComponent } from './crud-usuario/crud-usuario.component';
 import { ProyectoComponent } from './proyecto/proyecto.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
-
-
-//Angular Material
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatTableModule} from '@angular/material/table';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatNativeDateModule} from '@angular/material/core'
-import {MatSelectModule} from '@angular/material/select';
-import {FormsModule} from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
-
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -67,27 +56,16 @@ const routes: Routes=[
     UsuarioComponent,
     CrudUsuarioComponent,
     ProyectoComponent,
-    
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-<<<<<<< HEAD
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot(routes)
-=======
-    RouterModule.forRoot(routes),
-    BrowserAnimationsModule,
-    MatTableModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatSelectModule,
-    FormsModule,
-    ReactiveFormsModule
->>>>>>> 3c3ddf99bffb9f0776ad18aa60d6ff022aca9c08
   ],
-  providers: [{provide: JWT_OPTIONS, useValue: JWT_OPTIONS},JwtHelperService],
+  providers: [{provide: JWT_OPTIONS, useValue: JWT_OPTIONS}, JwtHelperService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

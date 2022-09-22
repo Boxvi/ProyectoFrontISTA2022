@@ -220,68 +220,38 @@ input:-moz-placeholder {
 input::-webkit-input-placeholder {
    color: #999;
 }
-
-/* Botones */
-
-button {
-  margin: 20px;
-}
-.custom-btn {
-  width: 130px;
-  height: 40px;
-  color: #fff;
-  border-radius: 4px;
-  padding: 10px 25px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 500;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
-  outline: none;
-  margin-top: auto;
-}
-
-.btn-15 {
-  background:  #a2882b;
-  border: none;
-  z-index: 1;
-  float: right;
-  margin-top: auto;
-}
-.btn-15:after {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 100%;
-  top: 0;
-  right: 0;
-  z-index: -1;
-  background-color: #272e56;
-  border-radius: 4px;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
-  transition: all 0.5s ease;
-}
-.btn-15:hover {
-  color: #fff;
-}
-.btn-15:hover:after {
-  left: 0;
-  width: 99%;
-}
-.btn-15:active {
-  top: 2px;
+.boton{
+   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+   text-align:center;
+   text-decoration: none;
+   font-family: 'Helvetica Neue', Helvetica, sans-serif;
+   display:inline-block;
+   color: #FFF;
+   background: #7F8C8D;
+   padding: 7px 20px;
+   white-space: nowrap;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 100px;
+   margin: 0px 5px;
+   -webkit-transition: all 0.2s ease-in-out;
+   -ms-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+   -o-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+   background: #c09300;
+   box-shadow: 0px 5px 0px 0px #a78000;
+   float :right;
 }
 
 
+.boton:hover{
+background: #c09300;
+}
 
-/* Tabla */
+.boton:active{
+box-shadow: 0px 2px 0px 0px #a78000;
+}
 .principal{
    color: #000000;
    padding-left: 205px;
@@ -305,7 +275,6 @@ button {
    
 } */
 
-/* Lineas Alberto */
 hr{
    height: 10px;
    background-color: #c09300;
@@ -332,175 +301,3 @@ h2::before{
 h2::after{
    right: -240px;
 } */
-
-/* Pop-UP */
-.modal{
-   position: center; 
-   
-   margin-left: 2%;
-   margin-top: 7%;
-   overflow-x: auto;
-   backdrop-filter: initial;
- }
-
-
- .crear{
-   position: relative;
-   border: 1px;
-   width: 97%;
-   height: 500px;
-   background-color: white;
-   box-shadow: 2px 2px 5px black; 
-   border-radius: 20px;
- }
- .headPop-up {
-   background-color: #272e56;
-   position: center;
-   margin: 25px;
-   margin-left: 0%;
-   margin-right: 0%;
-   border-top-left-radius: 20px;
-   border-top-right-radius: 20px;
-   border-bottom-left-radius: 0px;
-   border-bottom-right-radius: 0px;
-   border-top-right-radius: 20px;
-   margin-top: 5px;
-   padding: 5px;
-   color: white;
- }
-
- .lineaPop-Up{
-   height: 5px;
-   background-color: #c09300;
-   border-color: #c09300;
-   margin-right:-0.5%;
-   margin-top:-0.5%;
-   margin-left:-0.5%;
-   margin-bottom:-0.5%;
- }
- .txtNombre {
-   position: left;
-   color: black;
-   margin-left: 74px;
-   
- }
- .labels{
-   position: absolute;
-   margin-left: -30%;
-   color: #000;
- }
- .formularioProyecto{
-   margin-top:-2.5%;
-   height: 350px;
- }
- .superior{
-   margin-bottom:20%;
- }
- .inferior{
-   margin-top:30%;
- }
- /* .lineaIntermedia{
-   height: 1px;
-   background-color: #000000;
-   border-color: #000000;
-   margin-right:-0.5%;
-   margin-top:-0.5%;
-   margin-left:-0.5%;
-   margin-bottom:-0.5%;
- } */
-
- /* Notificaciones */
- .confirmarGuardado {
-   position: center;
-   overflow: hidden; 
-   margin-left: 25%;
-   margin-top: 7%;   
-   border: 100px;
-   width: 500px;
-   height: 200px;
-   background-color: white;
-   box-shadow: 2px 2px 5px black;
-   border-color: #000; 
-   border-radius: 20px;
- 
- }
- .advertencia2 {
-   width: 70px;
-   height: 70px;
-   margin-left: 5%;
-   margin-top: 1%;
- }
- /* PAPA CREAR PROYECTO */
- .fondopapa{
-   background-color: linear-gradient(135deg, #71b7e6, #9b59b6);
- }
- .contenedor form .detalles-proy{
-   display: flex;
-   flex-wrap: wrap;  
-   justify-content:  space-between;
-   margin: 0px 50px 12px 50px;
- }
-/* Dsitribucion de los formularios */
- form .detalles-proy .input-box{
-   margin-bottom: 15px;
-   width: calc(100% / 2 - 2px);
-   
- }
- .detalles-proy .input-box .detalles{
-   
-   display: flow-root;
-   position: fixed;
-   font-weight: 1000;
-   margin-bottom: 5px;
-   
- }
- .detalles-proy .input-box input{
-   display: flex;
-   height: 38px;
-   width: 50%;
-   padding-left: 100px;
-   outline: none;
-   background-color: rgba(186,200,215,255);;
-   border-radius: 5px;
-   border: 1px solid #ccc;
-   padding-left: 15px;
-   font-size: 16px;
-   border-bottom-width: 2px;
-   margin-left: 25%;
-   transition: all 0.3 ease;
-  
-
- }
- .detalles-proy .input-box input:focus,
- .detalles-proy .input-box input:valid{
-   border-color: #c09300;
- }
-
- button{
-   height: 10%;
-   width: 20%;
-   outline: none;
-   color: #fff;
-   border: none;
-   font-size:18px ;
-   font-weight: 500;
-   border-radius: 5%;
-   letter-spacing: 1px;   
-   background: linear-gradient(135deg, #71b7eb, #9b59b6) ;
- }
- .aceptar{
-   margin-right: 10px; 
-   margin-top: 10px;
- }
- .formulario{
-  border-top: white;
-  margin-top: -29px;
- }
- .tablapapa, .enc, .cuer{
-  border: 2px solid black;
-  width: 300px;
- }
- .calendario{
-  margin-left: 142px;
- }
-

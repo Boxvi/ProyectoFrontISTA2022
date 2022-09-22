@@ -285,6 +285,71 @@
     margin-left: 450px;
     margin-top: 100px;
 }
+.tit{
+    margin-left: 40%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    text-align: left;
+    
+    
+ }
+ button {
+    margin: 20px;
+  }
+  .custom-btn {
+    width: 130px;
+    height: 55px;
+    color: #fff;
+    border-radius: 4px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    margin-top: auto;
+    margin-right: 55%;
+  }
+  
+  .btn-15 {
+    background:  #a2882b;
+    border: none;
+    z-index: 1;
+    float: right;
+    margin-top: auto;
+  }
+  .btn-15:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #272e56;
+    border-radius: 4px;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    transition: all 0.5s ease;
+  }
+  .btn-15:hover {
+    color: #fff;
+  }
+  .btn-15:hover:after {
+    left: 0;
+    width: 99%;
+  }
+  .btn-15:active {
+    top: 2px;
+  }
+  
 
 
 

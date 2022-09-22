@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from '../models/user';
-import { LoginService } from '../services/login.service';
-import { Userlogin } from '../models/userlogin';
-import { FormControl } from '@angular/forms';
 import Swal from 'sweetalert2';
+import { Userlogin } from '../models/userlogin';
+import { LoginService } from '../services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -37,9 +35,9 @@ export class LoginComponent implements OnInit {
           title: 'Error',
           text: 'Credenciales incorrectas',
           icon: 'warning',
-          color: "#0c3255",
+          color: "#FDFEFE",
           confirmButtonColor:"#0c3255",
-          background: "#fbc02d",
+          background: "#EBEE93 ",
         })
       }
       )
@@ -49,5 +47,4 @@ export class LoginComponent implements OnInit {
 
   }
 
-  
 }

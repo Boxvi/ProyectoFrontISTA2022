@@ -4,4 +4,3 @@ export class Userlogin {
     password?: string;
     accessToken?:string;
   }
-  
