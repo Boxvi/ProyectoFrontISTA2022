@@ -1,7 +1,11 @@
 <nav id="navbar-example2" class="navbar  px-3 mb-3" style="background-color:rgba(39,46,86,255)">
     <img src="assets\img\logo_ista.png" style="width: 5%;">
-      <h1 class="navbar-brand" href="#" style="color: aliceblue; margin-right: 700px;">Administrador</h1>
+      <h1 class="navbar-brand" href="#" style="color: aliceblue;">Administrador</h1>
+      <h1  class="navbar-brand" href="#" style="color: aliceblue;">Evaluador</h1>
+      <h1  class="navbar-brand" href="#" style="color: aliceblue;">Monitor</h1 >
+      <h1  class="navbar-brand" href="#" style="color: aliceblue;">Colaborador</h1 >
       <ul class="nav nav-pills">
+  
         <li class="nav-item dropdown">
           <h1  class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" style="color: aliceblue;">Juan Perez <img src="assets\img\user_icon-icons.com_66546.png" alt=""style="width: 15%;"></h1 >
           <ul class="dropdown-menu"style="background-color: gray;">
@@ -12,13 +16,14 @@
       </ul>
     </nav>
     <br>
-    <h2 class="tit">   LISTADO DE USUARIOS   </h2>
-   
+    <hr>
+    <h4 class="tit"> LISTADO DE USUARIOS</h4>
+    <hr>
     <br>
     <div>
       <div class="row">
         <div class="col-6">
-          <button type="button" class="custom-btn btn-15"(click)="openPopup()">  +NUEVO USUARIO</button>
+          <button class="boton nuevo"(click)="openPopup()">  +NUEVO USUARIO</button>
         </div>
         <div class="col-6">
           <div class="input-group">
@@ -33,84 +38,29 @@
       <thead>
         <tr>
           <th >N°</th>
-          <th >Cedula</th>
           <th >Usuario</th>
+          <th >Fecha_creacion</th>
           <th >Rol</th>
           <th >Editar</th>
           <th >Eliminar</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-            
-          <th scope="row">1</th>
-          <td></td>
-          <td></td>
-          <td><div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-            </label>
-          </div></td>
-
-          
+        <tr *ngFor = "let usuario of Usuarios"  >
+          <td  >{{usuario.idusuario}}</td>
+          <td  >{{usuario.username}}</td>
+          <td  >{{usuario.fecha_creacion}}</td>
+          <td  >{{usuario.roles}}</td>
           <td><button type="button" style="border: transparent;background-color: transparent;"(click)="openPopup2()"><img src="assets\img\editar.png" alt="" style="width:30px;height:30px;"></button></td>
           <td><button type="button"style="border: transparent;background-color: transparent;" (click)="openPopup3()"><img src="assets\img\cubo-de-basura.png" alt=""style="width:30px;height:30px;"></button></td>
   
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td></td>
-          <td></td>
-          <td></td>
-
-          <td><button type="button" style="border: transparent;background-color: transparent;"><img src="assets\img\editar.png" alt="" style="width:30px;height:30px;"></button></td>
-          <td><button type="button"style="border: transparent;background-color: transparent;" ><img src="assets\img\cubo-de-basura.png" alt=""style="width:30px;height:30px;"></button></td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td></td>
-          <td></td>
-          <td></td>
-   
-          <td><button type="button" style="border: transparent;background-color: transparent;"><img src="assets\img\editar.png" alt="" style="width:30px;height:30px;"></button></td>
-          <td><button type="button"style="border: transparent;background-color: transparent;" ><img src="assets\img\cubo-de-basura.png" alt=""style="width:30px;height:30px;"></button></td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td colspan="2"></td>
-          <td></td>
- 
-          <td><button type="button" style="border: transparent;background-color: transparent;"><img src="assets\img\editar.png" alt="" style="width:30px;height:30px;"></button></td>
-          <td><button type="button"style="border: transparent;background-color: transparent;" ><img src="assets\img\cubo-de-basura.png" alt=""style="width:30px;height:30px;"></button></td>
-        </tr>
-        <tr>
-          <th scope="row">4</th>
-          <td colspan="2"></td>
-          <td></td>
-
-          <td><button type="button" style="border: transparent;background-color: transparent;"><img src="assets\img\editar.png" alt="" style="width:30px;height:30px;"></button></td>
-          <td><button type="button"style="border: transparent;background-color: transparent;" ><img src="assets\img\cubo-de-basura.png" alt=""style="width:30px;height:30px;"></button></td>
-        </tr>
-        <tr>
-          <th scope="row">5</th>
-          <td colspan="2"></td>
-          <td></td>
-
-          <td><button type="button" style="border: transparent;background-color: transparent;"><img src="assets\img\editar.png" alt="" style="width:30px;height:30px;"></button></td>
-          <td><button type="button"style="border: transparent;background-color: transparent;" ><img src="assets\img\cubo-de-basura.png" alt=""style="width:30px;height:30px;"></button></td>
-        </tr>
-        <tr>
-          <th scope="row">6</th>
-          <td colspan="2"></td>
-          <td></td>
-
-          <td><button type="button" style="border: transparent;background-color: transparent;"><img src="assets\img\editar.png" alt="" style="width:30px;height:30px;"></button></td>
-          <td><button type="button"style="border: transparent;background-color: transparent;" ><img src="assets\img\cubo-de-basura.png" alt=""style="width:30px;height:30px;"></button></td>
-        </tr>
+          
+         
+      </tr>
   
       </tbody>
     </table>
-    <img src="assets\img\logoista_opaco.png" style="height: 25%;width: 25%; margin-top:30px ;margin-left: 25px; position: relative;">
+    <img src="assets\img\logoista_opaco.png" style="height: 60%;width: 25%; margin-top:30px ;margin-left: 25px; position: relative;">
     
 
 

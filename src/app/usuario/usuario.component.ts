@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Usuario } from './usuario';
+import { UsuarioService } from './usuario.service';
 
 @Component({
   selector: 'app-usuario',
@@ -7,10 +10,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsuarioComponent implements OnInit {
 
-  constructor() { }
+  Usuarios: Usuario[]=[];
+  public Usuario:Usuario = new Usuario();
+  public titulo:string="Crear Usuario";
+  constructor(private repuestoService:UsuarioService,private router:Router,private activateRouter:ActivatedRoute) {}
 
   ngOnInit(): void {
+    this.repuestoService.getUsuarios().subscribe(
+      Usuarios => this.Usuarios=Usuarios
+      
+    );
+    
+    console.log(this.Usuarios);
+    this.cargarRepuesto()
+    
   }
+
+  cargarRepuesto(): void{
+    this.activateRouter.params.subscribe(params=>{
+      let id = params['id']
+      if(id){
+        this.repuestoService.getUsuario(id).subscribe((Usuario)=>this.Usuario=Usuario)
+      }
+    })
+  }
+
+
+
+
+
   displayStyle = "none";
   displayStyle2 = "none";
   displayStyle3 = "none";
@@ -42,6 +70,4 @@ export class UsuarioComponent implements OnInit {
   closePopup4() {
     this.displayStyle4 = "none";
   }
-  
-
 }

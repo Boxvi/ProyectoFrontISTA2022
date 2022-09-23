@@ -285,69 +285,62 @@
     margin-left: 450px;
     margin-top: 100px;
 }
-.tit{
+
+.boton{
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+    text-align:center;
+    text-decoration: none;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    display:inline-block;
+    color: #FFF;
+    background: #7F8C8D;
+    padding: 7px 20px;
+    white-space: nowrap;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 100px;
+    margin: 0px 5px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    background: #c09300;
+    box-shadow: 0px 5px 0px 0px #a78000;
+    float :right;
+    border: transparent;
+    margin-right: 350px;
+    margin-bottom: 30px;
+  }
+  
+  
+  .boton:hover{
+  background: #c09300;
+  }
+  
+  .boton:active{
+  box-shadow: 0px 2px 0px 0px #a78000;
+  }
+  
+  .tit{
     margin-left: 40%;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 30px;
+    font-size: 40px;
     text-align: left;
     
     
- }
- button {
-    margin: 20px;
   }
-  .custom-btn {
-    width: 130px;
-    height: 55px;
-    color: #fff;
-    border-radius: 4px;
-    padding: 10px 25px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-     7px 7px 20px 0px rgba(0,0,0,.1),
-     4px 4px 5px 0px rgba(0,0,0,.1);
-    outline: none;
-    margin-top: auto;
-    margin-right: 55%;
-  }
+  hr{
+    height: 10px;
+    background-color: #c09300;
+    margin-right:5%;
+    margin-left: 5%;
+    margin-top: 20px;
+    
+    opacity: 100%;
+    padding-left: -40px;
+    min-width: 200px;
   
-  .btn-15 {
-    background:  #a2882b;
-    border: none;
-    z-index: 1;
-    float: right;
-    margin-top: auto;
-  }
-  .btn-15:after {
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 100%;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    background-color: #272e56;
-    border-radius: 4px;
-     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-     7px 7px 20px 0px rgba(0,0,0,.1),
-     4px 4px 5px 0px rgba(0,0,0,.1);
-    transition: all 0.5s ease;
-  }
-  .btn-15:hover {
-    color: #fff;
-  }
-  .btn-15:hover:after {
-    left: 0;
-    width: 99%;
-  }
-  .btn-15:active {
-    top: 2px;
   }
   
 

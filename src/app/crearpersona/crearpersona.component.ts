@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router,ActivatedRoute } from '@angular/router';
+import { Persona } from './persona';
+import { PersonaService } from './persona.service';
 
 @Component({
   selector: 'app-crearpersona',
@@ -7,10 +10,48 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrearpersonaComponent implements OnInit {
 
-  constructor() { }
+  Personas: Persona[]=[];
+  public Persona:Persona = new Persona();
+  public titulo:string="Crear Persona";
+  constructor(private repuestoService:PersonaService,private router:Router,private activateRouter:ActivatedRoute) {
 
-  ngOnInit(): void {
-  }
+   }
+
+    ngOnInit(): void {
+      this.repuestoService.getPersonas().subscribe(
+        Personas => this.Personas=Personas
+      );
+  
+      this.cargarRepuesto()
+      
+    }
+
+    public create():void{
+      this.repuestoService.create(this.Persona).subscribe(
+        response=> this.router.navigate(['/crearpersona'])
+      )
+      
+    }
+  
+     cargarRepuesto(): void{
+      this.activateRouter.params.subscribe(params=>{
+        let id = params['id']
+        if(id){
+          this.repuestoService.getPersona(id).subscribe((Persona)=>this.Persona=Persona)
+        }
+      })
+    }
+
+    recargar():void{
+      window.location.reload()
+    }
+
+
+
+
+
+
+
   displayStyle = "none";
   displayStyle2 = "none";
   displayStyle3 = "none";

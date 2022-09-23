@@ -16,13 +16,15 @@
     </ul>
   </nav>
   <br>
-  <h4 style="color:black ;margin-top: 5px;margin-left: 550px;"> LISTADO DE PERSONAS</h4>
- 
+  <hr>
+  <h2 class="tit"> LISTADO DE PERSONAS</h2>
+ <hr>
   <br>
   <div>
     <div class="row">
       <div class="col-6">
-        <button style="margin-left:200px ;margin-bottom: 40px ;margin-right: 200px; color:white;background-color: #D9CF37; border-radius: 7px; border-color: transparent;"(click)="openPopup()">  +NUEVA PERSONA</button>
+        <button class="boton nuevo"(click)="openPopup()">  +NUEVA PERSONA</button>
+        <br>
       </div>
       <div class="col-6">
         <div class="input-group">
@@ -40,90 +42,29 @@
         <th >Cedula</th>
         <th>Nombre</th>
         <th >Apellido</th>
-        <th >Direccion</th>
+        <th >Telefono</th>
         <th>Correo</th>
         <th >Editar</th>
         <th >Eliminar</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-          
-        <th scope="row">1</th>
-        <td></td>
-        <td></td>
-        <td><div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-          <label class="form-check-label" for="flexCheckDefault">
-          </label>
-        </div></td>
-        <td></td>
-        
-        
+      <tr *ngFor = "let persona of Personas"  >
+        <td  >{{persona.cedula}}</td>
+        <td  >{{persona.nombre}}</td>
+        <td  >{{persona.apellido}}</td>
+        <td  >{{persona.telefono}}</td>
+        <td  >{{persona.email}}</td>
         <td><button type="button" style="border: transparent;background-color: transparent;"(click)="openPopup2()"><img src="assets\img\editar.png" alt="" style="width:30px;height:30px;"></button></td>
         <td><button type="button"style="border: transparent;background-color: transparent;" (click)="openPopup3()"><img src="assets\img\cubo-de-basura.png" alt=""style="width:30px;height:30px;"></button></td>
 
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-
-        <td><button type="button" style="border: transparent;background-color: transparent;"><img src="assets\img\editar.png" alt="" style="width:30px;height:30px;"></button></td>
-        <td><button type="button"style="border: transparent;background-color: transparent;" ><img src="assets\img\cubo-de-basura.png" alt=""style="width:30px;height:30px;"></button></td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
- 
-        <td><button type="button" style="border: transparent;background-color: transparent;"><img src="assets\img\editar.png" alt="" style="width:30px;height:30px;"></button></td>
-        <td><button type="button"style="border: transparent;background-color: transparent;" ><img src="assets\img\cubo-de-basura.png" alt=""style="width:30px;height:30px;"></button></td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2"></td>
-        <td></td>
-        <td></td>
-
-        <td><button type="button" style="border: transparent;background-color: transparent;"><img src="assets\img\editar.png" alt="" style="width:30px;height:30px;"></button></td>
-        <td><button type="button"style="border: transparent;background-color: transparent;" ><img src="assets\img\cubo-de-basura.png" alt=""style="width:30px;height:30px;"></button></td>
-      </tr>
-      <tr>
-        <th scope="row">4</th>
-        <td colspan="2"></td>
-        <td></td>
-        <td></td>
-
-        <td><button type="button" style="border: transparent;background-color: transparent;"><img src="assets\img\editar.png" alt="" style="width:30px;height:30px;"></button></td>
-        <td><button type="button"style="border: transparent;background-color: transparent;" ><img src="assets\img\cubo-de-basura.png" alt=""style="width:30px;height:30px;"></button></td>
-      </tr>
-      <tr>
-        <th scope="row">5</th>
-        <td colspan="2"></td>
-        <td></td>
-        <td></td>
-
-        <td><button type="button" style="border: transparent;background-color: transparent;"><img src="assets\img\editar.png" alt="" style="width:30px;height:30px;"></button></td>
-        <td><button type="button"style="border: transparent;background-color: transparent;" ><img src="assets\img\cubo-de-basura.png" alt=""style="width:30px;height:30px;"></button></td>
-      </tr>
-      <tr>
-        <th scope="row">6</th>
-        <td colspan="2"></td>
-        <td></td>
-        <td></td>
-
-        <td><button type="button" style="border: transparent;background-color: transparent;"><img src="assets\img\editar.png" alt="" style="width:30px;height:30px;"></button></td>
-        <td><button type="button"style="border: transparent;background-color: transparent;" ><img src="assets\img\cubo-de-basura.png" alt=""style="width:30px;height:30px;"></button></td>
-      </tr>
+        
+       
+    </tr>
 
     </tbody>
   </table>
-  <img src="assets\img\logoista_opaco.png" style="height: 25%;width: 25%; margin-top:30px ;margin-left: 25px; position: relative;">
+  <img src="assets\img\logoista_opaco.png" style="height: 60%;width: 25%; margin-top:30px ;margin-left: 25px; position: relative;">
   
 
 
@@ -134,59 +75,65 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div
+  <div
 class="modal"
 role="dialog"
 [ngStyle]="{'display':displayStyle}">
 <div >
   <div class="crear">
-    <h3 class="titulo"> Nueva Persona </h3>
-    <br>
-    <img src="assets\img\user_icon-icons.com_66546.png" class="cara">
-    <br>
-    <label class="cedula1" >Cedula:</label>
-    <input type="text" placeholder="Cedula" class="inputCedula1">
+    <form ngNavigateValidate (ngSubmit)="create()">
+      <h3 class="titulo"> Nueva Persona </h3>
+      <br>
+      <img src="assets\img\user_icon-icons.com_66546.png" class="cara">
+      <br>
+      <label class="cedula1" >Cedula:</label>
+      <input type="text" placeholder="Cedula" class="inputCedula1" [(ngModel)]="Persona.cedula" name="cedula">
+  
+      <label class="Nombre1" >Nombre:</label>
+      <input type="text" placeholder="Nombre" class="inputNombre1"[(ngModel)]="Persona.nombre" name="nombre">
+  
+      <label class="Apellido1" >Apellido:</label>
+      <input type="text" placeholder="Apellido" class="inputApellido1"[(ngModel)]="Persona.apellido" name="apellido">
+  
+      <label class="Direccion1" >Telefono:</label>
+      <input type="text" placeholder="Direccion" class="inputDireccion1"[(ngModel)]="Persona.telefono" name="telefono">
+  
+      <label class="Correo1" >Correo:</label>
+      <input type="text" placeholder="Correo" class="inputCorreo1"[(ngModel)]="Persona.email" name="email">
+      
+ 
+      
+      <button class="aceptar"   (click)="openPopup4()" >ACEPTAR</button>
+      <button class="cancelar" (click)="closePopup()">CANCELAR</button>
 
-    <label class="Nombre1" >Nombre:</label>
-    <input type="text" placeholder="Nombre" class="inputNombre1">
 
-    <label class="Apellido1" >Apellido:</label>
-    <input type="text" placeholder="Apellido" class="inputApellido1">
 
-    <label class="Direccion1" >Direccion:</label>
-    <input type="text" placeholder="Direccion" class="inputDireccion1">
-
-    <label class="Correo1" >Correo:</label>
-    <input type="text" placeholder="Correo" class="inputCorreo1">
-    
-    
-    <button class="aceptar" (click)="openPopup4()">ACEPTAR</button>
-    <button class="cancelar" (click)="closePopup()">CANCELAR</button>
      
 
+    </form>
     </div>
     </div>
 
    
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -222,8 +169,6 @@ role="dialog"
     
     <button class="aceptar2" (click)="openPopup4()">ACEPTAR</button>
     <button class="cancelar2 " (click)="closePopup2()">CANCELAR</button>
-     
-
     </div>
     </div>
 </div>
@@ -264,9 +209,8 @@ style="margin-top:300px ;margin-left: 350px ;"
 
 <h3 class="seguro1">¿Está seguro de guardar los datos?</h3>
 
-<button class="confirmar">CONFIRMAR</button>
+<button class="confirmar"(click)="closePopup4()" (click)="closePopup()"  (click)="recargar()"   role="button">CONFIRMAR</button>
 <button class="cancelar2"(click)="closePopup4()">CANCELAR</button>
 </div>
     </div>
 </div>
- 
