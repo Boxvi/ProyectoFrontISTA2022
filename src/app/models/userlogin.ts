@@ -1,6 +1,13 @@
 export class Userlogin {
     
-    username?: string;
-    password?: string;
-    accessToken?:string;
+    username!: String;
+    password!: string;
+    accessToken!:string;
+  }
+
+  export interface respose{
+    
+      accessToken:String; 
+      tokenType: String
+    
   }

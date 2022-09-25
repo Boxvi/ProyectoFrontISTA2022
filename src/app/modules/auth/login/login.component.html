@@ -1,0 +1,32 @@
+<form class="example-form">
+
+    <img src="assets\img\logoLogin.png" style= "width: 45%; ;margin-top: 15px;margin-top: 50px;margin-left: 320px;">
+   <br>
+   <br>
+   <h3 style="color:darkgoldenrod ;margin-top: 5px;margin-left: 430px;"> SISTEMA DE GESTION DE PROYECTOS</h3>
+   <br>
+   <div class="form-floating mb-3" style="margin-left:360px ; margin-right: 400px;" >
+   <!-- 
+     <input [(ngModel)]="userRequest.username" [ngModelOptions]="{standalone: true}"> 
+   -->  
+   <input type="text"   placeholder="name@example.com" class="form-control"  [(ngModel)]="userRequest.username" [ngModelOptions]="{standalone: true}" >
+     <label  for="floatingInput">USUARIO</label>
+   
+  
+   </div>
+   <br>
+   <div class="form-floating" style="margin-left:360px ; margin-right: 400px;">
+     <input type="password" class="form-control" placeholder="Password"  [(ngModel)]="userRequest.password" [ngModelOptions]="{standalone: true}" >
+     <label for="floatingPassword">CONTRASEÑA</label>
+         
+   </div>
+   <br>
+   <button style="width: 150px;height:50px;margin-left:600px ; margin-right: 400px; color:azure;background-color: darkblue; border-radius: 7px; border-color: transparent;"(click)="loginAuth()">  INGRESAR</button>
+   <br>
+   <br>
+   <a style="color: darkblue;margin-left: 350px;" routerLink="/auth/restablecercontra" >¿Has olvidado tu contraseña?</a>
+   
+  
+  
+  </form>
+  

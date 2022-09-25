@@ -1,0 +1,549 @@
+
+.crear{
+    position: relative;
+    border: 1px;
+    width: 370px;
+    height: 450px;
+    background-color: white;
+    box-shadow: 2px 2px 5px black; 
+    border-radius: 20px;
+  }
+  .editar{
+    position: relative;
+    border: 1px;
+  
+    width: 370px;
+    height: 600px;
+    background-color: white;
+    box-shadow: 2px 2px 5px black; 
+    border-radius: 20px;
+  
+  }
+  .separador {
+    width: 300px;
+    margin-left: 40px;
+    border-width: 2px;
+    margin-top: 100px;
+  }
+  .titulo {
+    background-color: #E8EC12;
+    position: absolute;
+    margin: 25px;
+    margin-left: 120px;
+    border-radius: 5px;
+    margin-top: 38px;
+    padding: 5px;
+    color: white;
+  }
+  
+  .cara {
+    margin-top: 10px;
+    margin-left: 55px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+  }
+  
+  .cedula {
+    position: absolute;
+    margin-top: 75px;
+    color: black;
+    margin-left: 74px;
+  
+  }
+  
+  .Nombre {
+    position: absolute;
+    margin-top: 10px;
+    color: black;
+    margin-left: 74px;
+  
+  }
+  
+  .Apellido {
+    position: absolute;
+    margin-top: 60px;
+    color: black;
+    margin-left: 74px;
+  
+  }
+  
+  .Direccion {
+    position: absolute;
+    margin-top: 110px;
+    color: black;
+    margin-left: 74px;
+  
+  }
+  
+  .Correo {
+    position: absolute;
+    margin-top: 160px;
+    color: black;
+    margin-left: 74px;
+  
+  }
+  
+  .inputNombre {
+    position: absolute;
+    margin-top: 10px;
+    color: black;
+    margin-left: 160px;
+    border-radius: 10px;
+    border: transparent;
+    background-color: #B1E7E1;
+  }
+  
+  .inputApellido {
+    position: absolute;
+    margin-top: 60px;
+    color: black;
+    margin-left: 160px;
+    border-radius: 10px;
+    border: transparent;
+    background-color: #B1E7E1;
+  }
+  
+  .inputDireccion {
+    position: absolute;
+    margin-top: 110px;
+    color: black;
+    margin-left: 160px;
+    border-radius: 10px;
+    border: transparent;
+    background-color: #B1E7E1;
+  }
+  
+  .inputCorreo {
+    position: absolute;
+    margin-top: 160px;
+    color: black;
+    margin-left: 160px;
+    border-radius: 10px;
+    border: transparent;
+    background-color: #B1E7E1;
+  }
+  
+  .inputCedula {
+    position: absolute;
+    margin-top: 75px;
+    color: black;
+    margin-left: 160px;
+    border-radius: 10px;
+    border: transparent;
+    background-color: #B1E7E1;
+  }
+  
+  .cedula1 {
+    position: absolute;
+    margin-top: 60px;
+    color: black;
+    margin-left: 74px;
+  
+  }
+  
+  .Nombre1 {
+    position: absolute;
+    margin-top: 110px;
+    color: black;
+    margin-left: 74px;
+  
+  }
+  
+  .Apellido1 {
+    position: absolute;
+    margin-top: 160px;
+    color: black;
+    margin-left: 74px;
+  
+  }
+  
+  .Direccion1 {
+    position: absolute;
+    margin-top: 210px;
+    color: black;
+    margin-left: 74px;
+  
+  }
+  
+  .Correo1 {
+    position: absolute;
+    margin-top: 260px;
+    color: black;
+    margin-left: 74px;
+  
+  }
+  
+  .inputNombre1 {
+    position: absolute;
+    margin-top: 110px;
+    color: black;
+    margin-left: 160px;
+    border-radius: 10px;
+    border: transparent;
+    background-color: #B1E7E1;
+  }
+  
+  .inputApellido1 {
+    position: absolute;
+    margin-top: 160px;
+    color: black;
+    margin-left: 160px;
+    border-radius: 10px;
+    border: transparent;
+    background-color: #B1E7E1;
+  }
+  
+  .inputDireccion1 {
+    position: absolute;
+    margin-top: 210px;
+    color: black;
+    margin-left: 160px;
+    border-radius: 10px;
+    border: transparent;
+    background-color: #B1E7E1;
+  }
+  
+  .inputCorreo1 {
+    position: absolute;
+    margin-top: 260px;
+    color: black;
+    margin-left: 160px;
+    border-radius: 10px;
+    border: transparent;
+    background-color: #B1E7E1;
+  }
+  
+  .inputCedula1 {
+    position: absolute;
+    margin-top: 60px;
+    color: black;
+    margin-left: 160px;
+    border-radius: 10px;
+    border: transparent;
+    background-color: #B1E7E1;
+  }
+  
+  .inputCedula2 {
+    position: absolute;
+    margin-top: 75px;
+    color: black;
+    margin-left: 74px;
+    border-radius: 10px;
+    border: transparent;
+    background-color:white;
+    width: 100px;
+    font-weight: bold;
+  }
+  
+  .buscar {
+    margin-top: 133px;
+    margin-left: 265px;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+  
+  }
+  
+  
+  
+  .separador {
+    width: 300px;
+    margin-left: 40px;
+    border-width: 2px;
+  }
+  
+  .usuario {
+    position: absolute;
+    margin-top: 5px;
+    color: black;
+    margin-left: 70px;
+  }
+  
+  .inputUsuario {
+    position: absolute;
+    margin-top: 4px;
+    color: black;
+    margin-left: 140px;
+    border-radius: 10px;
+    border: transparent;
+    background-color: #B1E7E1;
+  }
+  
+  .rol {
+    position: absolute;
+    margin-top: 50px;
+    color: black;
+    margin-left: 86px;
+  }
+  
+  .checkbox {
+    position: absolute;
+    margin-top: 57px;
+    margin-left: 145px;
+  
+  
+  }
+  
+  .checkbox1 {
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 145px;
+  
+  
+  }
+  
+  .checkbox2 {
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 245px;
+  
+  
+  }
+  
+  .checkbox3 {
+    position: absolute;
+    margin-top: 57px;
+    margin-left: 245px;
+  
+  
+  }
+  
+  .contrasenia {
+    position: absolute;
+    margin-top: 130px;
+    color: black;
+    margin-left: 40px;
+  }
+  
+  .repetircontrasenia {
+    position: absolute;
+    margin-top: 170px;
+    color: black;
+    margin-left: 40px;
+    text-align: center;
+  }
+  
+  .inputContraseña {
+    position: absolute;
+    margin-top: 130px;
+    color: black;
+    margin-left: 140px;
+    border-radius: 10px;
+    border: transparent;
+    background-color: #B1E7E1;
+  }
+  
+  .inputRepetir {
+    position: absolute;
+    margin-top: 180px;
+    color: black;
+    margin-left: 140px;
+    border-radius: 10px;
+    border: transparent;
+    background-color: #B1E7E1;
+  
+  }
+  
+  .cancelar {
+    border-radius: 10px;
+    background-color: #DF2926;
+    border: transparent;
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 260px;
+    margin-left: 45px;
+    color: white;
+  
+  
+  }
+  
+  .aceptar {
+    border-radius: 10px;
+    background-color: #2664DF;
+    border: transparent;
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-left: 50px;
+    color: white;
+    margin-top: 350px;
+  
+  }
+  
+  .cancelar2 {
+    border-radius: 10px;
+    background-color: #DF2926;
+    border: transparent;
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 110px;
+    margin-left: 45px;
+    color: white;
+  
+  
+  }
+  
+  .aceptar2 {
+    border-radius: 10px;
+    background-color: #2664DF;
+    border: transparent;
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-left: 50px;
+    color: white;
+    margin-top: 210px;
+  
+  }
+  
+  .eliminar {
+    position: relative;
+    border: 1px;
+    width: 600px;
+    height: 200px;
+    background-color: white;
+    box-shadow: 2px 2px 5px black;
+    border-radius: 20px;
+  
+  }
+  
+  .advertencia {
+    width: 70px;
+    height: 70px;
+    margin-left: 250px;
+  }
+  
+  .seguro {
+    margin-left: 10px;
+    text-align: justify;
+  }
+  
+  .cancelar2 {
+    border-radius: 10px;
+    background-color: #DF2926;
+    border: transparent;
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 15px;
+    margin-left: 45px;
+    color: white;
+  
+  
+  }
+  
+  .eliminarbtn {
+    border-radius: 10px;
+    background-color: green;
+    border: transparent;
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 15px;
+    margin-left: 150px;
+    color: white;
+  
+  
+  }
+  
+  .confirmarGuardado {
+    position: relative;
+    border: 1px;
+    width: 500px;
+    height: 200px;
+    background-color: white;
+    box-shadow: 2px 2px 5px black; 
+    border-radius: 20px;
+    margin-left: 0%;
+  
+  }
+  
+  .confirmar {
+    border-radius: 10px;
+    background-color: green;
+    border: transparent;
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 15px;
+    margin-left: 80px;
+    color: white;
+  
+  
+  }
+  .advertencia2 {
+    width: 70px;
+    height: 70px;
+    margin-left: 200px;
+  }
+  
+  .modal{
+    position: absolute; 
+    overflow: hidden; 
+    margin-left: 470px;
+    margin-top: 150px;
+  }
+  .boton{
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+    text-align:center;
+    text-decoration: none;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    display:inline-block;
+    color: #FFF;
+    background: #7F8C8D;
+    padding: 7px 20px;
+    white-space: nowrap;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 100px;
+    margin: 0px 5px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    background: #c09300;
+    box-shadow: 0px 5px 0px 0px #a78000;
+    float :right;
+    border: transparent;
+    margin-right: 350px;
+    margin-bottom: 30px;
+  }
+  
+  
+  .boton:hover{
+  background: #c09300;
+  }
+  
+  .boton:active{
+  box-shadow: 0px 2px 0px 0px #a78000;
+  }
+  
+  .tit{
+    margin-left: 40%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    text-align: left;
+    
+    
+  }
+  hr{
+    height: 10px;
+    background-color: #c09300;
+    margin-right:5%;
+    margin-left: 5%;
+    margin-top: 20px;
+    
+    opacity: 100%;
+    padding-left: -40px;
+    min-width: 200px;
+  
+  }
+  
+  
+  
+  
+  
