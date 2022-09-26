@@ -32,4 +32,7 @@ export class PersonaService {
     const path =`${this.urlEndPoint}/${persona.idpersona}` ;
     return this.http.delete(path);
   }
+  getRoken(){
+    return localStorage.getItem('token')||'';
+  }
 }
