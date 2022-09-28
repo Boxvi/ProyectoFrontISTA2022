@@ -28,13 +28,14 @@ export class LoginComponent implements OnInit {
     sessionStorage.clear;
 
     this.LoginService.Login(this.userRequest).subscribe(
-      (data: any) => {
-        
-          localStorage.setItem("token", data.accessToken);
+      data => {
+        sessionStorage.clear;
+        sessionStorage.setItem('user', JSON.stringify(data));
+          localStorage.setItem("token", JSON.stringify(data));
           this.router
             .navigate(["/panelusuario/proyecto/administrador"])
             .then(() => {
-              window.location.reload();
+              
             });
         
       },

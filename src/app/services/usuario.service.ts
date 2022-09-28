@@ -11,8 +11,7 @@ import { AuthUser } from '../models/authuser';
 export class UsuarioService {
 
   private urlEndPoint:string='http://localhost:8080/api/usuarios';
-  private urlEndPoint2:string='http://localhost:8080/api/auth/signup';
-  private httpHeaders =new HttpHeaders({ 'Content-Type': 'application/json'})
+  private httpHeaders =new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization':'Bearer '+JSON.parse(sessionStorage['user']).accessToken })
   
   
   constructor(private http: HttpClient) { }
@@ -21,8 +20,8 @@ export class UsuarioService {
     return this.http.get(this.urlEndPoint).pipe(map(response=>response as Usuario[]));
   }
 
-  create(usuarioa:AuthUser):Observable<AuthUser[]>{
-      return this.http.post<AuthUser[]>(this.urlEndPoint2,usuarioa,{headers:this.httpHeaders})
+  create(usuarioa:AuthUser):Observable<AuthUser>{
+      return this.http.post<AuthUser>(this.urlEndPoint,usuarioa,{headers:this.httpHeaders})
   }
 
   getUsuario(id:Usuario):Observable<Usuario>{

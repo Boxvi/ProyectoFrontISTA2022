@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { User } from '../../models/user';
 import { CookieService } from 'ngx-cookie-service';
 import { LoginService } from '../../services/login.service';
+import { Credenciales } from 'src/app/models/credenciales';
 
 @Component({
   selector: 'app-user',
@@ -12,10 +13,10 @@ import { LoginService } from '../../services/login.service';
 export class UserComponent implements OnInit {
 
   panelOpenState = false;
-  public persona:User=new User();
+  public persona:Credenciales=new Credenciales();
  //Maneja el estado de carga de esta pagina
  issloading=true;
- 
+ public rol?:String="";
  //Obtine el nombre completo de rol correspondiente
  
   constructor(private router:Router, private loginservice:LoginService)
@@ -27,11 +28,12 @@ export class UserComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.persona.rol="AMD"
     if(JSON.parse(localStorage['token'])!=""){
       
-      //desencriptar token obtiene rol
-      console.log('descrincpataaa token')
+      //datos de usuario rol username
+      this.persona=JSON.parse(sessionStorage['user']);
+//obtencion de rol de usuario
+      this.rol=JSON.parse(sessionStorage['user']).authorities[0].authority
     }else{
       window.localStorage.clear();
       localStorage.removeItem("user");
@@ -43,11 +45,9 @@ export class UserComponent implements OnInit {
   }
 
   logout():void{
-    window.localStorage.clear();
     sessionStorage.clear;
     sessionStorage.removeItem('token')
     localStorage.removeItem("token");
-    sessionStorage.setItem('token', JSON.stringify(""));
     this.router.navigate(['/auth/login']).then(() => {
       window.location.reload();
     });

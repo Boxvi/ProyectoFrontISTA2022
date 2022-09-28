@@ -9,15 +9,15 @@ import { map, Observable } from 'rxjs';
 export class PersonaService {
 
   private urlEndPoint:string='http://localhost:8080/api/personas';
-  private httpHeaders =new HttpHeaders({ 'Content-Type': 'application/json' })
+  private httpHeaders =new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization':'Bearer '+JSON.parse(sessionStorage['user']).accessToken })
   constructor(private http: HttpClient) { }
 
   getPersonas():Observable <Persona[]>{
     return this.http.get(this.urlEndPoint).pipe(map(response=>response as Persona[]));
   }
 
-  create(persona:Persona):Observable<Persona[]>{
-      return this.http.post<Persona[]>(this.urlEndPoint,persona,{headers:this.httpHeaders})
+  create(persona:Persona):Observable<Persona>{
+      return this.http.post<Persona>(this.urlEndPoint,persona,{headers:this.httpHeaders})
   }
 
   getPersona(id:Persona):Observable<Persona>{

@@ -17,19 +17,6 @@ export class GuarUserdGuard implements CanActivate {
   user: String = "";
   constructor(private router: Router, private service:LoginService) {}
 
-  hasUser():boolean{
-    if (localStorage.getItem('user')!="" || localStorage.getItem('user')!=null) {
-      console.log('entraaa')
-      console.log(localStorage.getItem('user'))
-      return true;
-    }else{
-      console.log('nooo')
-      console.log(localStorage.getItem('user'))
-      //this.router.navigate([""])
-      return false;
-    }
-  }
-
   canActivate() {
       if(this.service.IsloggedIn()){
         return true;

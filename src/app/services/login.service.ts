@@ -3,22 +3,23 @@ import { Injectable } from '@angular/core';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { respose, Userlogin } from '../models/userlogin';
 import { Observable } from 'rxjs';
+import { Credenciales } from '../models/credenciales';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  private urlEndPoint:string='http://deploybackend2022-env.eba-367yt4y5.us-east-1.elasticbeanstalk.com/api/auth';
+  private urlEndPoint:string='http://localhost:8080/api/auth';
 
   private httpHeaders = new HttpHeaders({'Content-Type':'application/json'})
   
   constructor(private http:HttpClient,  private jwtHelper: JwtHelperService) { }
  
 
-  Login(userRequest: Userlogin):Observable<respose>{
+  Login(userRequest: Userlogin):Observable<Credenciales>{
     //console.log(userRequest.username, userrequest.password)
-      return this.http.post<respose>(this.urlEndPoint+"/login",userRequest);
+      return this.http.post<Credenciales>(this.urlEndPoint+"/login",userRequest);
   }
   
 

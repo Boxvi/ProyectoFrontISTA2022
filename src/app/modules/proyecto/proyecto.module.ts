@@ -49,7 +49,7 @@ const routers: Routes = [
     FormsModule,
     ReactiveFormsModule,
     MaterialModule
-  ],providers:[{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi:true}],
+  ],
   exports: [RouterModule]
 })
 
