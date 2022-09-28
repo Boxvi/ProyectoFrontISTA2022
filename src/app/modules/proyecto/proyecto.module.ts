@@ -29,7 +29,8 @@ const routers: Routes = [
   {path: 'ventaadmin',component:VentaAdminComponent, canActivate:[GuarUserdGuard]},
   {path: 'verificarpassword', component:VerificarpasswordComponent, canActivate:[GuarUserdGuard]},
   {path: 'proyecto', component:ProyectoComponent, canActivate:[GuarUserdGuard]},
-  {path: 'mensajeconfirmacion', component: MensajeconfirmacionComponent, canActivate:[GuarUserdGuard]}
+  {path: 'mensajeconfirmacion', component: MensajeconfirmacionComponent, canActivate:[GuarUserdGuard]},
+  {path: 'carrera',component: CarreraComponent, canActivate:[GuarUserdGuard]}
 ]
 
 @NgModule({

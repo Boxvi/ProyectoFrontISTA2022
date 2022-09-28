@@ -180,7 +180,7 @@
    background-color: darkgoldenrod;
    position: absolute;
    margin: 25px;
-   margin-left: 115px;
+   margin-left: 155px;
    border-radius: 5px;
    padding: 5px;
    color: white;
@@ -195,7 +195,7 @@
    position: absolute;
  }
  .cuadernoe{
-   margin-top: 70px;
+   margin-top: 50px;
    margin-left: 180px;
    width: 70px;
    height: 70px;
@@ -425,19 +425,19 @@
    position: absolute;
    margin-top: 145px;
    color: rgb(0, 0, 0);
-   margin-left: 60px;
+   margin-left: 125px;
  }
  .teditar1{
    position: absolute;
    margin-top: 175px;
    color: rgb(0, 0, 0);
-   margin-left: 60px;
+   margin-left: 120px;
  }
  .teditar2{
    position: absolute;
-   margin-top: 175px;
+   margin-top: 185px;
    color: rgb(0, 0, 0);
-   margin-left: 55px;
+   margin-left: 125px;
  }
  .titulonav{
     
