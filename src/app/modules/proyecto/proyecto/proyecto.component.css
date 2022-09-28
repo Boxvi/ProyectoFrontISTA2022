@@ -1,82 +1,4 @@
-
- #nav{
-    padding: 3px;
-    padding-top:10px;
-    width: 200px;
-    height: 100%;
-    margin-top: 74px;
-    background-color: rgba(186,200,215,255);
-    position: fixed;
-  
- }
- #cabecera{
-   background-color: rgba(39,46,86,255);
-   position: fixed;
-   margin-left: 0px;
-   height: 10px;
-   width: 100%;
-   margin: 0 auto;
-   
- }
-
- 
- .titulonav{
-   
-    padding-top: 5px;
-    padding-right: 0pt;
-    padding-bottom: 5px;
-    padding-left: 4px;
-    font-size: 16pt;
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-    background-color:rgba(39,46,86,255);
-
- }
- 
- .cuerporec{
-   
-    margin-top: 4px;
-    margin-right: 0pt;
-    margin-bottom: 10px;
-    margin-left: 0pt;
- }
- 
- .cuerporec ul{
-    margin-top: 5px;
-    margin-right: 10px;
-    margin-bottom: 20px;
-    margin-left: 0px;
-    padding-top: 0pt;
-    padding-right: 0pt;
-    padding-bottom: 0pt;
-    padding-left: 1px;
-    list-style-type: none;
-    list-style-image: none;
-    list-style-position: outside;
- }
- 
- .cuerporec li{
-    list-style-type: none;
-    padding-left: 12px;
-    font-size: 12pt;
-    color: #000000;
-    padding-bottom: 2px;
-    margin-top: 1px;
-    margin-right: 0pt;
-    margin-bottom: 1px;
-    margin-left: 0pt;
-      
-    
- }
-
- 
- 
- .cuerporec a{
-    text-decoration: none;
- }
- * {
-   font-family: sans-serif; /* Change your font family */
- }
+proyecto.component.css
  
  .fondo{
    background: rgb(252, 252, 252);
@@ -84,7 +6,9 @@
    align-items: center;
    padding: 10px;
  }
-
+ .encabezado{
+  margin-top: -7%;
+ }
  .content-table {
    border-collapse: collapse;
    margin: 25px 0;
@@ -111,7 +35,7 @@
  
  .content-table th,
  .content-table td {
-   padding: 12px 15px;
+   padding: 12px 12px;
  }
  
  .content-table tbody tr {
@@ -220,7 +144,7 @@ input:-moz-placeholder {
 input::-webkit-input-placeholder {
    color: #999;
 }
-.boton{
+button{
    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
    text-align:center;
    text-decoration: none;
@@ -254,9 +178,7 @@ box-shadow: 0px 2px 0px 0px #a78000;
 }
 .principal{
    color: #000000;
-   padding-left: 205px;
    padding-bottom: 500px;
-   
    padding-top: 100px;
 }
 .tit{
@@ -264,8 +186,6 @@ box-shadow: 0px 2px 0px 0px #a78000;
    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Tahoma, Geneva, Verdana, sans-serif;
    font-size: 40px;
    text-align: left;
-   
-   
 }
 /* h2{
       
@@ -301,3 +221,77 @@ h2::before{
 h2::after{
    right: -240px;
 } */
+
+.modal{
+   position: center; 
+   overflow: hidden; 
+   margin-left: 25%;
+   margin-top: 10%;
+   
+ }
+ .crear{
+   position: relative;
+   border: 1px;
+   width: 1000px;
+   height: 500px;
+   background-color: white;
+   box-shadow: 2px 2px 5px black; 
+   border-radius: 20px;
+   z-index: 1;
+
+ }
+ .headPop-up {
+   background-color: #272e56;
+   position: center;
+   margin: 25px;
+   margin-left: 0%;
+   margin-right: 0%;
+   border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
+   border-bottom-left-radius: 0px;
+   border-bottom-right-radius: 0px;
+   border-top-right-radius: 20px;
+   margin-top: 5px;
+   padding: 5px;
+   color: white;
+ }
+
+ .lineaPop-Up{
+   height: 5px;
+   background-color: #c09300;
+   border-color: #c09300;
+   margin-right:-0.5%;
+   margin-top:-0.5%;
+   margin-left:-0.5%;
+   margin-bottom:-0.5%;
+ }
+ .txtNombre {
+   position: left;
+   color: black;
+   margin-left: 74px;
+   
+ }
+ .labels{
+   position: absolute;
+   margin-left: -30%;
+   color: #000;
+ }
+ .formularioProyecto{
+   margin-top:-2.5%;
+   height: 350px;
+ }
+ .superior{
+   margin-bottom:20%;
+ }
+ .inferior{
+   margin-top:30%;
+ }
+ .lineaIntermedia{
+   height: 5px;
+   background-color: #000000;
+   border-color: #000000;
+   margin-right:-0.5%;
+   margin-top:-0.5%;
+   margin-left:-0.5%;
+   margin-bottom:-0.5%;
+ }

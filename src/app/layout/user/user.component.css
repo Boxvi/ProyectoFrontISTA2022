@@ -65,3 +65,328 @@
     height: auto;
     min-height: 60px;
   }
+   /* Pop-UP */
+ .modal {
+  position: center;
+  margin-left: 6%;
+  margin-top: 5%;
+  height: 100%;
+
+}
+
+.modal-dialog {
+  position: relative;
+  border: 1px;
+  width: 90%;
+  height: 550px;
+  background-color: white;
+  box-shadow: 2px 2px 5px black;
+  border-radius: 20px;
+}
+
+.modal-header {
+  background-color: #272e56;
+  
+  margin: 25px;
+  margin-left: -0.2%;
+  margin-right: -0.2%;
+  margin-top: -0.2%;
+
+  color: white;
+}
+
+
+.modalTitle{
+  margin-left: 40%;
+  position: center;
+}
+.lineaPop-Up{
+  height: 10px;
+  background-color: #c09300;
+margin-left: -1.6%;
+margin-right:-1.6%;
+  margin-top: -4.5%;
+  opacity: 100%;
+  min-width: 200px;
+
+}
+.modal-content{
+  z-index: 0;
+}
+.txtNombre {
+  position: left;
+  color: black;
+  margin-left: 74px;
+
+}
+
+.labels {
+  position: absolute;
+  margin-left: -30%;
+  color: #000;
+}
+
+.formularioProyecto {
+  margin-top: -2.5%;
+  height: 350px;
+}
+
+.superior {
+  margin-bottom: 20%;
+}
+
+.inferior {
+  margin-top: 30%;
+}
+.confirmarGuardado {
+  position: center;
+  overflow: hidden;
+  margin-left: 25%;
+  margin-top: 7%;
+  border: 100px;
+  width: 500px;
+  height: 200px;
+  background-color: white;
+  box-shadow: 2px 2px 5px black;
+  border-color: #000;
+  border-radius: 20px;
+
+}
+
+.advertencia2 {
+  width: 70px;
+  height: 70px;
+  margin-left: 5%;
+  margin-top: 1%;
+}
+
+.contenedor form .detalles-proy {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0px 50px 12px 50px;
+ 
+}
+/* Dsitribucion de los formularios */
+form .detalles-proy .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 2px);
+
+}
+form .detalles-proy .input-box1 {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 2px);
+}
+.cbox{
+  display: flex;
+  height: 30px;
+  width: 58%;  
+  outline: none;
+  background-color: rgba(186, 200, 215, 255);
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  margin-left: 25%;
+  transition: all 0.3 ease;
+  margin-left: 32%;
+}
+.cboxizq{
+  display: flex;
+  height: 30px;
+  width: 50%;  
+  outline: none;
+  background-color: rgba(186, 200, 215, 255);
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  margin-left: 25%;
+  transition: all 0.3 ease;
+  margin-left: 25%;
+}
+
+.detalles-proy .input-box  .detalles {
+
+  display: flow-root;
+  position: fixed;
+  font-weight: 1000;
+  margin-bottom: 5px;
+  color: black;
+
+}
+.detalles-proy .input-box1 .detalles {
+
+  display: flow-root;
+  position: fixed;
+  font-weight: 1000;
+  margin-bottom: 5px;
+  color: black;
+
+}
+.detalles-proy .input-box .detalles1 {
+
+  display: flow-root;
+  position: fixed;
+  font-weight: 1000;
+  margin-bottom: 5px;
+  color: black;
+
+}
+
+
+.detalles-proy .input-box input {
+  display: flex;
+  height: 30px;
+  width: 50%;  
+  outline: none;
+  background-color: rgba(186, 200, 215, 255);
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  margin-left: 25%;
+  transition: all 0.3 ease;
+
+
+}
+.detalles-proy .input-box1 input {
+  display: flex;
+  height: 30px;
+  width: 58%;  
+  outline: none;
+  background-color: rgba(186, 200, 215, 255);
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  margin-left: 32%;
+  transition: all 0.3 ease;
+
+}
+
+
+.detalles-proy .input-box input:focus,
+.detalles-proy .input-box input:valid {
+  border-color: #c09300;
+}
+@media (max-width: 584px){
+  .contenedor{
+    max-width: 100%;
+  }
+  form .detalles-proy .input-box1 {
+    margin-bottom: 15px;
+    width: 100%;
+   
+  }
+  .contenedor form .detalles-proy {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .detalles-proy::-webkit-scrollbar{
+    width: 0;
+  }
+  
+
+}
+
+.boton {
+  
+  height: 7%;
+  width: 35%;
+  outline: none;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5%;
+  letter-spacing: 1px;
+  
+}
+
+.aceptar {
+  background-color: #133783;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.cancelar {
+  background-color: red;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.aceptare {
+  background-color: #133783;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.cancelare {
+  background-color: red;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+  
+
+
+
+
+
+.formulario {
+  border-top: white;
+  margin-top: -29px;
+}
+
+.formulario-inferior {
+  border-top: white;
+  margin-top: -170px;
+  margin-left: 480px;
+  border-style: none;
+  margin-right: -600px;  
+  width: 1000px;
+  background: none;
+  justify-content: space-between;
+}
+
+
+.formulario-inferior .input-box .detalles{
+  margin-right: 150px;
+    
+  position: absolute;
+}
+.formulario-inferior .input-box input{
+  width: 70%;
+  margin-left: 50%;
+  position: relative;
+}
+.modal-body .contenedor form{
+  border-bottom: none;
+}
+
+
+.calendario {
+  margin-left:8%;
+  width: 100%;
+  
+}
+
+.input-calendar {
+
+  display: flex;
+  font-weight: 100;
+  margin-bottom: 1px;
+  width: 100%;
+  
+  
+}
+
+.input-calendar .detalles {
+  color: black;
+  font-weight: 1000;
+  margin-top: 20px;
+  justify-content: space-between;
+
+
+}

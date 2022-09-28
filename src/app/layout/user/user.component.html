@@ -469,3 +469,225 @@
     </div>
   </ng-container>
 </section>
+
+<div class="modal fade" id="ModalProyectoNuevo" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle"
+  data-bs-backdrop="static">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="tituloCrearProyecto modalTitle"> Crear Proyecto </h3>
+
+      </div>
+      <!-- formulario -->
+
+      <div class="modal-body">
+        <hr class="lineaPop-Up">
+        <div class="contenedor">
+          <form action="#">
+            <div class="detalles-proy">
+              <div class="input-box">
+                <span class="detalles">Nombre</span>
+                <input type="text" placeholder="Ingrese el nombre del Proyecto" required>
+              </div>
+              <div class="input-box1">
+                <span class="detalles">Colaboradores</span>
+                <select name="colab" class="cbox">
+                  <option disabled>Elija un colaborador</option>
+                  <option value="colab1">Pedro Perez</option>
+                  <option value="colab1">Ramiro Ramirez</option>
+                  <option value="colab1">Gonzalo Gonzalez</option>
+                  <option value="colab1">Luis Cordero</option>
+                </select>
+
+              </div>
+              <div class="input-box">
+                <span class="detalles">Carrera</span>
+                <select name="carrera" class="cboxizq">
+                  <option disabled>Elija una Carrera</option>
+                  <option value="carrera1">Tecnologia superior en Desarrollo de Software</option>
+                  <option value="carrera2">Tecnologia superior en Análisis Financiero</option>
+                  <option value="carrera3">Ciberseguridad</option>
+                  <option value="carrera4">Entrenamiento Deportivo</option>
+                </select>
+              </div>
+            </div>
+          </form>
+
+          <form action="#" class="formulario">
+            <div class="detalles-proy">
+              <div class="input-box">
+                <span class="detalles">Evaluador</span>
+                <input type="text" placeholder="Ingrese el nombre del Evaluador" required>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- PARTE INFERIOR DEL FORMULARIO -->
+      <div class="modal-body">
+        <div class="contenedor">
+          <form action="#">
+            <div class="detalles-proy">
+
+              <div class="input-calendar">
+                <span class="detalles">Fechas</span>
+                <div class="calendario">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Rango de Fecha</mat-label>
+                    <mat-date-range-input [rangePicker]="picker">
+                      <input matStartDate placeholder="Fecha Inicio">
+                      <input matEndDate placeholder="Fecha Fin">
+                    </mat-date-range-input>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-picker class="cal-desplegable" #picker></mat-date-range-picker>
+                  </mat-form-field>
+                </div>
+
+              </div>
+              <div class="input-box">
+                <span class="detalles">Tipo</span>
+                <input type="text" placeholder="Ingrese el tipo de proyecto" required>
+              </div>
+            </div>
+          </form>
+          <form action="#" class="formulario-inferior">
+            <div class="detalles-proy">
+              <div class="input-box">
+                <span class="detalles">Objetivo Estratégico</span>
+                <input type="text" placeholder="Ingrese el Objetivo Estratégico" required>
+              </div>
+            </div>
+            <div class="detalles-proy">
+              <div class="input-box">
+                <span class="detalles">Objetivo Táctico</span>
+                <input type="text" placeholder="Ingrese el Objetivo Táctico" required>
+              </div>
+            </div>
+            <div class="detalles-proy">
+              <div class="input-box">
+                <span class="detalles">Objetivo Operativo</span>
+                <input type="text" placeholder="Ingrese el Objetivo Operativo" required>
+              </div>
+            </div>
+            <div class="detalles-proy">
+              <div class="input-box">
+                <span class="detalles">Estrategia</span>
+                <input type="text" placeholder="Ingrese la estrategia" required>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="boton cancelar" data-bs-dismiss="modal">CANCELAR</button>
+        <!-- <button class="aceptar" (click)="openPopupGuardar()">ACEPTAR</button>
+           -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DIALOGO DE EDITAR -->
+<!-- POP-UP -->
+<!-- <div class="modal" role="dialog" [ngStyle]="{'display':displayEstructurar}"> -->
+<div class="modal fade" id="ModalProyectoEditar" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle"
+data-bs-backdrop="static">
+  <div class="crear">
+    <div class="modal-header">
+      <h3 class="tituloCrearProyecto"> Editar Proyecto </h3>
+      <hr class="lineaPop-Up">
+    </div>
+    <!-- formulario -->
+    <div class="modal-body">
+      <div class="contenedor">
+        <form action="#">
+          <div class="detalles-proy">
+            <div class="input-box">
+              <span class="detalles">Nombre</span>
+              <input type="text" placeholder="Ingrese el nombre del Proyecto" required>
+            </div>
+            <div class="input-box1">
+              <span class="detalles">Colaboradores</span>
+              <select name="colab" class="cbox">
+                <option disabled>Elija un colaborador</option>
+                <option value="colab1">Pedro Perez</option>
+                <option value="colab1">Ramiro Ramirez</option>
+                <option value="colab1">Gonzalo Gonzalez</option>
+                <option value="colab1">Luis Cordero</option>
+              </select>
+            </div>
+            <div class="input-box">
+              <span class="detalles">Carrera</span>
+              <select name="carrera" class="cboxizq">
+                <option disabled>Elija una Carrera</option>
+                <option value="carrera1">Tecnologia superior en Desarrollo de Software</option>
+                <option value="carrera2">Tecnologia supeior en Análisis Financiero</option>
+                <option value="carrera3">Ciberseguridad</option>
+                <option value="carrera4">Entrenamiento Deportivo</option>
+              </select>
+            </div>
+          </div>
+
+        </form>
+
+
+
+        <form action="#" class="formulario">
+          <div class="detalles-proy">
+            <div class="input-box">
+              <span class="detalles">Evaluador</span>
+              <input type="text" placeholder="Ingrese el nombre del Evaluador" required>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- PARTE INFERIOR DEL FORMULARIO -->
+    <div class="modal-body">
+      <div class="contenedor">
+        <form action="#">
+          <div class="detalles-proy">
+
+            <div class="input-calendar">
+              <span class="detalles">Fechas</span>
+              <div class="calendario">
+                <mat-form-field appearance="outline">
+                  <mat-label>Rango de Fecha</mat-label>
+                  <mat-date-range-input [rangePicker]="picker">
+                    <input matStartDate placeholder="Fecha Inicio">
+                    <input matEndDate placeholder="Fecha Fin">
+                  </mat-date-range-input>
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-date-range-picker #picker></mat-date-range-picker>
+                </mat-form-field>
+              </div>
+
+            </div>
+
+          </div>
+        </form>
+        <form action="#" class="formulario-inferior1">
+          <div class="detalles-proy">
+          </div>
+          <div class="detalles-proy">
+            <div class="input-box">
+              <span class="detalles1">Tipo</span>
+              <input type="text" placeholder="Ingrese el tipo de proyecto" required>
+            </div>
+          </div>
+        </form>
+
+
+
+
+      </div>
+    </div>
+
+
+
+
+
+    <!-- <button class="aceptare" (click)="openPopupGuardar()">ACEPTAR</button> -->
+    <button class="cancelare" data-bs-dismiss="modal">CANCELAR</button>
+  </div>
+</div>

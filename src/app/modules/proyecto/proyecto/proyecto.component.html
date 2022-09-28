@@ -1,40 +1,30 @@
-<div id="nav">
-  <div class="titulonav">Participantes</div>
+proyecto.component.html
+<div>
 
-  <div class="cuerporec">
-    <ul>
-      <li>Pedro Avila</li>
-      <li>Mateo Bravo</li>
-      <li>Antonio Calle</li>
-      <li>Manuel Silva</li>
-      <li>Juan mendez</li>
-      <li>Adrian Merchan</li>
-    </ul>
-  </div>
-  <div class="titulonav">Secciones</div>
-
-  <div class="cuerporec">
-    <ul>
-      <li>Copia de Proyecto</li>
-    </ul>
-  </div>
 </div>
-<div></div>
 
 <div class="principal">
-  <hr />
-  <div>
-    <h2 class="tit">PROYECTOS ISTA</h2>
+  <div class ="encabezado">
+    <hr>
+    <div>
+  
+      <h2 class="tit"> PROYECTOS ISTA </h2>
+  
+    </div>
+    <hr>
   </div>
-  <hr />
 
   <body>
     <div class="fondo">
-      <input src="assets\img\x-error.png" type="search" placeholder="Buscar" />
-      <a href="" class="boton restructurar">Restructurar</a>
-      <a href="" class="boton nuevo">+ Nuevo</a>
+
+
+      <input type="search" placeholder="Buscar">
+      <button type="button" class="custom-btn btn-15" data-bs-toggle="modal" data-bs-target="#ModalProyectoEditar">Restructurar</button>
+      <button type="button" class="custom-btn btn-15" data-bs-toggle="modal" data-bs-target="#ModalProyectoNuevo">+ Nuevo</button>
+
     </div>
 
+    <!-- tabla -->
     <table class="content-table">
       <thead>
         <tr>
@@ -48,6 +38,7 @@
           <th>Objetivos</th>
           <th>Operaciones</th>
         </tr>
+
       </thead>
       <tbody>
         <tr>
@@ -57,28 +48,11 @@
           <td>dcode</td>
           <td>N°</td>
           <td>Domenic</td>
-          <td><img src="assets\img\x-error.png" width="30" height="30" /></td>
-          <td>
-            <img
-              src="assets\img\objetivos_proyecto.png"
-              width="30"
-              height="30"
-            />
-          </td>
-          <td>
-            <img
-              class="editar"
-              src="assets\img\editar.png"
-              width="30"
-              height="30"
-            />
-            <img
-              class="borrar"
-              src="assets\img\cubo-de-basura.png"
-              width="30"
-              height="30"
-            />
-          </td>
+          <td><img src="assets\img\x-error.png" width="30" height="30"></td>
+          <td><img src="assets\img\objetivos_proyecto.png" width="30" height="30"></td>
+          <td><img class="editar" src="assets\img\editar.png" width="30" height="30"> <img class="borrar"
+              src="assets\img\cubo-de-basura.png" width="30" height="30"></td>
+
         </tr>
         <tr class="active-row">
           <td>1</td>
@@ -87,28 +61,10 @@
           <td>Students</td>
           <td>Students</td>
           <td>Sally</td>
-          <td><img src="assets\img\checkmark.png" width="30" height="30" /></td>
-          <td>
-            <img
-              src="assets\img\objetivos_proyecto.png"
-              width="30"
-              height="30"
-            />
-          </td>
-          <td>
-            <img
-              class="editar"
-              src="assets\img\editar.png"
-              width="30"
-              height="30"
-            />
-            <img
-              class="borrar"
-              src="assets\img\cubo-de-basura.png"
-              width="30"
-              height="30"
-            />
-          </td>
+          <td><img src="assets\img\checkmark.png" width="30" height="30"></td>
+          <td><img src="assets\img\objetivos_proyecto.png" width="30" height="30"></td>
+          <td><img class="editar" src="assets\img\editar.png" width="30" height="30"> <img class="borrar"
+              src="assets\img\cubo-de-basura.png" width="30" height="30"></td>
         </tr>
         <tr>
           <td>1</td>
@@ -117,30 +73,10 @@
           <td>dcode</td>
           <td>Students</td>
           <td>Sally</td>
-          <td>
-            <img src="assets\img\desabilitado.png" width="30" height="30" />
-          </td>
-          <td>
-            <img
-              src="assets\img\objetivos_proyecto.png"
-              width="30"
-              height="30"
-            />
-          </td>
-          <td>
-            <img
-              class="editar"
-              src="assets\img\editar.png"
-              width="30"
-              height="30"
-            />
-            <img
-              class="borrar"
-              src="assets\img\cubo-de-basura.png"
-              width="30"
-              height="30"
-            />
-          </td>
+          <td><img src="assets\img\desabilitado.png" width="30" height="30"></td>
+          <td><img src="assets\img\objetivos_proyecto.png" width="30" height="30"></td>
+          <td><img class="editar" src="assets\img\editar.png" width="30" height="30"> <img class="borrar"
+              src="assets\img\cubo-de-basura.png" width="30" height="30"></td>
         </tr>
         <tr>
           <td>1</td>
@@ -149,28 +85,10 @@
           <td>dcode</td>
           <td>Students</td>
           <td>Sally</td>
-          <td><img src="assets\img\x-error.png" width="30" height="30" /></td>
-          <td>
-            <img
-              src="assets\img\objetivos_proyecto.png"
-              width="30"
-              height="30"
-            />
-          </td>
-          <td>
-            <img
-              class="editar"
-              src="assets\img\editar.png"
-              width="30"
-              height="30"
-            />
-            <img
-              class="borrar"
-              src="assets\img\cubo-de-basura.png"
-              width="30"
-              height="30"
-            />
-          </td>
+          <td><img src="assets\img\x-error.png" width="30" height="30"></td>
+          <td><img src="assets\img\objetivos_proyecto.png" width="30" height="30"></td>
+          <td><img class="editar" src="assets\img\editar.png" width="30" height="30"> <img class="borrar"
+              src="assets\img\cubo-de-basura.png" width="30" height="30"></td>
         </tr>
         <tr>
           <td>1</td>
@@ -179,28 +97,10 @@
           <td>dcode</td>
           <td>Students</td>
           <td>Sally</td>
-          <td><img src="assets\img\x-error.png" width="30" height="30" /></td>
-          <td>
-            <img
-              src="assets\img\objetivos_proyecto.png"
-              width="30"
-              height="30"
-            />
-          </td>
-          <td>
-            <img
-              class="editar"
-              src="assets\img\editar.png"
-              width="30"
-              height="30"
-            />
-            <img
-              class="borrar"
-              src="assets\img\cubo-de-basura.png"
-              width="30"
-              height="30"
-            />
-          </td>
+          <td><img src="assets\img\x-error.png" width="30" height="30"></td>
+          <td><img src="assets\img\objetivos_proyecto.png" width="30" height="30"></td>
+          <td><img class="editar" src="assets\img\editar.png" width="30" height="30"> <img class="borrar"
+              src="assets\img\cubo-de-basura.png" width="30" height="30"></td>
         </tr>
         <tr>
           <td>1</td>
@@ -209,30 +109,132 @@
           <td>dcode</td>
           <td>Students</td>
           <td>Sally</td>
-          <td><img src="assets\img\x-error.png" width="30" height="30" /></td>
-          <td>
-            <img
-              src="assets\img\objetivos_proyecto.png"
-              width="30"
-              height="30"
-            />
-          </td>
-          <td>
-            <img
-              class="editar"
-              src="assets\img\editar.png"
-              width="30"
-              height="30"
-            />
-            <img
-              class="borrar"
-              src="assets\img\cubo-de-basura.png"
-              width="30"
-              height="30"
-            />
-          </td>
+          <td><img src="assets\img\x-error.png" width="30" height="30"></td>
+          <td><img src="assets\img\objetivos_proyecto.png" width="30" height="30"></td>
+          <td><img class="editar" src="assets\img\editar.png" width="30" height="30"> <img class="borrar"
+              src="assets\img\cubo-de-basura.png" width="30" height="30"></td>
         </tr>
       </tbody>
     </table>
-  </body>
-</div>
+  
+
+    <!-- DIALOGO DE EDITAR -->
+    <!-- POP-UP -->
+    <!-- <div class="modal" role="dialog" [ngStyle]="{'display':displayEstructurar}"> -->
+    <div>
+      <div class="crear">
+        <div class="headPop-up">
+          <h3 class="tituloCrearProyecto"> Editar Proyecto </h3>
+          <hr class="lineaPop-Up">
+        </div>
+        <!-- formulario -->
+        <div class="fondopapa">
+          <div class="contenedor">
+            <form action="#">
+              <div class="detalles-proy">
+                <div class="input-box">
+                  <span class="detalles">Nombre</span>
+                  <input type="text" placeholder="Ingrese el nombre del Proyecto" required>
+                </div>
+                <div class="input-box1">
+                  <span class="detalles">Colaboradores</span>
+                  <select name="colab" class="cbox">
+                    <option disabled>Elija un colaborador</option>
+                    <option value="colab1">Pedro Perez</option>
+                    <option value="colab1">Ramiro Ramirez</option>
+                    <option value="colab1">Gonzalo Gonzalez</option>
+                    <option value="colab1">Luis Cordero</option>
+                  </select>
+                </div>
+                <div class="input-box">
+                  <span class="detalles">Carrera</span>
+                  <select name="carrera" class="cboxizq">
+                    <option disabled>Elija una Carrera</option>
+                    <option value="carrera1">Tecnologia superior en Desarrollo de Software</option>
+                    <option value="carrera2">Tecnologia supeior en Análisis Financiero</option>
+                    <option value="carrera3">Ciberseguridad</option>
+                    <option value="carrera4">Entrenamiento Deportivo</option>
+                  </select>
+                </div>
+              </div>
+
+            </form>
+
+
+
+            <form action="#" class="formulario">
+              <div class="detalles-proy">
+                <div class="input-box">
+                  <span class="detalles">Evaluador</span>
+                  <input type="text" placeholder="Ingrese el nombre del Evaluador" required>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- PARTE INFERIOR DEL FORMULARIO -->
+        <div class="fondopapa">
+          <div class="contenedor">
+            <form action="#">
+              <div class="detalles-proy">
+
+                <div class="input-calendar">
+                  <span class="detalles">Fechas</span>
+                  <div class="calendario">
+                    <mat-form-field appearance="outline">
+                      <mat-label>Rango de Fecha</mat-label>
+                      <mat-date-range-input [rangePicker]="picker">
+                        <input matStartDate placeholder="Fecha Inicio">
+                        <input matEndDate placeholder="Fecha Fin">
+                      </mat-date-range-input>
+                      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                      <mat-date-range-picker #picker></mat-date-range-picker>
+                    </mat-form-field>
+                  </div>
+
+                </div>
+
+              </div>
+            </form>
+            <form action="#" class="formulario-inferior1">
+              <div class="detalles-proy">
+              </div>
+              <div class="detalles-proy">
+                <div class="input-box">
+                  <span class="detalles1">Tipo</span>
+                  <input type="text" placeholder="Ingrese el tipo de proyecto" required>
+                </div>
+              </div>
+            </form>
+
+
+
+
+          </div>
+        </div>
+
+        <!-- <button class="aceptare" (click)="openPopupGuardar()">ACEPTAR</button> -->
+        <button class="cancelare" data-bs-dismiss="modal">CANCELAR</button>
+      </div>
+    </div>
+    <!-- </div> -->
+
+
+    <!-- <div class="modal" role="dialog" style="margin-top:300px ;margin-left: 350px ;"
+      [ngStyle]="{'display':displayGuardar}"> -->
+    <div>
+      <div class="confirmarGuardado">
+        <br>
+        <img src="assets\img\018-advertencia.png" class="advertencia2">
+
+        <h3 class="seguro1">¿Está seguro de guardar los datos?</h3>
+
+        <button class="confirmar">CONFIRMAR</button>
+        <!-- <button class="cancelar2" (click)="closePopupGuardar()">CANCELAR</button> -->
+      </div>
+    </div>
+    <!-- </div> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>

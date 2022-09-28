@@ -10,7 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '../material/material.module';
 import { FooterComponent } from './layout/footer/footer.component';
 import { UserComponent } from './layout/user/user.component';
-
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,8 @@ import { UserComponent } from './layout/user/user.component';
     HttpClientModule,
     MaterialModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CommonModule
   ],
   providers: [{provide: JWT_OPTIONS, useValue: JWT_OPTIONS}, JwtHelperService],
   bootstrap: [AppComponent]
