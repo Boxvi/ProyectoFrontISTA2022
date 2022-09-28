@@ -104,7 +104,24 @@
               </button>
             </mat-expansion-panel>
             <br />
-            
+            <mat-expansion-panel
+            (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false"
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title> Carrera </mat-panel-title>
+            </mat-expansion-panel-header>
+<!--boton usuario-->
+            <button
+              mat-button
+              class="id-menus"
+              [routerLink]="['/panelusuario/proyecto/carrera']"
+              routerLinkActive="active"
+            >
+              -lista carrera
+            </button>
+          </mat-expansion-panel>
+          <br />
 
 
             
