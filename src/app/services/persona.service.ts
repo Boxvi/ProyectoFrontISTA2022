@@ -8,7 +8,7 @@ import { map, Observable } from 'rxjs';
 })
 export class PersonaService {
 
-  private urlEndPoint:string='http://deploybackend2022-env.eba-367yt4y5.us-east-1.elasticbeanstalk.com/api/personas';
+  private urlEndPoint:string='http://localhost:8080/api/personas';
   private httpHeaders =new HttpHeaders({ 'Content-Type': 'application/json' })
   constructor(private http: HttpClient) { }
 

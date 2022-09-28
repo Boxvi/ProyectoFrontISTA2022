@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { Usuario } from '../models/usuario';
+import { AuthUser } from '../models/authuser';
 
 
 @Injectable({
@@ -9,7 +10,8 @@ import { Usuario } from '../models/usuario';
 })
 export class UsuarioService {
 
-  private urlEndPoint:string='http://deploybackend2022-env.eba-367yt4y5.us-east-1.elasticbeanstalk.com/api/usuarios';
+  private urlEndPoint:string='http://localhost:8080/api/usuarios';
+  private urlEndPoint2:string='http://localhost:8080/api/auth/signup';
   private httpHeaders =new HttpHeaders({ 'Content-Type': 'application/json'})
   
   
@@ -19,8 +21,8 @@ export class UsuarioService {
     return this.http.get(this.urlEndPoint).pipe(map(response=>response as Usuario[]));
   }
 
-  create(usuario:Usuario):Observable<Usuario[]>{
-      return this.http.post<Usuario[]>(this.urlEndPoint,usuario,{headers:this.httpHeaders})
+  create(usuarioa:AuthUser):Observable<AuthUser[]>{
+      return this.http.post<AuthUser[]>(this.urlEndPoint2,usuarioa,{headers:this.httpHeaders})
   }
 
   getUsuario(id:Usuario):Observable<Usuario>{

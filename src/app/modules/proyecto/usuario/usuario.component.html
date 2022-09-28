@@ -77,31 +77,36 @@
   [ngStyle]="{'display':displayStyle}">
   <div >
     <div class="crear">
-      <h3 class="titulo"> Nuevo Usuario </h3>
-      <br>
-      <img src="assets\img\015-cuaderno.png" class="cuaderno">
-      <br>
-      <label class="cedula" >Cedula:</label>
-      <input type="text" placeholder="Cedula" class="inputCedula">
-      <label class="Nombre">Juanito Perez</label>
-      <br>
-      <hr class="separador">
-      <label class="usuario" >Usuario:</label>
-      <input type="text" placeholder="Usuario" class="inputUsuario">
-      <label class="rol" >Roles:</label>
-      <input class="checkbox" type="checkbox">
-      <input class="checkbox1" type="checkbox">
-      <input class="checkbox2" type="checkbox">
-      <input class="checkbox3" type="checkbox">
-      
-      <label class="contrasenia" >Contraseña:</label>
-      <input type="password" placeholder="Contraseña" class="inputContraseña">
-      
-      <label class="repetircontrasenia" >Repetir <br> Contraseña :</label>
-      <input type="password" placeholder="Contraseña" class="inputRepetir">
-      
-      <button class="aceptar" (click)="openPopup4()">ACEPTAR</button>
-      <button class="cancelar" (click)="closePopup()">CANCELAR</button>
+      <form ngNavigateValidate (ngSubmit)="create()">
+        <h3 class="titulo"> Nuevo Usuario </h3>
+        <br>
+        <img src="assets\img\015-cuaderno.png" class="cuaderno">
+        <br>
+        <label class="cedula" >Cedula:</label>
+        <input type="text" placeholder="Cedula" class="inputCedula" [(ngModel)]="UsuarioA.cedula" name="cedula">
+    
+        <label class="Nombre">Juanito Perez</label>
+        <br>
+        <hr class="separador">
+        <label class="usuario" >Usuario:</label>
+        <input type="text" placeholder="Usuario" class="inputUsuario" [(ngModel)]="UsuarioA.username" name="username">
+    
+        <label class="rol" >Roles:</label>
+        <input class="imputRol" type="text" placeholder="Rol" [(ngModel)]="UsuarioA.rol" name="rol">
+    
+        <label class="contrasenia" >Contraseña:</label>
+        <input type="password" placeholder="Contraseña" class="inputContraseña" [(ngModel)]="UsuarioA.password" name="password">
+        
+   
+        
+        <button class="aceptar"   (click)="openPopup4()" >ACEPTAR</button>
+        <button class="cancelar" (click)="closePopup()">CANCELAR</button>
+  
+  
+  
+       
+  
+      </form>
        
 
       </div>
@@ -114,118 +119,15 @@
 
 
 
-
-
   <div
   class="modal"
   role="dialog"
   [ngStyle]="{'display':displayStyle2}">
-  <div >
-    <div class="editar">
-      <h3 class="titulo"> Editar Usuario </h3>
-      <br>
-      <img src="assets\img\017-editar-1.png" class="cuaderno">
-      <br>
-      <label class="cedula" >Cedula:</label>
-      <input type="text" placeholder="Cedula" class="inputCedula" value="0150144079">
-      <label class="Nombre">Maria Peña</label>
-      <br>
-      <hr class="separador">
-      <label class="usuario" >Usuario:</label>
-      <input type="text" placeholder="Usuario" class="inputUsuario" value="Pepe Perez">
-      <label class="rol" >Roles:</label>
-      <input class="checkbox" type="checkbox">
-      <input class="checkbox1" type="checkbox">
-      <input class="checkbox2" type="checkbox">
-      <input class="checkbox3" type="checkbox">
-      
-      <label class="contrasenia" >Contraseña:</label>
-      <input type="password" placeholder="Contraseña" class="inputContraseña" value="admin1234">
-      
-      <label class="repetircontrasenia" >Repetir <br> Contraseña :</label>
-      <input type="password" placeholder="Contraseña" class="inputRepetir" value="admin1234">
-      
-      <button class="aceptar" (click)="openPopup4()">ACEPTAR</button>
-      <button class="cancelar" (click)="closePopup2()">CANCELAR</button>
-  
-  </div>
-      </div>
-  </div>
-
-
-    
-
-
-  <div
-  class="modal"
-  role="dialog"
-  style="margin-top:300px ;margin-left: 350px ;"
-  [ngStyle]="{'display':displayStyle3}">
-  <div >
-    <div class="eliminar">
-      <br>
-  <img src="assets\img\018-advertencia.png" class="advertencia">
-  
-  <h3 class="seguro">¿Está seguro que desea eliminar este usuario?</h3>
-  
-  <button class="eliminarbtn">ELIMINAR</button>
-  <button class="cancelar2"(click)="closePopup3()">CANCELAR</button>
-  </div>
-      </div>
-  </div>
-
-
-
-  <div
-  class="modal"
-  role="dialog"
-  style="margin-top:300px ;margin-left: 350px ;"
-  [ngStyle]="{'display':displayStyle4}">
-  <div >
-    <div class="confirmarGuardado">
-      <br>
-  <img src="assets\img\018-advertencia.png" class="advertencia2">
-  
-  <h3 class="seguro1">¿Está seguro de guardar los datos?</h3>
-  
-  <button class="confirmar">CONFIRMAR</button>
-  <button class="cancelar2"(click)="closePopup4()">CANCELAR</button>
-  </div>
-      </div>
-  </div>
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div
-  class="modal"
-  role="dialog"
-  [ngStyle]="{'display':displayStyle}">
   <div >
     <div class="crear">
-      <h3 class="titulo"> Nuevo Usuario </h3>
+      <h3 class="titulo"> Editar Usuario </h3>
       <br>
-      <img src="assets\img\015-cuaderno.png" class="cuaderno">
+      <img src="assets\img\017-editar-1.png" class="cuaderno">
       <br>
       <label class="cedula" >Cedula:</label>
       <input type="text" placeholder="Cedula" class="inputCedula">
@@ -235,19 +137,13 @@
       <label class="usuario" >Usuario:</label>
       <input type="text" placeholder="Usuario" class="inputUsuario">
       <label class="rol" >Roles:</label>
-      <input class="checkbox" type="checkbox">
-      <input class="checkbox1" type="checkbox">
-      <input class="checkbox2" type="checkbox">
-      <input class="checkbox3" type="checkbox">
-      
+      <input class="imputRol" type="text" placeholder="Rol">
       <label class="contrasenia" >Contraseña:</label>
       <input type="password" placeholder="Contraseña" class="inputContraseña">
-      
-      <label class="repetircontrasenia" >Repetir <br> Contraseña :</label>
-      <input type="password" placeholder="Contraseña" class="inputRepetir">
+ 
       
       <button class="aceptar" (click)="openPopup4()">ACEPTAR</button>
-      <button class="cancelar" (click)="closePopup()">CANCELAR</button>
+      <button class="cancelar" (click)="closePopup2()">CANCELAR</button>
        
 
       </div>
@@ -256,48 +152,7 @@
      
   </div>
 
-
-
-
-
-
-
-  <div
-  class="modal"
-  role="dialog"
-  [ngStyle]="{'display':displayStyle2}">
-  <div >
-    <div class="editar">
-      <h3 class="titulo"> Editar Usuario </h3>
-      <br>
-      <img src="assets\img\017-editar-1.png" class="cuaderno">
-      <br>
-      <label class="cedula" >Cedula:</label>
-      <input type="text" placeholder="Cedula" class="inputCedula" value="0150144079">
-      <label class="Nombre">Maria Peña</label>
-      <br>
-      <hr class="separador">
-      <label class="usuario" >Usuario:</label>
-      <input type="text" placeholder="Usuario" class="inputUsuario" value="Pepe Perez">
-      <label class="rol" >Roles:</label>
-      <input class="checkbox" type="checkbox">
-      <input class="checkbox1" type="checkbox">
-      <input class="checkbox2" type="checkbox">
-      <input class="checkbox3" type="checkbox">
-      
-      <label class="contrasenia" >Contraseña:</label>
-      <input type="password" placeholder="Contraseña" class="inputContraseña" value="admin1234">
-      
-      <label class="repetircontrasenia" >Repetir <br> Contraseña :</label>
-      <input type="password" placeholder="Contraseña" class="inputRepetir" value="admin1234">
-      
-      <button class="aceptar" (click)="openPopup4()">ACEPTAR</button>
-      <button class="cancelar" (click)="closePopup2()">CANCELAR</button>
-  
-  </div>
-      </div>
-  </div>
-
+ 
 
     
 
@@ -308,14 +163,29 @@
   style="margin-top:300px ;margin-left: 350px ;"
   [ngStyle]="{'display':displayStyle3}">
   <div >
+    
     <div class="eliminar">
       <br>
   <img src="assets\img\018-advertencia.png" class="advertencia">
+  <br>
   
-  <h3 class="seguro">¿Está seguro que desea eliminar este usuario?</h3>
-  
-  <button class="eliminarbtn">ELIMINAR</button>
-  <button class="cancelar2"(click)="closePopup3()">CANCELAR</button>
+  <h3 class="seguro">¿Está seguro que desea eliminar esta persona?</h3>
+  <form ngNavigateValidate (ngSubmit)="eliminar()" >
+    <div>
+        <div >
+            <input type="text" class="inputEliminarCod" placeholder="Codigo" [(ngModel)]="Usuario.idusuario" name="idusuario" required>
+        </div>
+    </div>
+    <br>
+   
+    <button class="eliminarbtn" role="button"  (click)="recargar()">ELIMINAR</button>
+    
+    
+    
+</form>
+<button class="cancelar2"(click)="closePopup3()">CANCELAR</button>
+    
+ 
   </div>
       </div>
   </div>
@@ -334,9 +204,45 @@
   
   <h3 class="seguro1">¿Está seguro de guardar los datos?</h3>
   
-  <button class="confirmar">CONFIRMAR</button>
-  <button class="cancelar2"(click)="closePopup4()">CANCELAR</button>
+  <button class="confirmar"(click)="closePopup4()" (click)="closePopup()"  (click)="recargar()"   role="button">CONFIRMAR</button>
+  <button class="cancelarSeguro"(click)="closePopup4()">CANCELAR</button>
   </div>
       </div>
   </div>
    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+    
+

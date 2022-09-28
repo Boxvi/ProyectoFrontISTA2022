@@ -3,7 +3,7 @@
     position: relative;
     border: 1px;
     width: 370px;
-    height: 600px;
+    height: 450px;
     background-color: white;
     box-shadow: 2px 2px 5px black; 
     border-radius: 20px;
@@ -24,7 +24,7 @@
     background-color: #E8EC12;
     position: absolute;
     margin: 25px;
-    margin-left: 100px;
+    margin-left: 140px;
     border-radius: 5px;
     padding: 5px;
     color: white;
@@ -97,7 +97,15 @@
     border: transparent;
     background-color: #B1E7E1;
 }
-
+.imputRol {
+    position: absolute;
+    margin-top: 50px;
+    color: black;
+    margin-left: 140px;
+    border-radius: 10px;
+    border: transparent;
+    background-color: #B1E7E1;
+}
 .rol {
     position: absolute;
     margin-top: 50px;
@@ -139,7 +147,7 @@
 
 .contrasenia {
     position: absolute;
-    margin-top: 130px;
+    margin-top: 90px;
     color: black;
     margin-left: 40px;
 }
@@ -154,7 +162,7 @@
 
 .inputContraseña {
     position: absolute;
-    margin-top: 130px;
+    margin-top: 90px;
     color: black;
     margin-left: 140px;
     border-radius: 10px;
@@ -180,8 +188,8 @@
     padding: 5px;
     padding-right: 20px;
     padding-left: 20px;
-    margin-top: 260px;
-    margin-left: 45px;
+    margin-top: 130px;
+    margin-left: 50px;
     color: white;
 
 
@@ -203,12 +211,12 @@
     position: relative;
     border: 1px;
     width: 600px;
-    height: 200px;
+    height: 280px;
     background-color: white;
     box-shadow: 2px 2px 5px black;
     border-radius: 20px;
- 
-}
+  
+  }
 
 .advertencia {
     width: 70px;
@@ -217,23 +225,44 @@
 }
 
 .seguro {
-    margin-left: 10px;
+    margin-left: 110px;
     text-align: justify;
-}
+  }
 
 .cancelar2 {
+    position: absolute;
     border-radius: 10px;
     background-color: #DF2926;
     border: transparent;
     padding: 5px;
     padding-right: 20px;
     padding-left: 20px;
+    margin-bottom: 0px;
     margin-top: 15px;
-    margin-left: 45px;
+    margin-left: 300px;
     color: white;
-
-
-}
+  
+  
+  }
+  .seguro1 {
+    margin-left: 110px;
+    text-align: justify;
+  }
+  .cancelarSeguro {
+    position: absolute;
+    border-radius: 10px;
+    background-color: #DF2926;
+    border: transparent;
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 0px;
+    margin-top: 15px;
+    margin-left: 100px;
+    color: white;
+  
+  
+  }
 
 .eliminarbtn {
     border-radius: 10px;
@@ -245,9 +274,10 @@
     margin-top: 15px;
     margin-left: 150px;
     color: white;
-
-
-}
+    position: absolute;
+  
+  
+  }
 
 .confirmarGuardado {
     position: relative;
@@ -283,7 +313,7 @@
     position: absolute; 
     overflow: hidden; 
     margin-left: 450px;
-    margin-top: 100px;
+    margin-top: 0px;
 }
 
 .boton{
@@ -340,6 +370,13 @@
     opacity: 100%;
     padding-left: -40px;
     min-width: 200px;
+  
+  }
+  .inputEliminarCod {
+    position: relative;
+    margin-top: 10px;
+    color: black;
+    margin-left: 200px;
   
   }
 

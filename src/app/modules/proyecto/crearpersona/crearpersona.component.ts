@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Persona } from '../../../models/persona';
 import { PersonaService } from '../../../services/persona.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-crearpersona',
@@ -33,6 +34,22 @@ export class CrearpersonaComponent implements OnInit {
       )
       
     }
+
+    public Editar():void{
+      this.repuestoService.editar(this.Persona).subscribe(
+        response=> this.router.navigate(['/crearpersona'])
+      )
+    }
+
+    public eliminar():void{
+      this.repuestoService.eliminar(this.Persona).subscribe(
+        response=> this.router.navigate(['/crearpersona'])
+      )
+      Swal.fire('Persona Eliminada',`Persona ${this.Persona.idpersona} guardo con exito`,'success')
+      console.log(this.Persona)
+    }
+
+
   
      cargarRepuesto(): void{
       this.activateRouter.params.subscribe(params=>{
@@ -45,6 +62,8 @@ export class CrearpersonaComponent implements OnInit {
 
     recargar():void{
       window.location.reload()
+      Swal.fire('Persona Guardada',`Repuesto ${this.Persona.idpersona} guardo con exito`,'success')
+      console.log(this.Persona)
     }
 
 
