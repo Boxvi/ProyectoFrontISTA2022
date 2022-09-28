@@ -1,0 +1,168 @@
+
+
+  <div>
+    <br>
+    <hr>
+      <h1 class="tit">CARRERAS ISTA </h1>   
+      <hr>
+    
+  </div>
+ <div >
+ <input type="search" id="form1" class="buscar"  placeholder="Buscar "/>
+ </div>
+ <div >
+  <button class="boton" (click)="OpenPopup()"> NUEVA CARRERA </button>
+</div>
+<table class="content-table">
+  <thead>
+    <tr>
+      <th>N°</th>
+      <th>Nombre de la Carrera</th>
+      <th>Cordinador de la Carrera</th>
+      <th>Ciclos</th>
+      <th>Descripcion</th>
+      <th>Modalidad</th>
+      <th>Estado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Tecnologia Superior en Desarrollo de Software</td>
+      <td>--------------</td>
+      <td>5</td>
+      <td>--------------</td>
+      <td>Presencial</td>
+      <td><button class="btn" (click)="OpenPopup2()"><img src= "assets\img\deshabilitado.png"width="30" height="30"></button><button  class="btn" (click)="OpenPopup1()"><img src=assets\img\editar.png width="30" height="30"></button></td>
+
+      <tr>
+        <td>2</td>
+        <td>Entrenamiento Deportivo</td>
+        <td>--------------</td>
+        <td>5</td>
+        <td>--------------</td>
+        <td>Presencial</td>
+        <td><button class="btn"  (click)="OpenPopup3()" ><img src= "assets\img\habilitadoc.png"width="30" height="30"></button><button  class="btn" (click)="OpenPopup1()"><img src=assets\img\editar.png width="30" height="30"></button></td>
+
+        <tr>
+          <td>3</td>
+          <td>Tecnologia en Desarrollo Infantil Integral</td>
+          <td>--------------</td>
+          <td>5</td>
+          <td>--------------</td>
+          <td>Dual</td>
+          <td><button class="btn" (click)="OpenPopup2()"><img src= "assets\img\deshabilitado.png"width="30" height="30"></button>
+            <button  class="btn" (click)="OpenPopup1()"><img src=assets\img\editar.png width="30" height="30"></button></td>
+      </tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div
+class="modal"
+role="dialog"
+[ngStyle]="{'display':displayStyle}">
+<div>
+<div class="crear">
+    <h3 class="titulo"> Nueva Carrera </h3>
+    <br>
+    <img src="assets\img\015-cuaderno.png" class="cuaderno">
+    <br>
+    <label class="nombre" >Nombre:</label>
+    <input type="text"  class="inputnombre">
+    <hr class="separador">
+    <br>
+    <label class="nombre1" >Descripcion:</label>
+    <input type="text" class="inputDescripcion">
+    <br>
+    <label class="nombre2" >Cordinador:</label>
+    <input type="text"  class="inputcordinador">
+
+    <button class="aceptar" (click)="closePopup()">ACEPTAR</button>
+    <button class="cancelar" (click)="closePopup()">CANCELAR</button>
+    </div>
+</div>
+</div>
+
+<div
+class="modal"
+role="dialog"
+[ngStyle]="{'display':displayStyle1}">
+<div>
+<div class="editar">
+    <h3 class="tituloe"> Editar Carrera </h3>
+    <br>
+    <img src="assets\img\017-editar-1.png" class="cuadernoe">
+    <h6 class="teditar">Tecnologia Superior en Desarrollo de Software</h6>
+    <hr class="separador1">
+    <br>
+    <label class="nombre1" >Descripcion:</label>
+    <input type="text" class="inputDescripcion">
+    <br>
+    <label class="nombre2" >Cordinador:</label>
+    <input type="text" value="Ing.Jesica Herrera" class="inputcordinador">
+    <label class="nombre3" >Jornadas:</label>
+    <input type="text"  class="inputjornadas">
+    <label class="nombre4" >N° Ciclos:</label>
+    <input type="text"  class="inputciclos">
+    <label class="nombre5" >Modalidad:</label>
+    <input type="text"  class="inputmodalidad">
+    <button class="aceptar1" (click)="closePopup1()">ACEPTAR</button>
+    <button class="cancelar1" (click)="closePopup1()">CANCELAR</button>
+    </div>
+</div>
+</div>
+
+
+<div
+class="modal"
+role="dialog"
+[ngStyle]="{'display':displayStyle2}">
+<div>
+<div class="habilitar">
+    <img src="assets\img\deshabilitar.png" class="habi">
+    <h3 class="teditar1"> ¿Desea Habilitar Esta Carrera?</h3>
+    <button class="aceptar2" (click)="closePopup2()">SI</button>
+    <button class="cancelar2" (click)="closePopup2()">CANCELAR</button>
+    </div>
+</div>
+</div>
+
+<div
+class="modal"
+role="dialog"
+[ngStyle]="{'display':displayStyle3}">
+<div>
+<div class="habilitar">
+    <img src="assets\img\habilitar.png" class="habi">
+    <h4 class="teditar2"> ¿Desea Deshabilitar Esta Carrera?</h4>
+    <button class="aceptar2" (click)="closePopup3()">SI</button>
+    <button class="cancelar2" (click)="closePopup3()">CANCELAR</button>
+    </div>
+</div>
+</div>

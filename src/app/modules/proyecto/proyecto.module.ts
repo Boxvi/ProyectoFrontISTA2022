@@ -15,6 +15,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptorService } from 'src/app/services/auth-interceptor.service';
 import { ProyectoComponent } from './proyecto/proyecto.component';
 import { MensajeconfirmacionComponent } from './mensajeconfirmacion/mensajeconfirmacion.component';
+import { CarreraComponent } from './carrera/carrera.component';
 
 
 
@@ -41,7 +42,8 @@ const routers: Routes = [
     VentaAdminComponent,
     VerificarpasswordComponent,
     ProyectoComponent,
-    MensajeconfirmacionComponent
+    MensajeconfirmacionComponent,
+    CarreraComponent
   ],
   imports: [
     CommonModule,
