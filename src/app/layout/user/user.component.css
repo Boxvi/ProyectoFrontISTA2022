@@ -110,9 +110,7 @@ margin-right:-1.6%;
   min-width: 200px;
 
 }
-.modal-content{
-  z-index: 0;
-}
+
 .txtNombre {
   position: left;
   color: black;
@@ -154,12 +152,15 @@ margin-right:-1.6%;
 }
 
 .advertencia2 {
-  width: 70px;
-  height: 70px;
-  margin-left: 5%;
-  margin-top: 1%;
+  width: 400px;
+  height: 400px;
+  margin-left: 11%;
+  margin-top: 3%;
 }
-
+.seguro1{
+  margin-left: 25%;
+  margin-top: 3%;
+}
 .contenedor form .detalles-proy {
   display: flex;
   flex-wrap: wrap;
@@ -350,6 +351,9 @@ form .detalles-proy .input-box1 {
   justify-content: space-between;
 }
 
+.centrado{
+  margin-left: 35%;
+}
 
 .formulario-inferior .input-box .detalles{
   margin-right: 150px;
@@ -387,6 +391,4 @@ form .detalles-proy .input-box1 {
   font-weight: 1000;
   margin-top: 20px;
   justify-content: space-between;
-
-
 }

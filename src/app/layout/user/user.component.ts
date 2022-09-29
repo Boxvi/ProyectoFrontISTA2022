@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from '../../models/user';
 import { CookieService } from 'ngx-cookie-service';
+import { Proyecto } from '../../models/proyecto';
+import { ProyectoService } from '../../services/proyecto.service';
 import { LoginService } from '../../services/login.service';
 import { Credenciales } from 'src/app/models/credenciales';
 
@@ -11,7 +13,9 @@ import { Credenciales } from 'src/app/models/credenciales';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-
+  Proyectos: Proyecto[]=[];
+  public Proyecto:Proyecto = new Proyecto();
+  public titulo:string="Crear Proyecto";
   panelOpenState = false;
   public persona:Credenciales=new Credenciales();
  //Maneja el estado de carga de esta pagina
@@ -19,7 +23,7 @@ export class UserComponent implements OnInit {
  public rol?:String="";
  //Obtine el nombre completo de rol correspondiente
  
-  constructor(private router:Router, private loginservice:LoginService)
+  constructor(private repuestoService:ProyectoService, private router:Router, private loginservice:LoginService)
    { }
    ngAfterViewInit(): void {
     setTimeout(()=>{
@@ -33,7 +37,8 @@ export class UserComponent implements OnInit {
       //datos de usuario rol username
       this.persona=JSON.parse(sessionStorage['user']);
 //obtencion de rol de usuario
-      this.rol=JSON.parse(sessionStorage['user']).authorities[0].authority
+      // this.rol=JSON.parse(sessionStorage['user']).authorities[0].authority
+      this.rol="ROLE_ADMINISTRADOR"
     }else{
       window.localStorage.clear();
       localStorage.removeItem("user");
@@ -43,7 +48,17 @@ export class UserComponent implements OnInit {
       });
     }
   }
-
+  public create():void{
+    this.repuestoService.create(this.Proyecto).subscribe(
+      response=> this.router.navigate(['/crearproyecto'])
+    )
+    
+  }
+  public Editar():void{
+    this.repuestoService.editar(this.Proyecto).subscribe(
+      response=> this.router.navigate(['/crearproyecto'])
+    )
+  }
   logout():void{
     sessionStorage.clear;
     sessionStorage.removeItem('token')
