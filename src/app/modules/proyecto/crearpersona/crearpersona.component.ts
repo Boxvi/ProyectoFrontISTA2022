@@ -29,26 +29,75 @@ export class CrearpersonaComponent implements OnInit {
     }
 
     public create():void{
+      
       this.repuestoService.create(this.Persona).subscribe(
-        response=> this.router.navigate(['/crearpersona'])
+        response=> this.router.navigate(['/panelusuario/proyecto/crearpersona'])
       )
       
     }
 
     public Editar():void{
+      console.log(this.Persona)
       this.repuestoService.editar(this.Persona).subscribe(
-        response=> this.router.navigate(['/crearpersona'])
+        response=> this.router.navigate(['/panelusuario/proyecto/crearpersona'])
       )
     }
 
     public eliminar():void{
-      this.repuestoService.eliminar(this.Persona).subscribe(
-        response=> this.router.navigate(['/crearpersona'])
-      )
-      Swal.fire('Persona Eliminada',`Persona ${this.Persona.idpersona} guardo con exito`,'success')
       console.log(this.Persona)
+      this.repuestoService.eliminar(this.Persona).subscribe(
+        response=> this.router.navigate(['/panelusuario/proyecto/crearpersona'])
+      )
     }
 
+    delete(Personas:Persona):void{
+      const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+          confirmButton: 'btn btn-success',
+          cancelButton: 'btn btn-danger'
+        },
+        buttonsStyling: false
+      })
+      
+      swalWithBootstrapButtons.fire({
+        title: 'Esta seguro de eliminar!',
+        text: `A ${Personas.nombre} ${Personas.apellido}`,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Eliminar',
+        cancelButtonText: 'Cancelar!',
+        reverseButtons: true
+      }).then((result) => {
+        if (result.isConfirmed) {
+  
+          //funcion eliminar
+          this.repuestoService.eliminar(Personas).subscribe(data =>{
+            swalWithBootstrapButtons.fire(
+              'Eliminado!',
+              `Cliente eliminado ${Personas.nombre} ${Personas.apellido}`,
+              'success'
+            )
+            
+    
+          })
+  
+          console.log('llega');
+          window.location.reload()
+                    console.log('pasoo');
+          
+        } else if (
+          /* Read more about handling dismissals below */
+          result.dismiss === Swal.DismissReason.cancel
+        ) {
+          swalWithBootstrapButtons.fire(
+            'Cancelado',
+            ' ',
+            'error'
+          )
+        }
+      })   
+     
+    }
 
   
      cargarRepuesto(): void{
@@ -80,9 +129,11 @@ export class CrearpersonaComponent implements OnInit {
 
   
   openPopup() {
+    this.Persona=new Persona;
     this.displayStyle = "block";
   }
-  openPopup2() {
+  openPopup2(persona:Persona) {
+    this.Persona=persona;
     this.displayStyle2 = "block";
   }
   openPopup3() {

@@ -24,13 +24,13 @@ export class PersonaService {
     return this.http.get<Persona>(`${this.urlEndPoint}/${id}`);
   }
   editar(persona:Persona){
-    const path =`${this.urlEndPoint}/${persona.idpersona}` ;
-    return this.http.put<Persona>(path,persona)
+    console.log(persona)
+    return this.http.put<Persona>(this.urlEndPoint+"/"+persona.idpersona,persona,{headers:this.httpHeaders})
   }
 
   eliminar(persona:Persona){
     const path =`${this.urlEndPoint}/${persona.idpersona}` ;
-    return this.http.delete(path);
+    return this.http.delete<Persona>(this.urlEndPoint+"/"+persona.idpersona,{headers:this.httpHeaders});
   }
   getRoken(){
     return localStorage.getItem('token')||'';

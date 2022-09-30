@@ -38,10 +38,10 @@
       <td>{{persona.apellido}}</td>
       <td>{{persona.telefono}}</td>
       <td>{{persona.email}}</td>
-      <td><button type="button" style="border: transparent;background-color: transparent;" (click)="openPopup2()"><img
+      <td><button type="button" style="border: transparent;background-color: transparent;" (click)="openPopup2(persona)"><img
             src="assets\img\editar.png" alt="" style="width:30px;height:30px;"></button></td>
-      <td><button type="button" style="border: transparent;background-color: transparent;" (click)="openPopup3()"><img
-            src="assets\img\cubo-de-basura.png" alt="" style="width:30px;height:30px;"></button></td>
+      <td><button type="button" style="border: transparent;background-color: transparent;"><img
+            src="assets\img\cubo-de-basura.png" alt="" style="width:30px;height:30px;" (click)="delete(persona)"></button></td>
 
 
 
@@ -118,11 +118,11 @@
         <br>
 
         <label class="idpersona1">Id:</label>
-        <input type="text" placeholder="ID" class="inputId1" [(ngModel)]="Persona.idpersona" name="idpersona">
+        <input type="text" placeholder="ID" class="inputId1" [(ngModel)]="Persona.idpersona" name="idpersona" disabled>
 
 
         <label class="cedula1">Cedula:</label>
-        <input type="text" placeholder="Cedula" class="inputCedula1" [(ngModel)]="Persona.cedula" name="cedula">
+        <input type="text" placeholder="Cedula" class="inputCedula1" [(ngModel)]="Persona.cedula" name="cedula" disabled>
 
         <label class="Nombre1">Nombre:</label>
         <input type="text" placeholder="Nombre" class="inputNombre1" [(ngModel)]="Persona.nombre" name="nombre">
@@ -189,7 +189,7 @@
         </div>
         <br>
 
-        <button class="eliminarbtn" role="button" (click)="recargar()">ELIMINAR</button>
+        <button class="eliminarbtn" role="button" >ELIMINAR</button>
 
 
 
