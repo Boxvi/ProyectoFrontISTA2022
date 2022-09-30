@@ -12,8 +12,7 @@
     <div class="col-6">
       <div class="input-group">
         <div>
-          <input type="search" id="form1" class="form-control" style="margin-left:200px ;"
-            placeholder="Buscar Usuario" />
+          <input type="search" id="form1" class="form-control" style="margin-left:200px ;" name="filterPost" placeholder="Buscar Usuario" [(ngModel)]="filterPost" />
         </div>
       </div>
     </div>
@@ -33,7 +32,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let persona of Personas">
+    <tr *ngFor="let persona of Personas | filter:filterPost">
       <td>{{persona.cedula}}</td>
       <td>{{persona.nombre}}</td>
       <td>{{persona.apellido}}</td>

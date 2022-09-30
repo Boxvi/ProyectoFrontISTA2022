@@ -16,6 +16,8 @@ import { AuthInterceptorService } from 'src/app/services/auth-interceptor.servic
 import { ProyectoComponent } from './proyecto/proyecto.component';
 import { MensajeconfirmacionComponent } from './mensajeconfirmacion/mensajeconfirmacion.component';
 import { CarreraComponent } from './carrera/carrera.component';
+import { FilterPipe } from 'src/app/pipes/filter.pipe';
+
 
 
 
@@ -44,7 +46,8 @@ const routers: Routes = [
     VerificarpasswordComponent,
     ProyectoComponent,
     MensajeconfirmacionComponent,
-    CarreraComponent
+    CarreraComponent,
+    FilterPipe
   ],
   imports: [
     CommonModule,

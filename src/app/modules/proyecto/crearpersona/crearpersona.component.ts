@@ -15,9 +15,9 @@ export class CrearpersonaComponent implements OnInit {
   Personas: Persona[]=[];
   public Persona:Persona = new Persona();
   public titulo:string="Crear Persona";
-  constructor(private repuestoService:PersonaService,private router:Router,private activateRouter:ActivatedRoute) {
+  constructor(private repuestoService:PersonaService,private router:Router,private activateRouter:ActivatedRoute) {}
 
-   }
+  filterPost ='';
 
     ngOnInit(): void {
       this.repuestoService.getPersonas().subscribe(

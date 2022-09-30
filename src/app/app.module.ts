@@ -12,11 +12,14 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { UserComponent } from './layout/user/user.component';
 import { CommonModule } from '@angular/common';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     UserComponent,
+    
 
   ],
   imports: [
