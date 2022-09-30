@@ -1,16 +1,15 @@
 
+<div>
+  <br>
+  <hr>
+  <h1 class="tit">CARRERAS ISTA </h1>
+  <hr>
 
-  <div>
-    <br>
-    <hr>
-      <h1 class="tit">CARRERAS ISTA </h1>   
-      <hr>
-    
-  </div>
- <div >
- <input type="search" id="form1" class="buscar"  placeholder="Buscar "/>
- </div>
- <div >
+</div>
+<div>
+  <input type="search" id="form1" class="buscar" placeholder="Buscar " />
+</div>
+<div>
   <button class="boton" (click)="OpenPopup()"> NUEVA CARRERA </button>
 </div>
 <table class="content-table">
@@ -18,47 +17,155 @@
     <tr>
       <th>N°</th>
       <th>Nombre de la Carrera</th>
-      <th>Cordinador de la Carrera</th>
       <th>Ciclos</th>
-      <th>Descripcion</th>
       <th>Modalidad</th>
+      
+      <!-- <th>Cordinador de la Carrera</th>       -->
+      <!-- <th>Descripcion</th>
+      <th>Modalidad</th> -->
       <th>Estado</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>1</td>
-      <td>Tecnologia Superior en Desarrollo de Software</td>
-      <td>--------------</td>
-      <td>5</td>
-      <td>--------------</td>
-      <td>Presencial</td>
-      <td><button class="btn" (click)="OpenPopup2()"><img src= "assets\img\deshabilitado.png"width="30" height="30"></button><button  class="btn" (click)="OpenPopup1()"><img src=assets\img\editar.png width="30" height="30"></button></td>
+    <tr *ngFor="let carrera of Carreras">
+      <td>{{carrera.id_carrera}}</td>
+      <td>{{carrera.nombre}}</td>
+      <td>{{carrera.num_ciclos}}</td>
+      <td>{{carrera.modalidad}}</td>      
 
-      <tr>
-        <td>2</td>
-        <td>Entrenamiento Deportivo</td>
-        <td>--------------</td>
-        <td>5</td>
-        <td>--------------</td>
-        <td>Presencial</td>
-        <td><button class="btn"  (click)="OpenPopup3()" ><img src= "assets\img\habilitadoc.png"width="30" height="30"></button><button  class="btn" (click)="OpenPopup1()"><img src=assets\img\editar.png width="30" height="30"></button></td>
-
-        <tr>
-          <td>3</td>
-          <td>Tecnologia en Desarrollo Infantil Integral</td>
-          <td>--------------</td>
-          <td>5</td>
-          <td>--------------</td>
-          <td>Dual</td>
-          <td><button class="btn" (click)="OpenPopup2()"><img src= "assets\img\deshabilitado.png"width="30" height="30"></button>
-            <button  class="btn" (click)="OpenPopup1()"><img src=assets\img\editar.png width="30" height="30"></button></td>
-      </tbody>
+      <td><button class="btn" (click)="OpenPopup2()"><img src="assets\img\deshabilitado.png" width="30"
+            height="30"></button>
+        <button class="btn" (click)="OpenPopup1()"><img src=assets\img\editar.png width="30" height="30"></button>
+      </td>
 
 
 
+    </tr>
+  </tbody>
+
+  <div class="modal" role="dialog" [ngStyle]="{'display':displayStyle}">
+    <div>
+      <div class="crear">
+        <form ngNavigateValidate (ngSubmit)="create()">
+          <h3 class="titulo"> Nueva Carrera </h3>
+          <br>
+          <img src="assets\img\015-cuaderno.png" class="cuaderno">
+          <br>
+          <label class="nombre">Nombre:</label>
+          <input type="text" class="inputnombre" [(ngModel)]="Carrera.nombre" name="nombre">
+          <hr class="separador">
+          <br>
+          <label class="nombre1">Ciclos:</label>
+          <input type="text" class="inputDescripcion" [(ngModel)]="Carrera.num_ciclos" name="num_ciclos">
+          <br>
+          <label class="nombre2">Cedula:</label>
+          <input type="text" class="inputcordinador" [(ngModel)]="Carrera.cedula" name="cedula">
+          <br>
+          <label class="nombre3">Modalidad:</label>
+          <input type="text" class="inputmodalidad" [(ngModel)]="Carrera.modalidad" name="modalidad">
 
 
+
+
+
+          <button class="aceptar" (click)="OpenPopup4()">ACEPTAR</button>
+          <button class="cancelar" (click)="closePopup()">CANCELAR</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" role="dialog" [ngStyle]="{'display':displayStyle1}">
+    <div>
+      <div class="editar">
+        <form ngNavigateValidate (ngSubmit)="Editar()">
+          <h3 class="tituloe"> Editar Carrera </h3>
+          <br>
+          <img src="assets\img\017-editar-1.png" class="cuadernoe">
+          <h5 class="teditar">Tecnologia Superior en Desarrollo de Software</h5>
+          <hr class="separador1">
+          <br>
+          <div class="formulario-edit">
+            
+          <label class="lblid">id carrera:</label>
+          <input type="text" class="inputid" [(ngModel)]="Carrera.id_carrera" name="id_carrera">
+          <br>
+          <label class="nombre">Nombre:</label>
+          <input type="text" class="inputnombre" [(ngModel)]="Carrera.nombre" name="nombre">
+          <hr class="separador">
+          <br>
+          <label class="nombre1">Ciclos:</label>
+          <input type="text" class="inputDescripcion" [(ngModel)]="Carrera.num_ciclos" name="num_ciclos">
+          <br>
+          <label class="nombre2">Cedula:</label>
+          <input type="text" class="inputcordinador" [(ngModel)]="Carrera.cedula" name="cedula">
+          <br>
+          <label class="nombre3">Modalidad:</label>
+          <input type="text" class="inputmodalidad" [(ngModel)]="Carrera.modalidad" name="modalidad">
+          <button class="aceptar" (click)="OpenPopup4()">ACEPTAR</button>
+          <button class="cancelar" (click)="closePopup()">CANCELAR</button>
+
+          </div>
+          
+          <!-- <label class="nombre1" >Descripcion:</label>
+      <input type="text" class="inputDescripcion"> -->
+          <!-- <br>
+          <label class="nombre2">Cordinador:</label>
+          <input type="text" class="inputcordinador" [(ngModel)]="Carrera.cedula" name="cedula">
+           <label class="nombre3" >Jornadas:</label>
+      <input type="text"  class="inputjornadas"> -->
+          <!-- <label class="nombre4">N° Ciclos:</label>
+          <input type="text" class="inputDescripcion" [(ngModel)]="Carrera.num_ciclos" name="num_ciclos">
+          <label class="nombre5">Modalidad:</label>
+          <input type="text" class="inputcordinador" [(ngModel)]="Carrera.modalidad" name="modalidad">
+           --> 
+        </form>
+     
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal" role="dialog" [ngStyle]="{'display':displayStyle2}">
+    <div>
+      <div class="habilitar">
+        <img src="assets\img\deshabilitar.png" class="habi">
+        <h3 class="teditar1"> ¿Desea Habilitar Esta Carrera?</h3>
+        <button class="aceptar2" (click)="closePopup2()">SI</button>
+        <button class="cancelar2" (click)="closePopup2()">CANCELAR</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" role="dialog" [ngStyle]="{'display':displayStyle3}">
+    <div>
+      <div class="habilitar">
+        <img src="assets\img\habilitar.png" class="habi">
+        <h4 class="teditar2"> ¿Desea Deshabilitar Esta Carrera?</h4>
+        <button class="aceptar2" (click)="closePopup3()">SI</button>
+        <button class="cancelar2" (click)="closePopup3()">CANCELAR</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="modal" role="dialog" style="margin-top:300px ;margin-left: 350px ;" [ngStyle]="{'display':displayStyle4}">
+    <div>
+      <div class="confirmarGuardado">
+        <br>
+        <img src="assets\img\018-advertencia.png" class="advertencia2">
+
+        <h3 class="seguro1">¿Está seguro de guardar los datos?</h3>
+
+        <button class="confirmar" (click)="closePopup4()" (click)="closePopup()" (click)="recargar()"
+          role="button">CONFIRMAR</button>
+        <button class="cancelarSeguro" (click)="closePopup4()">CANCELAR</button>
+      </div>
+    </div>
+  </div>
 
 
 

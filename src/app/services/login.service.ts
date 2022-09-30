@@ -10,7 +10,7 @@ import { Credenciales } from '../models/credenciales';
 })
 export class LoginService {
 
-  private urlEndPoint:string='http://deploybackend2022-env.eba-367yt4y5.us-east-1.elasticbeanstalk.com/api/auth';
+  private urlEndPoint:string='http://localhost:8080/api/auth';
 
   private httpHeaders = new HttpHeaders({'Content-Type':'application/json'})
   

@@ -37,8 +37,8 @@ export class UserComponent implements OnInit {
       //datos de usuario rol username
       this.persona=JSON.parse(sessionStorage['user']);
 //obtencion de rol de usuario
-      // this.rol=JSON.parse(sessionStorage['user']).authorities[0].authority
-      this.rol="ROLE_ADMINISTRADOR"
+      this.rol=JSON.parse(sessionStorage['user']).authorities[0].authority
+      //this.rol="ROLE_ADMINISTRADOR"
     }else{
       window.localStorage.clear();
       localStorage.removeItem("user");

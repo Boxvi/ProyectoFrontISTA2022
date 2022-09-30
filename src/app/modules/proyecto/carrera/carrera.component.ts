@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Carrera } from '../../../models/carrera';
+import { CarreraService } from '../../../services/carrera.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-carrera',
@@ -7,15 +12,73 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarreraComponent implements OnInit {
 
-  constructor() { }
+  Carreras: Carrera[]=[];
+  public Carrera:Carrera = new Carrera();
+  public titulo:string="Crear Carrera";
+  constructor(private repuestoService:CarreraService,private router:Router,private activateRouter:ActivatedRoute) {
 
-  ngOnInit(): void {
-  }
+   }
+
+    ngOnInit(): void {
+
+      
+      this.repuestoService.getCarreras().subscribe(
+     
+        Carreras => this.Carreras=Carreras
+
+        
+      );
+  
+      this.cargarRepuesto()
+      
+    }
+
+    public create():void{
+      this.repuestoService.create(this.Carrera).subscribe(
+        response=> this.router.navigate(['/panelusuario/proyecto/crearcarrera'])
+      )
+      
+    }
+
+    public Editar():void{
+      this.repuestoService.editar(this.Carrera).subscribe(
+        response=> this.router.navigate(['/panelusuario/proyecto/crearcarrera'])
+      )
+    }
+
+    public eliminar():void{
+      this.repuestoService.eliminar(this.Carrera).subscribe(
+        response=> this.router.navigate(['/panelusuario/proyecto/crearcarrera'])
+      )
+      Swal.fire('Carrera Eliminada',`Carrera ${this.Carrera.id_carrera} guardo con exito`,'success')
+      console.log(this.Carrera)
+    }
+
+
+  
+     cargarRepuesto(): void{
+      this.activateRouter.params.subscribe(params=>{
+        let id = params['id']
+        if(id){
+          this.repuestoService.getCarrera(id).subscribe((Carrera)=>this.Carrera=Carrera)
+        }
+      })
+    }
+
+    recargar():void{
+      window.location.reload()
+      Swal.fire('Carrera Guardada',`Repuesto ${this.Carrera.id_carrera} guardo con exito`,'success')
+      console.log(this.Carrera)
+    }
+
+  
 
   displayStyle = "none";
   displayStyle1 = "none";
   displayStyle2 = "none";
   displayStyle3 = "none";
+  displayStyle4 = "none";
+
   OpenPopup() {
     this.displayStyle = "block";
   }
@@ -39,5 +102,11 @@ export class CarreraComponent implements OnInit {
   }
   closePopup3() {
     this.displayStyle3= "none";
+  }
+  OpenPopup4() {
+    this.displayStyle4= "block";
+  }
+  closePopup4() {
+    this.displayStyle4= "none";
   }
 }
