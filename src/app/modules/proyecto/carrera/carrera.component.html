@@ -1,4 +1,3 @@
-
 <div>
   <br>
   <hr>
@@ -36,6 +35,7 @@
       <td><button class="btn" (click)="OpenPopup2()"><img src="assets\img\deshabilitado.png" width="30"
             height="30"></button>
         <button class="btn" (click)="OpenPopup1()"><img src=assets\img\editar.png width="30" height="30"></button>
+
       </td>
 
 
@@ -104,7 +104,9 @@
           <label class="nombre3">Modalidad:</label>
           <input type="text" class="inputmodalidad" [(ngModel)]="Carrera.modalidad" name="modalidad">
           <button class="aceptar" (click)="OpenPopup4()">ACEPTAR</button>
-          <button class="cancelar" (click)="closePopup()">CANCELAR</button>
+          <button class="cancelar" (click)="closePopup1()">CANCELAR</button>
+
+
 
           </div>
           
@@ -166,110 +168,3 @@
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <div
-class="modal"
-role="dialog"
-[ngStyle]="{'display':displayStyle}">
-<div>
-<div class="crear">
-    <h3 class="titulo"> Nueva Carrera </h3>
-    <br>
-    <img src="assets\img\015-cuaderno.png" class="cuaderno">
-    <br>
-    <label class="nombre" >Nombre:</label>
-    <input type="text"  class="inputnombre">
-    <hr class="separador">
-    <br>
-    <label class="nombre1" >Descripcion:</label>
-    <input type="text" class="inputDescripcion">
-    <br>
-    <label class="nombre2" >Cordinador:</label>
-    <input type="text"  class="inputcordinador">
-
-    <button class="aceptar" (click)="closePopup()">ACEPTAR</button>
-    <button class="cancelar" (click)="closePopup()">CANCELAR</button>
-    </div>
-</div>
-</div>
-
-<div
-class="modal"
-role="dialog"
-[ngStyle]="{'display':displayStyle1}">
-<div>
-<div class="editar">
-    <h3 class="tituloe"> Editar Carrera </h3>
-    <br>
-    <img src="assets\img\017-editar-1.png" class="cuadernoe">
-    <h5 class="teditar">Tecnologia Superior en Desarrollo de Software</h5>
-    <hr class="separador1">
-    <br>
-    <label class="nombre1" >Descripcion:</label>
-    <input type="text" class="inputDescripcion">
-    <br>
-    <label class="nombre2" >Cordinador:</label>
-    <input type="text" value="Ing.Jesica Herrera" class="inputcordinador">
-    <label class="nombre3" >Jornadas:</label>
-    <input type="text"  class="inputjornadas">
-    <label class="nombre4" >N° Ciclos:</label>
-    <input type="text"  class="inputciclos">
-    <label class="nombre5" >Modalidad:</label>
-    <input type="text"  class="inputmodalidad">
-    <button class="aceptar1" (click)="closePopup1()">ACEPTAR</button>
-    <button class="cancelar1" (click)="closePopup1()">CANCELAR</button>
-    </div>
-</div>
-</div>
-
-
-<div
-class="modal"
-role="dialog"
-[ngStyle]="{'display':displayStyle2}">
-<div>
-<div class="habilitar">
-    <img src="assets\img\deshabilitar.png" class="habi">
-    <h3 class="teditar1"> ¿Desea Habilitar Esta Carrera?</h3>
-    <button class="aceptar2" (click)="closePopup2()">SI</button>
-    <button class="cancelar2" (click)="closePopup2()">CANCELAR</button>
-    </div>
-</div>
-</div>
-
-<div
-class="modal"
-role="dialog"
-[ngStyle]="{'display':displayStyle3}">
-<div>
-<div class="habilitar">
-    <img src="assets\img\habilitar.png" class="habi">
-    <h4 class="teditar2"> ¿Desea Deshabilitar Esta Carrera?</h4>
-    <button class="aceptar2" (click)="closePopup3()">SI</button>
-    <button class="cancelar2" (click)="closePopup3()">CANCELAR</button>
-    </div>
-</div>
-</div>
