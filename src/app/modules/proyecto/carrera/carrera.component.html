@@ -6,7 +6,7 @@
 
 </div>
 <div>
-  <input type="search" id="form1" class="buscar" placeholder="Buscar " />
+  <input type="search" id="form1" class="buscar" placeholder="Buscar " [(ngModel)]="filterPost"/>
 </div>
 <div>
   <button class="boton" (click)="OpenPopup()"> NUEVA CARRERA </button>
@@ -26,7 +26,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let carrera of Carreras">
+    <tr *ngFor="let carrera of Carreras | filter:filterPost">
       <td>{{carrera.id_carrera}}</td>
       <td>{{carrera.nombre}}</td>
       <td>{{carrera.num_ciclos}}</td>

@@ -18,6 +18,7 @@ export class CarreraComponent implements OnInit {
   constructor(private repuestoService:CarreraService,private router:Router,private activateRouter:ActivatedRoute) {
 
    }
+   filterPost ='';
 
     ngOnInit(): void {
 
@@ -75,7 +76,7 @@ export class CarreraComponent implements OnInit {
           this.repuestoService.eliminar(Carreras).subscribe(data =>{
             swalWithBootstrapButtons.fire(
               'Eliminado!',
-              `Cliente eliminado ${Carreras.nombre} `,
+              `Carrera eliminada ${Carreras.nombre} `,
               'success'
             )
             
