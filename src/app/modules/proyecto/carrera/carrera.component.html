@@ -35,6 +35,7 @@
       <td><button class="btn" (click)="OpenPopup2()"><img src="assets\img\deshabilitado.png" width="30"
             height="30"></button>
         <button class="btn" (click)="OpenPopup1()"><img src=assets\img\editar.png width="30" height="30"></button>
+        <button class="btn" (click)="delete(carrera)"><img src=assets\img\cubo-de-basura.png width="30" height="30" ></button>
 
       </td>
 
@@ -168,3 +169,15 @@
       </div>
     </div>
   </div>
+
+  <div class="modal" role="dialog" [ngStyle]="{'display':displayStyle5}">
+    <div>
+      <div class="habilitar">
+        <img src="assets\img\018-advertencia.png" class="habi">
+        <h4 class="teditar2"> ¿Está seguro que desea eliminar esta carrera?</h4>
+        <button class="aceptar2" (click)="closePopup5()">SI</button>
+        <button class="cancelar2" (click)="closePopup5()">CANCELAR</button>
+      </div>
+    </div>
+  </div>
+

@@ -50,10 +50,55 @@ export class CarreraComponent implements OnInit {
       this.repuestoService.eliminar(this.Carrera).subscribe(
         response=> this.router.navigate(['/panelusuario/proyecto/crearcarrera'])
       )
-      Swal.fire('Carrera Eliminada',`Carrera ${this.Carrera.id_carrera} guardo con exito`,'success')
-      console.log(this.Carrera)
     }
-
+    delete(Carreras:Carrera):void{
+      const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+          confirmButton: 'btn btn-success',
+          cancelButton: 'btn btn-danger'
+        },
+        buttonsStyling: false
+      })
+      
+      swalWithBootstrapButtons.fire({
+        title: 'Esta seguro de eliminar!',
+        text: `A ${Carreras.nombre} `,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Eliminar',
+        cancelButtonText: 'Cancelar!',
+        reverseButtons: true
+      }).then((result) => {
+        if (result.isConfirmed) {
+  
+          //funcion eliminar
+          this.repuestoService.eliminar(Carreras).subscribe(data =>{
+            swalWithBootstrapButtons.fire(
+              'Eliminado!',
+              `Cliente eliminado ${Carreras.nombre} `,
+              'success'
+            )
+            
+    
+          })
+  
+          console.log('llega');
+          window.location.reload()
+                    console.log('pasoo');
+          
+        } else if (
+          /* Read more about handling dismissals below */
+          result.dismiss === Swal.DismissReason.cancel
+        ) {
+          swalWithBootstrapButtons.fire(
+            'Cancelado',
+            ' ',
+            'error'
+          )
+        }
+      })   
+     
+    }
 
   
      cargarRepuesto(): void{
@@ -78,6 +123,7 @@ export class CarreraComponent implements OnInit {
   displayStyle2 = "none";
   displayStyle3 = "none";
   displayStyle4 = "none";
+  displayStyle5 = "none";
 
   OpenPopup() {
     this.displayStyle = "block";
@@ -108,5 +154,11 @@ export class CarreraComponent implements OnInit {
   }
   closePopup4() {
     this.displayStyle4= "none";
+  }
+  OpenPopup5() {
+    this.displayStyle5= "block";
+  }
+  closePopup5() {
+    this.displayStyle5= "none";
   }
 }
