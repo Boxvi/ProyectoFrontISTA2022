@@ -45,13 +45,56 @@ export class ProyectoComponent implements OnInit {
     )
   }
 
-  public eliminar():void{
-    this.repuestoService.eliminar(this.Proyecto).subscribe(
-      response=> this.router.navigate(['/panelusuario/proyecto/crearproyecto'])
-    )
-    Swal.fire('Proyecto Eliminado',`Proyecto ${this.Proyecto.idproyecto} guardo con exito`,'success')
-    console.log(this.Proyecto)
+  delete(Proyectos:Proyecto):void{
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-success',
+        cancelButton: 'btn btn-danger'
+      },
+      buttonsStyling: false
+    })
+    
+    swalWithBootstrapButtons.fire({
+      title: 'Esta seguro de eliminar!',
+      text: `A ${Proyectos.nombre} `,
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Eliminar',
+      cancelButtonText: 'Cancelar!',
+      reverseButtons: true
+    }).then((result) => {
+      if (result.isConfirmed) {
+
+        //funcion eliminar
+        this.repuestoService.eliminar(Proyectos).subscribe(data =>{
+          swalWithBootstrapButtons.fire(
+            'Eliminado!',
+            `Carrera eliminada ${Proyectos.nombre} `,
+            'success'
+          )
+          
+  
+        })
+
+        console.log('llega');
+        window.location.reload()
+                  console.log('pasoo');
+        
+      } else if (
+        /* Read more about handling dismissals below */
+        result.dismiss === Swal.DismissReason.cancel
+      ) {
+        swalWithBootstrapButtons.fire(
+          'Cancelado',
+          ' ',
+          'error'
+        )
+      }
+    })   
+   
   }
+
+
 
   cargarRepuesto(): void{
     this.activateRouter.params.subscribe(params=>{

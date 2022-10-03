@@ -1,23 +1,24 @@
-
-
 <div class="principal">
-  <div class ="encabezado">
+  <div class="encabezado">
     <hr>
     <div>
-  
+
       <h2 class="tit"> PROYECTOS ISTA </h2>
-  
+
     </div>
     <hr>
   </div>
   <div class="fondo">
 
 
-    <input type="search" placeholder="Buscar">
-    <button type="button" class="custom-btn btn-15" data-bs-toggle="modal" data-bs-target="#ModalProyectoEditar">Restructurar</button>
-    <button type="button" class="custom-btn btn-15" data-bs-toggle="modal" data-bs-target="#ModalProyectoNuevo">+ Nuevo</button>
+    <input type="search" placeholder="Buscar" class="form-control" name="filterPost"  [(ngModel)]="filterPost" >
+    <button type="button" class="custom-btn btn-15" data-bs-toggle="modal"
+      data-bs-target="#ModalProyectoEditar">Restructurar</button>
+    <button type="button" class="custom-btn btn-15" data-bs-toggle="modal" data-bs-target="#ModalProyectoNuevo">+
+      Nuevo</button>
 
   </div>
+
   <body>
 
 
@@ -37,7 +38,7 @@
 
       </thead>
       <tbody>
-        <tr *ngFor = "let proyecto of Proyectos| filter:filterPost">
+        <tr *ngFor="let proyecto of Proyectos| filter:filterPost">
           <td>{{proyecto.carrera}}</td>
           <td>{{proyecto.descripcion}}</td>
           <td>{{proyecto.estado}}</td>
@@ -45,12 +46,13 @@
 
           <td>{{proyecto.nombre}}</td>
           <td>{{proyecto.usuario}}</td>
-          <td><img class="editar" src="assets\img\editar.png" width="30" height="30"  data-bs-toggle="modal" data-bs-target="#ModalProyectoEditar"> </td>
-          <td><img class="borrar" src="assets\img\cubo-de-basura.png" width="30" height="30"></td>
+          <td><img class="editar" src="assets\img\editar.png" width="30" height="30" data-bs-toggle="modal"
+              data-bs-target="#ModalProyectoEditar"> </td>
+          <td><img class="borrar" src="assets\img\cubo-de-basura.png" width="30" height="30" (click)="delete(proyecto)"></td>
         </tr>
       </tbody>
     </table>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+      </script>
