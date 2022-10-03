@@ -17,6 +17,7 @@ import { ProyectoComponent } from './proyecto/proyecto.component';
 import { MensajeconfirmacionComponent } from './mensajeconfirmacion/mensajeconfirmacion.component';
 import { CarreraComponent } from './carrera/carrera.component';
 import { FilterPipe } from 'src/app/pipes/filter.pipe';
+import { CrearrolComponent } from './crearrol/crearrol.component';
 
 
 
@@ -32,7 +33,8 @@ const routers: Routes = [
   {path: 'verificarpassword', component:VerificarpasswordComponent, canActivate:[GuarUserdGuard]},
   {path: 'proyecto', component:ProyectoComponent, canActivate:[GuarUserdGuard]},
   {path: 'mensajeconfirmacion', component: MensajeconfirmacionComponent, canActivate:[GuarUserdGuard]},
-  {path: 'carrera',component: CarreraComponent, canActivate:[GuarUserdGuard]}
+  {path: 'carrera',component: CarreraComponent, canActivate:[GuarUserdGuard]},
+  {path: 'rol',component: CrearrolComponent, canActivate:[GuarUserdGuard]}
 ]
 
 @NgModule({
@@ -47,7 +49,8 @@ const routers: Routes = [
     ProyectoComponent,
     MensajeconfirmacionComponent,
     CarreraComponent,
-    FilterPipe
+    FilterPipe,
+    CrearrolComponent
   ],
   imports: [
     CommonModule,

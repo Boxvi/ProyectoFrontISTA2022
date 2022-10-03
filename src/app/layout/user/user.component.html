@@ -78,6 +78,22 @@
               </button>
             </mat-expansion-panel>
             <br />
+            <br />
+            
+            <!--menu administrador persona-->
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title> Rol </mat-panel-title>
+              </mat-expansion-panel-header>
+              <!--boton persona-->
+              <button mat-button class="id-menus" [routerLink]="['/panelusuario/proyecto/rol']"
+                routerLinkActive="active">
+                Listado Rol
+              </button>
+
+
+            </mat-expansion-panel>
+            <br />
 
 
 
