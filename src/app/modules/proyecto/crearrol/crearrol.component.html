@@ -1,0 +1,189 @@
+
+<br>
+<hr>
+<h2 class="tit"> LISTADO DE ROLES</h2>
+<hr>
+<br>
+<div>
+  <div class="row">
+    <div class="col-6">
+      <button class="boton nuevo"(click)="openPopup()">Registrar</button>
+      <br>
+    </div>
+    <div class="col-6">
+      <div class="input-group">
+        <div >
+            <input type="search" id="form1" class="form-control" style="margin-left:200px ;" name="filterPost" placeholder="Buscar Rol" [(ngModel)]="filterPost" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<table class="table table-striped" style="position: absolute;">
+  <thead>
+    <tr>
+      <th >ID</th>
+      <th>Nombre</th>
+      <th >Descripcion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let rol of Roles"  >
+      <td  >{{rol.idrol}}</td>
+      <td  >{{rol.nombre}}</td>
+      <td  >{{rol.descripcion}}</td>
+      <td><button type="button" style="border: transparent;background-color: transparent;"(click)="openPopup2(rol)"><img src="assets\img\editar.png" alt="" style="width:30px;height:30px;"></button></td>
+      <td><button type="button" style="border: transparent;background-color: transparent;"><img
+        src="assets\img\cubo-de-basura.png" alt="" style="width:30px;height:30px;" (click)="delete(rol)"></button></td>
+  </tr>
+  </tbody>
+</table>
+<img src="assets\img\logoista_opaco.png" style="height: 60%;width: 25%; margin-top:30px ;margin-left: 25px; position: relative;">
+
+
+
+
+
+
+
+
+
+<div class="modal" role="dialog" [ngStyle]="{'display':displayStyle}">
+  <div>
+    <div class="crear">
+      <form ngNavigateValidate (ngSubmit)="create()">
+        <h3 class="titulo"> Nuevo Rol </h3>
+        <br>
+        <img src="assets\img\user_icon-icons.com_66546.png" class="cara">
+        <br>
+        <label class="cedula1">ID:</label>
+        <input type="text" placeholder="Id Rol" class="inputCedula1" [(ngModel)]="Rol.idrol" name="cedula">
+
+        <label class="Nombre1">Nombre:</label>
+        <input type="text" placeholder="Nombre Rol"   class="inputNombre1" [(ngModel)]="Rol.nombre" name="nombre">
+
+        <label class="Apellido1">Descripcion:</label>
+        <input type="text" placeholder="Descripcion" class="inputApellido1" [(ngModel)]="Rol.descripcion" name="apellido">
+
+
+
+
+        <button class="aceptar" (click)="openPopup4()">ACEPTAR</button>
+        <button class="cancelar" (click)="closePopup()">CANCELAR</button>
+
+
+
+
+
+      </form>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="modal" role="dialog" [ngStyle]="{'display':displayStyle2}">
+  <div>
+    <div class="editar">
+      <form ngNavigateValidate (ngSubmit)="Editar()">
+        <h3 class="titulo"> Editar Rol </h3>
+        <br>
+        <img src="assets\img\user_icon-icons.com_66546.png" class="cara">
+        <br>
+        <label class="cedula1">ID:</label>
+        <input type="text" placeholder="Id Rol" class="inputCedula1" [(ngModel)]="Rol.idrol" name="cedula">
+
+        <label class="Nombre1">Nombre:</label>
+        <input type="text" placeholder="Nombre Rol" class="inputNombre1" [(ngModel)]="Rol.nombre" name="nombre">
+
+        <label class="Apellido1">Descripcion:</label>
+        <input type="text" placeholder="Descripcion" class="inputApellido1" [(ngModel)]="Rol.descripcion" name="apellido">
+
+
+
+
+        <button class="aceptarEditar" (click)="openPopup4()">ACEPTAR</button>
+        <button class="cancelarEditar" (click)="closePopup2()">CANCELAR</button>
+
+
+
+
+
+      </form>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal" role="dialog" style="margin-top:300px ;margin-left: 350px ;" [ngStyle]="{'display':displayStyle3}">
+  <div>
+
+    <div class="eliminar">
+      <br>
+      <img src="assets\img\018-advertencia.png" class="advertencia">
+      <br>
+
+      <h3 class="seguro">¿Está seguro que desea eliminar este Rol?</h3>
+      <form ngNavigateValidate (ngSubmi2t)="eliminar()">
+        <div>
+          <div>
+            <input type="text" class="inputEliminarCod" placeholder="Codigo" [(ngModel)]="Rol.idrol"
+              name="idpersona" required>
+          </div>
+        </div>
+        <br>
+
+        <button class="eliminarbtn" role="button" >ELIMINAR</button>
+
+
+
+      </form>
+      <button class="cancelar2" (click)="closePopup3()">CANCELAR</button>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal" role="dialog" style="margin-top:300px ;margin-left: 350px ;" [ngStyle]="{'display':displayStyle4}">
+  <div>
+    <div class="confirmarGuardado">
+      <br>
+      <img src="assets\img\018-advertencia.png" class="advertencia2">
+
+      <h3 class="seguro1">¿Está seguro de guardar los datos?</h3>
+
+      <button class="confirmar" (click)="closePopup4()" (click)="closePopup()" (click)="recargar()"
+        role="button">CONFIRMAR</button>
+      <button class="cancelarSeguro" (click)="closePopup4()">CANCELAR</button>
+    </div>
+  </div>
+</div>
