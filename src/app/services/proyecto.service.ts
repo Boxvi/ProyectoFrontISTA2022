@@ -8,12 +8,13 @@ import { map, Observable } from 'rxjs';
 })
 export class ProyectoService {
 
-  private urlEndPoint:string='http://localhost:8080/api/proyectos';
+  private urlEndPoint:string='http://localhost:8080/api/proyecto';
   private httpHeaders =new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization':'Bearer '+JSON.parse(sessionStorage['user']).accessToken })
   constructor(private http: HttpClient) { }
 
   getProyectos():Observable <Proyecto[]>{
     return this.http.get(this.urlEndPoint).pipe(map(response=>response as Proyecto[]));
+    console.log(Proyecto);
   }
 
   create(proyecto:Proyecto):Observable<Proyecto>{

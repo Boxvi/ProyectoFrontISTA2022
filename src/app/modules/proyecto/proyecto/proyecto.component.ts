@@ -18,17 +18,14 @@ export class ProyectoComponent implements OnInit {
   constructor(private repuestoService:ProyectoService,private router:Router,private activateRouter:ActivatedRoute) {
 
    }
-   cargarRepuesto(): void{
-    this.activateRouter.params.subscribe(params=>{
-      let id = params['id']
-      if(id){
-        this.repuestoService.getProyecto(id).subscribe((Proyecto)=>this.Proyecto=Proyecto)
-      }
-    })
-  }
+   filterPost ='';
   ngOnInit(): void {
     this.repuestoService.getProyectos().subscribe(
-      Proyectos => this.Proyectos=Proyectos
+      
+      Proyectos => {
+        console.log(Proyectos);
+        this.Proyectos=Proyectos}
+      
     );
 
     this.cargarRepuesto()
@@ -37,22 +34,37 @@ export class ProyectoComponent implements OnInit {
 
   public create():void{
     this.repuestoService.create(this.Proyecto).subscribe(
-      response=> this.router.navigate(['/crearproyecto'])
+      response=> this.router.navigate(['/panelusuario/proyecto/crearproyecto'])
     )
     
   }
 
   public Editar():void{
     this.repuestoService.editar(this.Proyecto).subscribe(
-      response=> this.router.navigate(['/crearproyecto'])
+      response=> this.router.navigate(['/panelusuario/proyecto/crearproyecto'])
     )
   }
 
   public eliminar():void{
     this.repuestoService.eliminar(this.Proyecto).subscribe(
-      response=> this.router.navigate(['/crearproyecto'])
+      response=> this.router.navigate(['/panelusuario/proyecto/crearproyecto'])
     )
-    Swal.fire('PRoyecto Eliminado',`Proyecto ${this.Proyecto.idproyecto} guardo con exito`,'success')
+    Swal.fire('Proyecto Eliminado',`Proyecto ${this.Proyecto.idproyecto} guardo con exito`,'success')
+    console.log(this.Proyecto)
+  }
+
+  cargarRepuesto(): void{
+    this.activateRouter.params.subscribe(params=>{
+      let id = params['id']
+      if(id){
+        this.repuestoService.getProyecto(id).subscribe((Proyecto)=>this.Proyecto=Proyecto)
+      }
+    })
+  }
+
+  recargar():void{
+    window.location.reload()
+    Swal.fire('Carrera Guardada',`Repuesto ${this.Proyecto.idproyecto} guardo con exito`,'success')
     console.log(this.Proyecto)
   }
 

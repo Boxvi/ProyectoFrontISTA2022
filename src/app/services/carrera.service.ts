@@ -24,13 +24,13 @@ export class CarreraService {
     return this.http.get<Carrera>(`${this.urlEndPoint}/${id}`);
   }
   editar(carrera:Carrera){
-    const path =`${this.urlEndPoint}/${carrera.id_carrera}` ;
-    return this.http.put<Carrera>(path,carrera)
+    console.log(carrera)
+    return this.http.put<Carrera>(this.urlEndPoint+'/'+carrera.id_carrera,carrera,{headers:this.httpHeaders})
   }
 
   eliminar(carrera:Carrera){
     const path =`${this.urlEndPoint}/${carrera.id_carrera}` ;
-    return this.http.delete(path);
+    return this.http.delete<Carrera>(this.urlEndPoint+'/'+carrera.id_carrera,{headers:this.httpHeaders})
   }
   getRoken(){
     return localStorage.getItem('token')||'';

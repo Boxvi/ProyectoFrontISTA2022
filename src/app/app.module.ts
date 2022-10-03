@@ -20,7 +20,6 @@ import { UsuarioPipe } from './pipes/usuario.pipe';
     AppComponent,
     FooterComponent,
     UserComponent,
-
     
 
   ],

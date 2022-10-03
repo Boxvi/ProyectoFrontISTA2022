@@ -70,6 +70,22 @@
               </button>
             </mat-expansion-panel>
             <br />
+            <br />
+            
+            <!--menu administrador persona-->
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title> Rol </mat-panel-title>
+              </mat-expansion-panel-header>
+              <!--boton persona-->
+              <button mat-button class="id-menus" [routerLink]="['/panelusuario/proyecto/rol']"
+                routerLinkActive="active">
+                Listado Rol
+              </button>
+
+
+            </mat-expansion-panel>
+            <br />
 
 
 
@@ -334,14 +350,6 @@
                 </select>
               </div>
             </div>
-          </form>
-
-        </div>
-      </div>
-      <!-- PARTE INFERIOR DEL FORMULARIO -->
-      <div class="modal-body">
-        <div class="contenedor">
-          <form action="#">
             <div class="detalles-proy">
 
               <div class="input-calendar">
@@ -350,9 +358,8 @@
                   <mat-form-field appearance="outline">
                     <mat-label>Rango de Fecha</mat-label>
                     <mat-date-range-input [rangePicker]="picker">
-                      <input matStartDate placeholder="Fecha Inicio" [(ngModel)]="Proyecto.fecha_inicio"
-                        name="fecha-inicio">
-                      <input matEndDate placeholder="Fecha Fin" [(ngModel)]="Proyecto.fecha_fin" name="fecha-fin">
+                      <input matStartDate placeholder="Fecha Inicio">
+                      <input matEndDate placeholder="Fecha Fin">
                     </mat-date-range-input>
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-date-range-picker class="cal-desplegable" #picker></mat-date-range-picker>
@@ -366,8 +373,7 @@
                   name="usuario">
               </div>
             </div>
-          </form>
-          <form action="#" class="formulario-inferior">
+
             <div class="detalles-proy">
               <div class="input-box">
                 <span class="detalles">Objetivo Estratégico</span>
@@ -392,7 +398,8 @@
             <div class="detalles-proy">
               <div class="input-box">
                 <span class="detalles">Estrategia</span>
-                <input type="text" placeholder="Ingrese la estrategia" required>
+                <input type="text" placeholder="Ingrese la estrategia" required [(ngModel)]="Proyecto.estrategia"
+                  name="estrategia">
               </div>
             </div>
           </form>
@@ -425,7 +432,8 @@
             <div class="detalles-proy">
               <div class="input-box">
                 <span class="detalles">Nombre</span>
-                <input type="text" placeholder="Ingrese el nombre del Proyecto" required [(ngModel)]="Proyecto.nombre" name="nombre">
+                <input type="text" placeholder="Ingrese el nombre del Proyecto" required [(ngModel)]="Proyecto.nombre"
+                  name="nombre">
               </div>
               <div class="input-box">
                 <span class="detalles">Carrera</span>
@@ -437,62 +445,38 @@
                   <option value="carrera4">Entrenamiento Deportivo</option>
                 </select>
               </div>
-            </div>
-          </form>
-          <form action="#" class="formulario" ngNavigateValidate (ngSubmit)="Editar()">
-            <div class="detalles-proy">
-              <div class="input-box">
-                <span class="detalles">Evaluador</span>
-                <input type="text" placeholder="Ingrese el nombre del Evaluador" required>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <!-- PARTE INFERIOR DEL FORMULARIO -->
-      <div class="modal-body">
-        <div class="contenedor">
-          <form action="#" ngNavigateValidate (ngSubmit)="Editar()">
-            <div class="detalles-proy">
-
               <div class="input-calendar">
                 <span class="detalles">Fechas</span>
                 <div class="calendario">
                   <mat-form-field appearance="outline">
                     <mat-label>Rango de Fecha</mat-label>
                     <mat-date-range-input [rangePicker]="picker">
-                      <input matStartDate placeholder="Fecha Inicio" [(ngModel)]="Proyecto.fecha_inicio" name="fecha_inicio">
-                      <input matEndDate placeholder="Fecha Fin" [(ngModel)]="Proyecto.fecha_fin" name="fecha_fin">
+                      <input matStartDate placeholder="Fecha Inicio">
+                      <input matEndDate placeholder="Fecha Fin">
                     </mat-date-range-input>
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-date-range-picker #picker></mat-date-range-picker>
                   </mat-form-field>
                 </div>
-
-              </div>
-
-            </div>
-          </form>
-          <form action="#" class="formulario-inferior1" ngNavigateValidate (ngSubmit)="Editar()">
-            <div class="detalles-proy">
-            </div>
-            <div class="detalles-proy">
-              <div class="input-box">
-                <span class="detalles1">Usuario</span>
-                <input type="text" placeholder="Ingrese el tipo de proyecto" required [(ngModel)]="Proyecto.usuario" name="usuario">
+                <div class="input-box">
+                  <span class="detalles1">Usuario</span>
+                  <input type="text" placeholder="Ingrese el tipo de proyecto" required [(ngModel)]="Proyecto.usuario"
+                    name="usuario">
+                </div>
               </div>
             </div>
           </form>
         </div>
       </div>
-      <div class="modal-footer">
-        <!-- <button class="aceptare" (click)="openPopupGuardar()">ACEPTAR</button> -->
-        <button class="boton cancelar" data-bs-dismiss="modal">CANCELAR</button>
+    </div>
+    <div class="modal-footer">
+      <button class="boton aceptar centrado" (click)="recargar()">ACEPTAR</button>
+      <button class="boton cancelar" data-bs-dismiss="modal">CANCELAR</button>
 
-      </div>
     </div>
   </div>
 </div>
+
 
 <!-- DIALOGO DE Guardar -->
 <!-- POP-UP -->
@@ -502,7 +486,7 @@
     <div class="modal-content">
       <img src="assets\img\018-advertencia.png" class="advertencia2">
       <h3 class="seguro1">¿Está seguro de guardar los datos?</h3>
-      <button class="boton aceptar centrado">CONFIRMAR</button>
+      <button class="boton aceptar centrado" (click)="recargar()">CONFIRMAR</button>
       <button class="boton cancelar centrado" data-bs-dismiss="modal">CANCELAR</button>
     </div>
   </div>
