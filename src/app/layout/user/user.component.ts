@@ -6,6 +6,8 @@ import { Proyecto } from '../../models/proyecto';
 import { ProyectoService } from '../../services/proyecto.service';
 import { LoginService } from '../../services/login.service';
 import { Credenciales } from 'src/app/models/credenciales';
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-user',
@@ -66,5 +68,10 @@ export class UserComponent implements OnInit {
     this.router.navigate(['/auth/login']).then(() => {
       window.location.reload();
     });
+  }
+  recargar():void{
+    window.location.reload()
+    Swal.fire('Proyecto Guardado',`Repuesto ${this.Proyecto.idproyecto} guardo con exito`,'success')
+    console.log(this.Proyecto)
   }
 }

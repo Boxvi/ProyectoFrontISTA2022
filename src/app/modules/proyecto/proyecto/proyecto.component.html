@@ -29,29 +29,24 @@
           <th>Descripción</th>
           <th>Estado</th>
           <th>Estrategia</th>
-          <th>Fecha Fin</th>
-          <th>Fecha Inicio</th>
           <th>Nombre</th>
           <th>Usuario</th>
-          <th>Objetivos</th>
           <th>Editar</th>
+          <th>Eliminar</th>
         </tr>
 
       </thead>
       <tbody>
-        <tr *ngFor = "let proyecto of Proyectos">
+        <tr *ngFor = "let proyecto of Proyectos| filter:filterPost">
           <td>{{proyecto.carrera}}</td>
           <td>{{proyecto.descripcion}}</td>
           <td>{{proyecto.estado}}</td>
           <td>{{proyecto.estrategia}}</td>
-          <td>{{proyecto.fecha_fin}}</td>
-          <td>{{proyecto.fecha_inicio}}</td>
+
           <td>{{proyecto.nombre}}</td>
           <td>{{proyecto.usuario}}</td>
-          <td><img src="assets\img\objetivos_proyecto.png" width="30" height="30"></td>
-          <td><img class="editar" src="assets\img\editar.png" width="30" height="30"> <img class="borrar"
-              src="assets\img\cubo-de-basura.png" width="30" height="30"></td>
-
+          <td><img class="editar" src="assets\img\editar.png" width="30" height="30"  data-bs-toggle="modal" data-bs-target="#ModalProyectoEditar"> </td>
+          <td><img class="borrar" src="assets\img\cubo-de-basura.png" width="30" height="30"></td>
         </tr>
       </tbody>
     </table>

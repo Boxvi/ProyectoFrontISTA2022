@@ -11,7 +11,8 @@ import { MaterialModule } from '../material/material.module';
 import { FooterComponent } from './layout/footer/footer.component';
 import { UserComponent } from './layout/user/user.component';
 import { CommonModule } from '@angular/common';
-
+import {enableProdMode} from '@angular/core';
+import { LocaldatetimePipe } from './models/localdatetime.pipe';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { CommonModule } from '@angular/common';
     AppComponent,
     FooterComponent,
     UserComponent,
+    LocaldatetimePipe,
     
 
   ],
