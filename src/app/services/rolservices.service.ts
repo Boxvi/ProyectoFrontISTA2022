@@ -7,7 +7,7 @@ import { Roles } from '../models/roles';
   providedIn: 'root'
 })
 export class RolservicesService {
-  
+  //holphh
   private urlEndPoint:string='http://localhost:8080/api/roles';
   private httpHeaders =new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization':'Bearer '+JSON.parse(sessionStorage['user']).accessToken })
   constructor(private http: HttpClient) { }

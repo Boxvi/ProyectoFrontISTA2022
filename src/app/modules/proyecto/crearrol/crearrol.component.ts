@@ -12,7 +12,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./crearrol.component.css']
 })
 export class CrearrolComponent implements OnInit {
-
+//hopla
   
   Roles: Roles[]=[];
   public Rol:Roles = new Roles();
