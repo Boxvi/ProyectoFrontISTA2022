@@ -1,248 +1,294 @@
-
-    <h4 class="tit"> LISTADO DE USUARIOS</h4>
-    <hr>
-    <br>
-    <div>
-      <div class="row">
-        <div class="col-6">
-          <button class="boton nuevo"(click)="openPopup()">  +NUEVO USUARIO</button>
+<h4 class="tit">LISTADO DE USUARIOS</h4>
+<hr />
+<br />
+<div>
+  <div class="row">
+    <div class="col-6">
+      <button class="boton nuevo" (click)="openPopup()">+NUEVO USUARIO</button>
+    </div>
+    <div class="col-6">
+      <div class="input-group">
+        <div>
+          <input
+            type="search"
+            id="form1"
+            class="form-control"
+            style="margin-left: 200px"
+            placeholder="Buscar Usuario"
+            name="searchUser" [(ngModel)]="searchUser"
+          />
         </div>
-        <div class="col-6">
-          <div class="input-group">
-            <div >
-              <input type="search" id="form1" class="form-control" style="margin-left:200px ;" placeholder="Buscar Usuario"/>
-            </div>
+      </div>
+    </div>
+  </div>
+</div>
+<table class="table table-striped" style="position: absolute">
+  <thead>
+    <tr>
+      <th>N°</th>
+      <th>Usuario</th>
+      <th>Rol</th>
+      <th>Editar</th>
+      <th>Eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usuario of Usuarios | filterusuario:searchUser">
+      <td>{{ usuario.idusuario }}</td>
+      <td>{{ usuario.username }}</td>
+      <td>{{ usuario.roles }}</td>
+      <td>
+        <button
+          type="button"
+          style="border: transparent; background-color: transparent"
+          (click)="openPopup2(usuario)"
+        >
+          <img
+            src="assets\img\editar.png"
+            alt=""
+            style="width: 30px; height: 30px"
+          />
+        </button>
+      </td>
+      <td>
+        <button
+          type="button"
+          style="border: transparent; background-color: transparent"
+          (click)="delete(usuario)"
+        >
+          <img
+            src="assets\img\cubo-de-basura.png"
+            alt=""
+            style="width: 30px; height: 30px"
+          />
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<img
+  src="assets\img\logoista_opaco.png"
+  style="
+    height: 60%;
+    width: 25%;
+    margin-top: 30px;
+    margin-left: 25px;
+    position: relative;
+  "
+/>
+
+<div class="modal" role="dialog" [ngStyle]="{ display: displayStyle }">
+  <div>
+    <div class="crear">
+      <form ngNavigateValidate (ngSubmit)="createU(Usuario)">
+        <h3 class="titulo">Nuevo Usuario</h3>
+        <br />
+        <img src="assets\img\015-cuaderno.png" class="cuaderno" />
+        <br />
+        <label class="cedula">Cedula:</label>
+        <input
+          type="text"
+          placeholder="Cedula"
+          class="inputCedula"
+          [(ngModel)]="Usuario.cedula"
+          name="cedula"
+        />
+
+        <label class="Nombre">Juanito Perez</label>
+        <br />
+        <hr class="separador" />
+        <label class="usuario">Usuario:</label>
+        <input
+          type="text"
+          placeholder="Usuario"
+          class="inputUsuario"
+          [(ngModel)]="Usuario.username"
+          name="username"
+        />
+
+        <!--botones de rol-->
+
+        <label class="rol">Roles:</label>
+        <div class="imputRol">
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="checka"
+              [(ngModel)]="rola"
+              name="rola"
+            />
+            <label class="form-check-label" for="flexSwitchCheckDefault"
+              >ROLE_ADMINISTRADOR</label
+            >
+          </div>
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="checke"
+              value="ROLE_ADMINISTRADOR"
+              [(ngModel)]="role"
+              name="role"
+            />
+            <label class="form-check-label" for="flexSwitchCheckDefault"
+              >ROLE_EVALUADOR</label
+            >
+          </div>
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="checkm"
+              value="ROLE_ADMINISTRADOR"
+              [(ngModel)]="rolm"
+              name="rolm"
+            />
+            <label class="form-check-label" for="flexSwitchCheckDefault"
+              >ROLE_MONITOR</label
+            >
+          </div>
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="checkc"
+              value="ROLE_ADMINISTRADOR"
+              [(ngModel)]="rolc"
+              name="rolc"
+            />
+            <label class="form-check-label" for="flexSwitchCheckDefault"
+              >ROLE_COLABORADOR</label
+            >
           </div>
         </div>
-      </div>
-    </div>
-    <table class="table table-striped" style="position: absolute;">
-      <thead>
-        <tr>
-          <th >N°</th>
-          <th >Usuario</th>
-          <th >Fecha_creacion</th>
-          <th >Rol</th>
-          <th >Editar</th>
-          <th >Eliminar</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor = "let usuario of Usuarios"  >
-          <td  >{{usuario.idusuario}}</td>
-          <td  >{{usuario.username}}</td>
-          <td  >{{usuario.fecha_creacion}}</td>
-          <td  >{{usuario.roles}}</td>
-          <td><button type="button" style="border: transparent;background-color: transparent;"(click)="openPopup2()"><img src="assets\img\editar.png" alt="" style="width:30px;height:30px;"></button></td>
-          <td><button type="button"style="border: transparent;background-color: transparent;" (click)="openPopup3()"><img src="assets\img\cubo-de-basura.png" alt=""style="width:30px;height:30px;"></button></td>
-  
-          
-         
-      </tr>
-  
-      </tbody>
-    </table>
-    <img src="assets\img\logoista_opaco.png" style="height: 60%;width: 25%; margin-top:30px ;margin-left: 25px; position: relative;">
-    
 
+        <label class="contrasenia">Contraseña:</label>
+        <input
+          type="password"
+          placeholder="Contraseña"
+          class="inputContraseña"
+          [(ngModel)]="Usuario.password"
+          name="password"
+        />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div
-  class="modal"
-  role="dialog"
-  [ngStyle]="{'display':displayStyle}">
-  <div >
-    <div class="crear">
-      <form ngNavigateValidate (ngSubmit)="create()">
-        <h3 class="titulo"> Nuevo Usuario </h3>
-        <br>
-        <img src="assets\img\015-cuaderno.png" class="cuaderno">
-        <br>
-        <label class="cedula" >Cedula:</label>
-        <input type="text" placeholder="Cedula" class="inputCedula" [(ngModel)]="UsuarioA.cedula" name="cedula">
-    
-        <label class="Nombre">Juanito Perez</label>
-        <br>
-        <hr class="separador">
-        <label class="usuario" >Usuario:</label>
-        <input type="text" placeholder="Usuario" class="inputUsuario" [(ngModel)]="UsuarioA.username" name="username">
-    
-        <label class="rol" >Roles:</label>
-        <input class="imputRol" type="text" placeholder="Rol" [(ngModel)]="UsuarioA.rol" name="rol">
-    
-        <label class="contrasenia" >Contraseña:</label>
-        <input type="password" placeholder="Contraseña" class="inputContraseña" [(ngModel)]="UsuarioA.password" name="password">
-        
-   
-        
-        <button class="aceptar"   (click)="openPopup4()" >ACEPTAR</button>
-        <button class="cancelar" (click)="closePopup()">CANCELAR</button>
-  
-  
-  
-       
-  
+        <button class="aceptar" (click)="openPopup4()">ACEPTAR</button>
+        <button class="cancelar" type="button" (click)="closePopup()">
+          CANCELAR
+        </button>
       </form>
-       
-
-      </div>
-      </div>
-
-     
-  </div>
-
-
-
-
-
-  <div
-  class="modal"
-  role="dialog"
-  [ngStyle]="{'display':displayStyle2}">
-  <div >
-    <div class="crear">
-      <h3 class="titulo"> Editar Usuario </h3>
-      <br>
-      <img src="assets\img\017-editar-1.png" class="cuaderno">
-      <br>
-      <label class="cedula" >Cedula:</label>
-      <input type="text" placeholder="Cedula" class="inputCedula">
-      <label class="Nombre">Juanito Perez</label>
-      <br>
-      <hr class="separador">
-      <label class="usuario" >Usuario:</label>
-      <input type="text" placeholder="Usuario" class="inputUsuario">
-      <label class="rol" >Roles:</label>
-      <input class="imputRol" type="text" placeholder="Rol">
-      <label class="contrasenia" >Contraseña:</label>
-      <input type="password" placeholder="Contraseña" class="inputContraseña">
- 
-      
-      <button class="aceptar" (click)="openPopup4()">ACEPTAR</button>
-      <button class="cancelar" (click)="closePopup2()">CANCELAR</button>
-       
-
-      </div>
-      </div>
-
-     
-  </div>
-
- 
-
-    
-
-
-  <div
-  class="modal"
-  role="dialog"
-  style="margin-top:300px ;margin-left: 350px ;"
-  [ngStyle]="{'display':displayStyle3}">
-  <div >
-    
-    <div class="eliminar">
-      <br>
-  <img src="assets\img\018-advertencia.png" class="advertencia">
-  <br>
-  
-  <h3 class="seguro">¿Está seguro que desea eliminar esta persona?</h3>
-  <form ngNavigateValidate (ngSubmit)="eliminar()" >
-    <div>
-        <div >
-            <input type="text" class="inputEliminarCod" placeholder="Codigo" [(ngModel)]="Usuario.idusuario" name="idusuario" required>
-        </div>
     </div>
-    <br>
-   
-    <button class="eliminarbtn" role="button"  (click)="recargar()">ELIMINAR</button>
-    
-    
-    
-</form>
-<button class="cancelar2"(click)="closePopup3()">CANCELAR</button>
-    
- 
   </div>
+</div>
+
+<div class="modal" role="dialog" [ngStyle]="{ display: displayStyle2 }">
+  <div>
+    <div class="crear">
+      <form ngNavigateValidate (ngSubmit)="Editar(Usuario)">
+
+        <h3 class="titulo">Editar Usuario</h3>
+      <br />
+      <img src="assets\img\017-editar-1.png" class="cuaderno" />
+      <br />
+      <label class="cedula">Cedula:</label>
+      <input
+        type="text"
+        placeholder="Cedula"
+        class="inputCedula"
+        [(ngModel)]="Usuario.cedula"
+        name="cedula"
+      />
+      <label class="Nombre">Juanito Perez</label>
+      <br />
+      <hr class="separador" />
+      <label class="usuario">Usuario:</label>
+      <input
+        type="text"
+        placeholder="Usuario"
+        class="inputUsuario"
+        [(ngModel)]="Usuario.username"
+        name="username"
+      />
+
+      <!--botones de rol-->
+
+      <label class="rol">Roles:</label>
+      <div class="imputRol">
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="rola"
+            [(ngModel)]="rola"
+            name="rola"
+          />
+          <label class="form-check-label" for="flexSwitchCheckDefault"
+            >ROLE_ADMINISTRADOR</label
+          >
+        </div>
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="checke"
+            value="ROLE_ADMINISTRADOR"
+            [(ngModel)]="role"
+            name="rolee"
+          />
+          <label class="form-check-label" for="flexSwitchCheckDefault"
+            >ROLE_EVALUADOR</label
+          >
+        </div>
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="checkm"
+            value="ROLE_ADMINISTRADOR"
+            [(ngModel)]="rolm"
+            name="rolme"
+          />
+          <label class="form-check-label" for="flexSwitchCheckDefault"
+            >ROLE_MONITOR</label
+          >
+        </div>
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="checkc"
+            value="ROLE_ADMINISTRADOR"
+            [(ngModel)]="rolc"
+            name="rolce"
+          />
+          <label class="form-check-label" for="flexSwitchCheckDefault"
+            >ROLE_COLABORADOR</label
+          >
+        </div>
       </div>
+
+      <label class="contrasenia">Contraseña:</label>
+      <input
+        type="password"
+        placeholder="Contraseña"
+        class="inputContraseña"
+        [(ngModel)]="Usuario.password"
+        name="password"
+      />
+
+      <button class="aceptar" (click)="openPopup4()">ACEPTAR</button>
+      <button class="cancelar" type="button" (click)="closePopup2()">CANCELAR</button>
+
+      </form>
+      
+    </div>
   </div>
-
-
-
-  <div
-  class="modal"
-  role="dialog"
-  style="margin-top:300px ;margin-left: 350px ;"
-  [ngStyle]="{'display':displayStyle4}">
-  <div >
-    <div class="confirmarGuardado">
-      <br>
-  <img src="assets\img\018-advertencia.png" class="advertencia2">
-  
-  <h3 class="seguro1">¿Está seguro de guardar los datos?</h3>
-  
-  <button class="confirmar"(click)="closePopup4()" (click)="closePopup()"  (click)="recargar()"   role="button">CONFIRMAR</button>
-  <button class="cancelarSeguro"(click)="closePopup4()">CANCELAR</button>
-  </div>
-      </div>
-  </div>
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-  
-
-
-    
-
+</div>

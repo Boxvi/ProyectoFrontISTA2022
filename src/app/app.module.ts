@@ -11,6 +11,7 @@ import { MaterialModule } from '../material/material.module';
 import { FooterComponent } from './layout/footer/footer.component';
 import { UserComponent } from './layout/user/user.component';
 import { CommonModule } from '@angular/common';
+import { UsuarioPipe } from './pipes/usuario.pipe';
 
 
 
@@ -19,6 +20,7 @@ import { CommonModule } from '@angular/common';
     AppComponent,
     FooterComponent,
     UserComponent,
+
     
 
   ],

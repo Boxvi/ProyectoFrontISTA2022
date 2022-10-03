@@ -29,9 +29,10 @@ export class CrearpersonaComponent implements OnInit {
     }
 
     public create():void{
-      
+      console.log(this.Persona)
       this.repuestoService.create(this.Persona).subscribe(
-        response=> this.router.navigate(['/panelusuario/proyecto/crearpersona'])
+        response=> {//this.router.navigate(['/panelusuario/proyecto/crearpersona'])
+      }
       )
       
     }
@@ -110,7 +111,7 @@ export class CrearpersonaComponent implements OnInit {
     }
 
     recargar():void{
-      window.location.reload()
+      //window.location.reload()
       Swal.fire('Persona Guardada',`Repuesto ${this.Persona.idpersona} guardo con exito`,'success')
       console.log(this.Persona)
     }

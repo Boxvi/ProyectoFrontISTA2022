@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from '../../models/user';
-import { CookieService } from 'ngx-cookie-service';
 import { Proyecto } from '../../models/proyecto';
 import { ProyectoService } from '../../services/proyecto.service';
 import { LoginService } from '../../services/login.service';
@@ -20,7 +18,7 @@ export class UserComponent implements OnInit {
   public persona:Credenciales=new Credenciales();
  //Maneja el estado de carga de esta pagina
  issloading=true;
- public rol?:String="";
+  rol?:String="";
  //Obtine el nombre completo de rol correspondiente
  
   constructor(private repuestoService:ProyectoService, private router:Router, private loginservice:LoginService)
